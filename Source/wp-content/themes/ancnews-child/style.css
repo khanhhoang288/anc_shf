@@ -1,0 +1,16 @@
+/*
+Theme Name: ANC News Child Theme
+Theme URI: http: 
+Description: Day la child theme cua ANC News
+Author: ANC
+Author URI: 
+Template: ancnews
+Version: 1.0
+*/
+@import url("../ancnews/style.css");
+
+/*font breaking news*/
+#breaking-news .breaking-news-title {
+	font-family: arial;
+	text-transform: uppercase;
+}
