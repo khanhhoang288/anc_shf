@@ -14,3 +14,6 @@ Version: 1.0
 	font-family: arial;
 	text-transform: uppercase;
 }
+#wrapper.wide-layout #theme-header {
+	margin-top: -15px;
+}
