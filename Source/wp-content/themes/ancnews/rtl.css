@@ -1,5 +1,5 @@
 /**
- * ANC RTL (Right-To-Left) CSS
+ * Sahifa RTL (Right-To-Left) CSS
  */
 
 body {
@@ -735,7 +735,7 @@ a.post-slideshow-next .fa-angle-right:before {
             transform: translate3d(100%, 0, 0);
 }
 
-#slide-out #mobile-menu a {
+#slide-out a {
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -756,22 +756,22 @@ a.post-slideshow-next .fa-angle-right:before {
     border-right: 1px solid #333;
 }
 
-#slide-out #mobile-menu ul ul a {
+#mobile-menu ul ul a {
     padding-right: 30px;
     padding-left: 0
 }
 
-#slide-out #mobile-menu ul ul ul a {
+#mobile-menu ul ul ul a {
     padding-right: 40px;
     padding-left: 0
 }
 
-#slide-out #mobile-menu ul ul ul a {
+#mobile-menu ul ul ul a {
     padding-right: 50px;
     padding-left: 0
 }
 
-#slide-out #mobile-menu ul ul ul ul a {
+#mobile-menu ul ul ul ul a {
     padding-right: 60px;
     padding-left: 0
 }

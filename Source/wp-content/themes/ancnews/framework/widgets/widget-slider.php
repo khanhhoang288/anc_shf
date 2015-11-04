@@ -6,9 +6,9 @@ function tie_slider_widget() {
 class tie_slider extends WP_Widget {
 
 	function tie_slider() {
-		$widget_ops 	= array( 'classname' => 'tie-slider' );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'tie-slider-widget' );
-		parent::__construct( 'tie-slider-widget',THEME_NAME .' - '.__( 'Slider' , 'tie'), $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'tie-slider' );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'tie-slider-widget' );
+		$this->WP_Widget( 'tie-slider-widget',THEME_NAME .' - '.__( 'Slider' , 'tie'), $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -21,7 +21,7 @@ class tie_slider extends WP_Widget {
 		global $post;
 		$original_post = $post;
 
-		$argss 			= array('posts_per_page'=> $no_of_posts , 'cat' => $cats_id, 'no_found_rows' => 1 );
+		$argss = array('posts_per_page'=> $no_of_posts , 'cat' => $cats_id, 'no_found_rows' => 1 );
 		$featured_query = new WP_Query( $argss );
 		
 	if( empty($custom_slider) ):
@@ -44,8 +44,8 @@ class tie_slider extends WP_Widget {
 	</div>
 	<?php endif; ?>
 	<?php else :
-		$custom_slider_args 	= array( 'post_type' => 'tie_slider', 'p' => $custom_slider, 'no_found_rows' => 1  ) ;
-		$custom_slider_query 	= new WP_Query( $custom_slider_args );
+		$custom_slider_args = array( 'post_type' => 'tie_slider', 'p' => $custom_slider, 'no_found_rows' => 1  ) ;
+		$custom_slider_query = new WP_Query( $custom_slider_args );
 	?>
 	<div class="flexslider" id="<?php echo $args['widget_id']; ?>">
 		<ul class="slides">
@@ -95,11 +95,12 @@ class tie_slider extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance 						= $old_instance;
-		$instance['cat_posts_title'] 	= strip_tags( $new_instance['cat_posts_title'] );
-		$instance['no_of_posts'] 		= strip_tags( $new_instance['no_of_posts'] );
-		$instance['custom_slider'] 		=  $new_instance['custom_slider'] ;
-		$instance['cats_id'] 			= implode(',' , $new_instance['cats_id']  );
+		$instance = $old_instance;
+		$instance['cat_posts_title'] = strip_tags( $new_instance['cat_posts_title'] );
+		$instance['no_of_posts'] = strip_tags( $new_instance['no_of_posts'] );
+		$instance['custom_slider'] =  $new_instance['custom_slider'] ;
+		
+		$instance['cats_id'] = implode(',' , $new_instance['cats_id']  );
 
 		return $instance;
 	}
@@ -109,7 +110,7 @@ class tie_slider extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults );
 		
 		$categories_obj = get_categories();
-		$categories 	= array();
+		$categories = array();
 
 		foreach ($categories_obj as $pn_cat) {
 			$categories[$pn_cat->cat_ID] = $pn_cat->cat_name;

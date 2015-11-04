@@ -31,6 +31,7 @@
 				'compare'	=> '='
 			)
 		))); 
+		
  ?>
 		<section class="cat-box video-box tie-cat-<?php echo $cat_id ?> <?php echo $lightbox ?> clear">
 		
@@ -49,10 +50,12 @@
 				while ( $cat_query->have_posts() ) : $cat_query->the_post();
 				$count ++ ;
 				
-				if( !empty( $block['lightbox']) ){
+				if( !empty($block['lightbox']) ){
 					$video_link = tie_video_embed();
 					$video_lighbox_class 	= ' single-videolighbox';
-				}else{
+				}
+
+				if( empty( $video_link ) ){
 					$video_link = get_permalink();
 					$video_lighbox_class 	= '';
 				}

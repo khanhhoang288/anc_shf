@@ -9,7 +9,7 @@ class ads125_widget extends WP_Widget {
 	function ads125_widget() {
 		$widget_ops = array( 'classname' => 'e3lan e3lan125-widget', 'description' => ''  );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'ads125-widget' );
-		parent::__construct( 'ads125-widget', THEME_NAME .' - '.__( 'Ads 125*125' , 'tie' ) , $widget_ops, $control_ops );
+		$this->WP_Widget( 'ads125-widget', THEME_NAME .' - '.__( 'Ads 125*125' , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -130,7 +130,7 @@ class ads120_90_widget extends WP_Widget {
 	function ads120_90_widget() {
 		$widget_ops = array( 'classname' => 'e3lan e3lan120_90-widget', 'description' => ''  );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'ads120_90-widget' );
-		parent::__construct( 'ads120_90-widget', THEME_NAME .' - '.__( 'Ads 120*90' , 'tie' ) , $widget_ops, $control_ops );
+		$this->WP_Widget( 'ads120_90-widget', THEME_NAME .' - '.__( 'Ads 120*90' , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -251,7 +251,7 @@ class ads120_60_widget extends WP_Widget {
 	function ads120_60_widget() {
 		$widget_ops = array( 'classname' => 'e3lan e3lan120_60-widget', 'description' => ''  );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'ads120_60-widget' );
-		parent::__construct( 'ads120_60-widget', THEME_NAME .' - '.__( 'Ads 120*60' , 'tie' ) , $widget_ops, $control_ops );
+		$this->WP_Widget( 'ads120_60-widget', THEME_NAME .' - '.__( 'Ads 120*60' , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -373,7 +373,7 @@ class ads120_600_widget extends WP_Widget {
 	function ads120_600_widget() {
 		$widget_ops = array( 'classname' => 'e3lan e3lan120_600-widget', 'description' => ''  );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'ads120_600-widget' );
-		parent::__construct( 'ads120_600-widget', THEME_NAME .' - '.__( 'Ads 120*600' , 'tie' ) , $widget_ops, $control_ops );
+		$this->WP_Widget( 'ads120_600-widget', THEME_NAME .' - '.__( 'Ads 120*600' , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -494,7 +494,7 @@ class ads120_240_widget extends WP_Widget {
 	function ads120_240_widget() {
 		$widget_ops = array( 'classname' => 'e3lan e3lan120_240-widget', 'description' => ''  );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'ads120_240-widget' );
-		parent::__construct( 'ads120_240-widget', THEME_NAME .' - '.__( 'Ads 120*240' , 'tie' ) , $widget_ops, $control_ops );
+		$this->WP_Widget( 'ads120_240-widget', THEME_NAME .' - '.__( 'Ads 120*240' , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -614,7 +614,7 @@ class ads160_600_widget extends WP_Widget {
 	function ads160_600_widget() {
 		$widget_ops = array( 'classname' => 'e3lan e3lan160_600-widget', 'description' => ''  );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'ads160_600-widget' );
-		parent::__construct( 'ads160_600-widget', THEME_NAME .' - '.__( 'Ads 160*600' , 'tie' ) , $widget_ops, $control_ops );
+		$this->WP_Widget( 'ads160_600-widget', THEME_NAME .' - '.__( 'Ads 160*600' , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -722,7 +722,7 @@ class ads300_600_widget extends WP_Widget {
 	function ads300_600_widget() {
 		$widget_ops = array( 'classname' => 'e3lan e3lan300_600-widget', 'description' => ''  );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'ads300_600-widget' );
-		parent::__construct( 'ads300_600-widget', THEME_NAME .' - '.__( 'Ads 300*600' , 'tie' ) , $widget_ops, $control_ops );
+		$this->WP_Widget( 'ads300_600-widget', THEME_NAME .' - '.__( 'Ads 300*600' , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -831,7 +831,7 @@ class ads250_250_widget extends WP_Widget {
 	function ads250_250_widget() {
 		$widget_ops = array( 'classname' => 'e3lan e3lan250_250-widget', 'description' => ''  );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'ads250_250-widget' );
-		parent::__construct( 'ads250_250-widget', THEME_NAME .' - '.__( 'Ads 250*250' ) , $widget_ops, $control_ops );
+		$this->WP_Widget( 'ads250_250-widget', THEME_NAME .' - '.__( 'Ads 250*250' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -943,7 +943,7 @@ class ads300_100_widget extends WP_Widget {
 	function ads300_100_widget() {
 		$widget_ops = array( 'classname' => 'e3lan e3lan300_100-widget', 'description' => ''  );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'ads300_100-widget' );
-		parent::__construct( 'ads300_100-widget',THEME_NAME .' - '.__( 'Ads 300*100' ) , $widget_ops, $control_ops );
+		$this->WP_Widget( 'ads300_100-widget',THEME_NAME .' - '.__( 'Ads 300*100' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -1055,7 +1055,7 @@ class ads300_250_widget extends WP_Widget {
 	function ads300_250_widget() {
 		$widget_ops = array( 'classname' => 'e3lan e3lan300_250-widget', 'description' => ''  );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'ads300_250-widget' );
-		parent::__construct( 'ads300_250-widget',THEME_NAME .' - '.__( 'Ads 300*250', 'tie' ) , $widget_ops, $control_ops );
+		$this->WP_Widget( 'ads300_250-widget',THEME_NAME .' - '.__( 'Ads 300*250', 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {

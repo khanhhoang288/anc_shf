@@ -82,7 +82,7 @@
 		 <key name="%1s-at-%2s" />
 		 <key name="page-%currentpage%-of-%totalpages%" />
 		 <key name="breaking-news" />
-		 <key name="%s-ago" />
+		 <key name="ago" />
 		 <key name="about-the-author" />
 		 <key name="home" />
 		 <key name="scroll-to-top" />

@@ -28,10 +28,9 @@ if( empty( $get_meta['tie_post_head'][0] ) || ( !empty( $get_meta['tie_post_head
 		}
 	}elseif( !empty( $get_meta['tie_post_head'][0] ) && $get_meta['tie_post_head'][0] == 'soundcloud' ){
 		if( !empty( $get_meta["tie_audio_soundcloud"][0] ) ){
-			$play = $visual = 'false';
+			$play = 'false';
 			if( !empty( $get_meta["tie_audio_soundcloud_play"][0] )) $play = 'true';
-			if( !empty( $get_meta["tie_audio_soundcloud_visual"][0] )) $visual = 'true';
-			echo tie_soundcloud($get_meta["tie_audio_soundcloud"][0] , $play, $visual );?>
+			echo tie_soundcloud($get_meta["tie_audio_soundcloud"][0] , $play );?>
 	<?php
 		}
 	}elseif( ( !empty( $get_meta['tie_post_head'][0] ) && $get_meta['tie_post_head'][0] == 'thumb' ) || ( empty( $get_meta['tie_post_head'][0] ) && tie_get_option( 'post_featured' ) ) ){

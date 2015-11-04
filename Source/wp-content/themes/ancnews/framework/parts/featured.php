@@ -56,7 +56,7 @@ if( $featured_posts_query != 'custom' ): ?>
 		while ( $featured_query->have_posts() ) : $featured_query->the_post(); $i++; $j++; ?>
 		<div class="featured-post featured-post-<?php echo $i; ?> fea-<?php echo $j; ?>">
 			<div class="featured-post-inner" style="background-image:url(<?php echo tie_thumb_src( $size ); ?>);">	
-				<div class="featured-cover"><a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a></div>
+				<div class="featured-cover"><a href="<?php the_permalink(); ?>"></a></div>
 				<div class="featured-title">
 					<?php tie_get_time() ?>
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

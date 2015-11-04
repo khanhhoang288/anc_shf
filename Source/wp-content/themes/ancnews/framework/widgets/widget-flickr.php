@@ -7,19 +7,19 @@ function tie_flickr_photos_widget() {
 class tie_flickr_photos extends WP_Widget {
 
 	function tie_flickr_photos() {
-		$widget_ops 	= array( 'classname' => 'flickr-widget' );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'flickr_photos-widget' );
-		parent::__construct( 'flickr_photos-widget', THEME_NAME .' - '.__( 'Flickr' , 'tie') , $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'flickr-widget' );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'flickr_photos-widget' );
+		$this->WP_Widget( 'flickr_photos-widget', THEME_NAME .' - '.__( 'Flickr' , 'tie') , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
 		extract( $args );
 
-		$title 			= apply_filters('widget_title', $instance['title'] );
-		$no_of_photos 	= $instance['no_of_photos'];
-		$flickr_id 		= $instance['flickr_id'];
+		$title = apply_filters('widget_title', $instance['title'] );
+		$no_of_photos = $instance['no_of_photos'];
+		$flickr_id = $instance['flickr_id'];
 		$flickr_display = $instance['flickr_display'];
-		$protocol 		= is_ssl() ? 'https' : 'http';
+		$protocol = is_ssl() ? 'https' : 'http';
 
 		echo $before_widget;
 		if ( $title )
@@ -33,10 +33,10 @@ class tie_flickr_photos extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance 					= $old_instance;
-		$instance['title'] 			= strip_tags( $new_instance['title'] );
-		$instance['no_of_photos'] 	= strip_tags( $new_instance['no_of_photos'] );
-		$instance['flickr_id'] 		= strip_tags( $new_instance['flickr_id'] );
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['no_of_photos'] = strip_tags( $new_instance['no_of_photos'] );
+		$instance['flickr_id'] = strip_tags( $new_instance['flickr_id'] );
 		$instance['flickr_display'] = strip_tags( $new_instance['flickr_display'] );
 		return $instance;
 	}

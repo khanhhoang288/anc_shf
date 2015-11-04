@@ -7,17 +7,17 @@ function tie_youtube_widget_box() {
 class tie_youtube_widget extends WP_Widget {
 
 	function tie_youtube_widget() {
-		$widget_ops 	= array( 'classname' => 'youtube-widget'  );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'youtube-widget' );
-		parent::__construct( 'youtube-widget', THEME_NAME .' - '.__( 'YouTube Channel' , 'tie' ) , $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'youtube-widget'  );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'youtube-widget' );
+		$this->WP_Widget( 'youtube-widget', THEME_NAME .' - '.__( 'YouTube Channel' , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
 		extract( $args );
 
-		$title 		= apply_filters('widget_title', $instance['title'] );
-		$page_url 	= $instance['page_url'];
-		$protocol 	= is_ssl() ? 'https' : 'http';
+		$title = apply_filters('widget_title', $instance['title'] );
+		$page_url = $instance['page_url'];
+		$protocol = is_ssl() ? 'https' : 'http';
 
 		echo $before_widget;
 		if ( $title )
@@ -31,9 +31,9 @@ class tie_youtube_widget extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance 				= $old_instance;
-		$instance['title'] 		= strip_tags( $new_instance['title'] );
-		$instance['page_url'] 	= strip_tags( $new_instance['page_url'] );
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['page_url'] = strip_tags( $new_instance['page_url'] );
 		return $instance;
 	}
 

@@ -7,7 +7,7 @@ function tie_Author_widget_box(){
 class tie_author_widget extends WP_Widget {
 	function tie_author_widget() {
 		$widget_ops = array( 'classname' => 'widget_author' );
-		parent::__construct( 'author_widget',THEME_NAME .' - '.__( 'Post Author' , 'tie' ) , $widget_ops );
+		$this->WP_Widget( 'author_widget',THEME_NAME .' - '.__( 'Post Author' , 'tie' ) , $widget_ops );
 	}
 	function widget( $args, $instance ) {
 		extract( $args );
@@ -31,7 +31,7 @@ class tie_author_widget extends WP_Widget {
 	
 	
 	function update( $new_instance, $old_instance ) {
-		$instance 			= $old_instance;
+		$instance = $old_instance;
 		$instance['avatar'] = strip_tags( $new_instance['avatar'] );
 		$instance['social'] = strip_tags( $new_instance['social'] );
 		return $instance;
@@ -40,7 +40,9 @@ class tie_author_widget extends WP_Widget {
 	function form( $instance ) {
 		$defaults = array( 'avatar' => 'true' , 'social' => 'true' );
 		$instance = wp_parse_args( (array) $instance, $defaults );
+		
 		?>
+		
 		<p><em style="color:red;"><?php _e( 'This Widget appears in single post only.' , 'tie') ?></em></p>
 		
 		<p>
@@ -68,7 +70,7 @@ function Author_post_widget_box(){
 class author_post_widget extends WP_Widget {
 	function author_post_widget() {
 		$widget_ops = array( 'classname' => 'widget_author_posts'  );
-		parent::__construct( 'author_post_widget', THEME_NAME .' - '.__( "Posts By Post's Author" , 'tie' ) , $widget_ops );
+		$this->WP_Widget( 'author_post_widget', THEME_NAME .' - '.__( "Posts By Post's Author" , 'tie' ) , $widget_ops );
 	}
 	function widget( $args, $instance ) {
 		global $post;
@@ -76,12 +78,12 @@ class author_post_widget extends WP_Widget {
 		wp_reset_query();
 		if ( is_single() ) :
 		
-			$no_of_posts 	= $instance['no_of_posts'];
-			$see_all 		= $instance['see_all'];
+			$no_of_posts = $instance['no_of_posts'];
+			$see_all = $instance['see_all'];
 			
-			$authorID 		= get_the_author_meta( 'ID' );
-			$args 			= array('author' => $authorID , 'post__not_in' => array($post->ID), 'posts_per_page'=> $no_of_posts, 'no_found_rows' => 1 );
-			$my_query 		= new wp_query( $args );
+			$authorID = get_the_author_meta( 'ID' );
+			$args = array('author' => $authorID , 'post__not_in' => array($post->ID), 'posts_per_page'=> $no_of_posts, 'no_found_rows' => 1 );
+			$my_query = new wp_query( $args );
 		if( $my_query->have_posts() ) :
 			echo $before_widget; 
 				echo $before_title;
@@ -105,10 +107,10 @@ class author_post_widget extends WP_Widget {
 	}
 	
 	function update( $new_instance, $old_instance ) {
-		$instance 					= $old_instance;
-		$instance['title'] 			= ' ';
-		$instance['no_of_posts'] 	= strip_tags( $new_instance['no_of_posts'] );
-		$instance['see_all'] 		= strip_tags( $new_instance['see_all'] );
+		$instance = $old_instance;
+		$instance['title'] = ' ';
+		$instance['no_of_posts'] = strip_tags( $new_instance['no_of_posts'] );
+		$instance['see_all'] = strip_tags( $new_instance['see_all'] );
 		return $instance;
 	}
 

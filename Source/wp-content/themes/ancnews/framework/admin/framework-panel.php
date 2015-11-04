@@ -26,6 +26,19 @@ function tie_save_settings ( $data , $refresh = 0 ) {
 		if( isset( $data[$option] )){
 			array_walk_recursive( $data[$option] , 'tie_clean_options');
 			update_option( $option ,  $data[$option] );
+			
+			if(  function_exists('icl_register_string') && $option == 'tie_home_cats'){
+				foreach( $data[$option] as $item ){
+					if( !empty($item['boxid']) )
+						icl_register_string( THEME_NAME , $item['boxid'], $item['title'] );
+
+					if( !empty($item['type']) && $item['type'] == 'ads' && !empty($item['boxid']) )
+						icl_register_string( THEME_NAME , $item['boxid'], $item['text'] );
+				}
+			}
+		}
+		elseif( !isset( $data[$option] ) && $option != 'tie_options' ){
+			delete_option($option);
 		}		
 	}
 
@@ -65,13 +78,13 @@ function tie_add_admin() {
 	$icon = get_template_directory_uri().'/framework/admin/images/tie.png';
 	add_menu_page( THEME_NAME , THEME_NAME ,'switch_themes', 'panel' , 'tie_panel_options', $icon  );
 	$theme_page = add_submenu_page('panel', __( 'Theme Settings', 'tie' ), __( 'Theme Settings', 'tie' ) ,'switch_themes', 'panel' , 'tie_panel_options');
-	// add_submenu_page('panel',  __( 'Import Demo Data', 'tie' ), __( 'Import Demo Data', 'tie' ),'switch_themes', 'tie_demo_installer' , 'tie_demo_installer');
-	// add_submenu_page('panel', __( 'Documentation', 'tie' ), __( 'Documentation', 'tie' ) ,'switch_themes', 'docs' , 'redirect_docs');
-	// add_submenu_page('panel', __( 'Support', 'tie' ), __( 'Support', 'tie' ) ,'switch_themes', 'support' , 'tie_get_support');
+	add_submenu_page('panel',  __( 'Import Demo Data', 'tie' ), __( 'Import Demo Data', 'tie' ),'switch_themes', 'tie_demo_installer' , 'tie_demo_installer');
+	add_submenu_page('panel', __( 'Documentation', 'tie' ), __( 'Documentation', 'tie' ) ,'switch_themes', 'docs' , 'redirect_docs');
+	add_submenu_page('panel', __( 'Support', 'tie' ), __( 'Support', 'tie' ) ,'switch_themes', 'support' , 'tie_get_support');
 
 
 	function tie_get_support(){
-		echo "<script type='text/javascript'>window.location='".SUPPORT_URL."';</script>";
+		echo "<script type='text/javascript'>window.location='http://support.tielabs.com/';</script>";
 	}
 	
 	function redirect_docs(){
@@ -455,7 +468,7 @@ $save='
 				<h3><?php _e( 'Header Top area Settings', 'tie' ) ?></h3>
 				<?php
 					tie_options(
-						array(	"name"	=> __( 'Top menu', 'tie' ),
+						array(	"name"	=> __( 'Hide Top menu', 'tie' ),
 								"id"	=> "top_menu",
 								"type"	=> "checkbox"));
 
@@ -492,7 +505,7 @@ $save='
 				<h3><?php _e( 'Main Nav Settings', 'tie' ) ?></h3>
 				<?php
 					tie_options(
-						array(	"name"	=> __( 'Main Nav', 'tie' ),
+						array(	"name"	=> __( 'Hide Main Nav', 'tie' ),
 								"id"	=> "main_nav",
 								"type"	=> "checkbox"));	
 																			
@@ -545,7 +558,7 @@ $save='
 								"type"	=> "checkbox" ));
 								
 					tie_options(
-						array(	"name"	=> __( 'Enable Mobile Menu Items Icons', 'tie' ),
+						array(	"name"	=> __( 'Hide the Mobile Menu Items Icons', 'tie' ),
 								"id"	=> "mobile_menu_hide_icons",
 								"type"	=> "checkbox" ));
 		
@@ -671,7 +684,7 @@ $save='
 							
 				<?php
 					tie_options(
-						array(	"name"	=> __( 'RSS Icon', 'tie' ),
+						array(	"name"	=> __( 'Hide RSS Icon', 'tie' ),
 								"id"	=> "rss_icon",
 								"type"	=> "checkbox"));
 								
@@ -2251,11 +2264,6 @@ $save='
 					tie_options(				
 						array(	"name"	=> __( 'Lazy Load For Images', 'tie' ),
 								"id"	=> "lazy_load",
-								"type"	=> "checkbox" ));
-
-					tie_options(				
-						array(	"name"	=> __( 'Smoth Scroll', 'tie' ),
-								"id"	=> "smoth_scroll",
 								"type"	=> "checkbox" ));
 				?>
 			</div>	

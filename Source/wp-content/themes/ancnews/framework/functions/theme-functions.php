@@ -223,7 +223,7 @@ function tie_get_social( $newtab = true, $colored = true, $tooltip='ttip' ){
 		<div class="social-icons<?php echo $colored ?>">
 		<?php
 		// RSS
-		if ( tie_get_option('rss_icon') ){
+		if ( !tie_get_option('rss_icon') ){
 		if ( tie_get_option('rss_url') != '' && tie_get_option('rss_url') != ' ' ) $rss = tie_get_option('rss_url') ;
 		else $rss = get_bloginfo('rss2_url'); 
 			?><a class="<?php echo $tooltip; ?>" title="Rss" href="<?php echo esc_url( $rss ) ; ?>" <?php echo $newtab; ?>><i class="fa fa-rss"></i></a><?php 
@@ -432,7 +432,7 @@ function tie_excerpt_home(){
 # Read More Functions
 /*-----------------------------------------------------------------------------------*/
 function tie_remove_excerpt( $more ) {
-	return ' &hellip;';
+	return ' ...';
 }
 add_filter('excerpt_more', 'tie_remove_excerpt');
 
@@ -1121,15 +1121,10 @@ function tie_google_maps($src , $width = 610 , $height = 440 , $class="") {
 /*-----------------------------------------------------------------------------------*/
 # Soundcloud Function
 /*-----------------------------------------------------------------------------------*/
-function tie_soundcloud($url, $autoplay = 'false', $visual = 'false' ) {
+function tie_soundcloud($url , $autoplay = 'false' ) {
 	global $post;
 	
 	$color = $tie_post_color = $cat_id = '';
-
-	$height = '166';
-	if(	$visual != 'false' ){
-		$height = '350'; 
-	}
 
 	if( is_singular() ){
 		$get_meta = get_post_custom($post->ID);
@@ -1163,7 +1158,7 @@ function tie_soundcloud($url, $autoplay = 'false', $visual = 'false' ) {
 		$color = '&amp;color='.$tie_post_color;
 	}
 	
-	return '<iframe width="100%" height="'.$height.'" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url='.$url.$color.'&amp;auto_play='.$autoplay.'&amp;show_artwork=true&amp;visual='.$visual.'"></iframe>';
+	return '<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url='.$url.$color.'&amp;auto_play='.$autoplay.'&amp;show_artwork=true"></iframe>';
 }			
 
 /*-----------------------------------------------------------------------------------*/
@@ -1189,8 +1184,8 @@ function tie_login_form( $login_only  = 0 ) {
 	<?php else: ?>
 		<div id="login-form">
 			<form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ) ?>" method="post">
-				<p id="log-username"><input type="text" name="log" id="log" title="<?php _eti( 'Username' ) ?>" value="<?php _eti( 'Username' ) ?>" onfocus="if (this.value == '<?php _eti( 'Username' ) ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php _eti( 'Username' ) ?>';}"  size="33" /></p>
-				<p id="log-pass"><input type="password" name="pwd" id="pwd" title="<?php _eti( 'Password' ) ?>" value="<?php _eti( 'Password' ) ?>" onfocus="if (this.value == '<?php _eti( 'Password' ) ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php _eti( 'Password' ) ?>';}" size="33" /></p>
+				<p id="log-username"><input type="text" name="log" id="log" value="<?php _eti( 'Username' ) ?>" onfocus="if (this.value == '<?php _eti( 'Username' ) ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php _eti( 'Username' ) ?>';}"  size="33" /></p>
+				<p id="log-pass"><input type="password" name="pwd" id="pwd" value="<?php _eti( 'Password' ) ?>" onfocus="if (this.value == '<?php _eti( 'Password' ) ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php _eti( 'Password' ) ?>';}" size="33" /></p>
 				<input type="submit" name="submit" value="<?php _eti( 'Log in' ) ?>" class="login-button" />
 				<label for="rememberme"><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> <?php _eti( 'Remember Me' ) ?></label>
 				<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
@@ -1233,8 +1228,8 @@ function tie_og_data() {
 		}
 	}
 
-$og_title 		= strip_shortcodes(strip_tags(( get_the_title() ))) .' - '. get_bloginfo('name') ;
-$og_description = strip_tags(strip_shortcodes( apply_filters('tie_exclude_content', $post->post_content) ) );
+$og_title 		= strip_shortcodes(strip_tags(( get_the_title() ))) ;
+$og_description = htmlspecialchars(strip_tags(strip_shortcodes($post->post_content)));
 $og_type 		= 'article';
 
 if( is_home() || is_front_page() ){
@@ -1246,7 +1241,7 @@ if( is_home() || is_front_page() ){
 ?>
 <meta property="og:title" content="<?php echo $og_title ?>"/>
 <meta property="og:type" content="<?php echo $og_type ?>"/>
-<meta property="og:description" content="<?php echo wp_html_excerpt( $og_description , 100 ) ?>"/>
+<meta property="og:description" content="<?php echo tie_content_limit( $og_description , 100 ) ?>"/>
 <meta property="og:url" content="<?php the_permalink(); ?>"/>
 <meta property="og:site_name" content="<?php echo get_bloginfo( 'name' ) ?>"/>
 <?php
@@ -1271,32 +1266,50 @@ add_filter('widget_title', 'tie_widget_title');
 /*-----------------------------------------------------------------------------------*/
 function tie_get_time( $return = false ){
 	global $post ;
-
 	if( tie_get_option( 'time_format' ) == 'none' ){
 		return false;
-
 	}elseif( tie_get_option( 'time_format' ) == 'modern' ){	
-
-		$time_now  = current_time('timestamp');
-		$post_time = get_the_time('U') ;
-
-		if ( $post_time > $time_now - ( 60 * 60 * 24 * 30 ) ) {
-			$since = sprintf( __ti( '%s ago' ), human_time_diff( $post_time, $time_now ) );
-		} else {
-			$since = get_the_time(get_option('date_format'));
+		$to = current_time('timestamp'); //time();
+		$from = get_the_time('U') ;
+		
+		$diff = (int) abs($to - $from);
+		if ($diff <= 3600) {
+			$mins = round($diff / 60);
+			if ($mins <= 1) {
+				$mins = 1;
+			}
+			$since = sprintf(_n('%s min', '%s mins', $mins), $mins) .' '. __ti( 'ago' );
 		}
-
+		else if (($diff <= 86400) && ($diff > 3600)) {
+			$hours = round($diff / 3600);
+			if ($hours <= 1) {
+				$hours = 1;
+			}
+			$since = sprintf(_n('%s hour', '%s hours', $hours), $hours) .' '. __ti( 'ago' );
+		}
+		elseif ($diff >= 86400) {
+			$days = round($diff / 86400);
+			if ($days <= 1) {
+				$days = 1;
+				$since = sprintf(_n('%s day', '%s days', $days), $days) .' '. __ti( 'ago' );
+			}
+			elseif( $days > 29){
+				$since = get_the_time(get_option('date_format'));
+			}
+			else{
+				$since = sprintf(_n('%s day', '%s days', $days), $days) .' '. __ti( 'ago' );
+			}
+		}
 	}else{
 		$since = get_the_time(get_option('date_format'));
 	}
 	
 	$post_time = '<span class="tie-date"><i class="fa fa-clock-o"></i>'.$since.'</span>';
 
-	if( $return ){
+	if( $return )
 		return $post_time;
-	}else{
+	else
 		echo $post_time;
-	}
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1399,40 +1412,29 @@ function tie_language_selector_flags(){
 
 
 /*-----------------------------------------------------------------------------------*/
-# Modify excerpts 
+# Show dropcap and highlight shortcodes in excerpts 
 /*-----------------------------------------------------------------------------------*/
-function tie_modify_post_excerpt($text = '') {
+function tie_remove_shortcodes($text = '') {
 	$raw_excerpt = $text;
 	if ( '' == $text ) {
 		$text = get_the_content('');
 
-		$text = apply_filters('tie_exclude_content', $text);
+		$text = preg_replace( '/(\[(padding)\s?.*?\])/' , '' , $text);
+		$text = str_replace( array ( '[/padding]', '[dropcap]', '[/dropcap]', '[highlight]', '[/highlight]', '[tie_slideshow]', '[/tie_slideshow]', '[tie_slide]', '[/tie_slide]') ,"",$text);
 
 		$text = strip_shortcodes( $text );
+
 		$text = apply_filters('the_content', $text);
 		$text = str_replace(']]>', ']]>', $text);
-
 		$excerpt_length = apply_filters('excerpt_length', 55);
-		$excerpt_more 	= apply_filters('excerpt_more', ' ' . '[&hellip;]');
-		$text 			= wp_trim_words( $text, $excerpt_length, $excerpt_more );
+		$excerpt_more = apply_filters('excerpt_more', ' ' . '[&hellip;]');
+		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
 	}
 	return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
 }
-add_filter( 'get_the_excerpt', 'tie_modify_post_excerpt' );
+add_filter( 'get_the_excerpt', 'tie_remove_shortcodes', 1);
 	
-
-/*-----------------------------------------------------------------------------------*/
-# Remove Shortcodes code and Keep the content 
-/*-----------------------------------------------------------------------------------*/
-function tie_remove_shortcodes($text = '') {
-	$text = preg_replace( '/(\[(padding)\s?.*?\])/' , '' , $text);
-	$text = str_replace( array ( '[/padding]', '[dropcap]', '[/dropcap]', '[highlight]', '[/highlight]', '[tie_slideshow]', '[/tie_slideshow]', '[tie_slide]', '[/tie_slide]') ,"",$text);
-	return $text;
-}
-add_filter( 'tie_exclude_content', 'tie_remove_shortcodes' );
-add_filter( 'taqyeem_exclude_content', 'tie_remove_shortcodes' );
-
-
+	
 /*-----------------------------------------------------------------------------------*/
 # WP 3.6.0
 /*-----------------------------------------------------------------------------------*/
@@ -1500,7 +1502,7 @@ function tie_theme_register_required_plugins() {
             'slug'               => 'instagramy',
             'source'             => get_template_directory_uri() . '/framework/plugins/instagramy.zip',
             'required'           => true,
-            'version'            => '1.1.2',
+            'version'            => '',
             'force_activation'   => false,
             'force_deactivation' => true,
             'external_url'       => '',
@@ -1511,7 +1513,7 @@ function tie_theme_register_required_plugins() {
             'slug'               => 'taqyeem',
             'source'             => get_template_directory_uri() . '/framework/plugins/taqyeem.zip',
             'required'           => true,
-            'version'            => '2.1.5',
+            'version'            => '',
             'force_activation'   => false,
             'force_deactivation' => true,
             'external_url'       => '',
@@ -1522,7 +1524,7 @@ function tie_theme_register_required_plugins() {
             'slug'               => 'taqyeem-buttons',
             'source'             => get_template_directory_uri() . '/framework/plugins/taqyeem-buttons.zip',
             'required'           => true,
-            'version'            => '1.0.3',
+            'version'            => '',
             'force_activation'   => false,
             'force_deactivation' => true,
             'external_url'       => '',
@@ -1533,7 +1535,7 @@ function tie_theme_register_required_plugins() {
             'slug'               => 'taqyeem-predefined',
             'source'             => get_template_directory_uri() . '/framework/plugins/taqyeem-predefined.zip',
             'required'           => true,
-            'version'            => '1.0.1',
+            'version'            => '',
             'force_activation'   => false,
             'force_deactivation' => true,
             'external_url'       => '',
@@ -1561,14 +1563,13 @@ function tie_theme_register_required_plugins() {
 
 
     $config = array(
-    	'id'           => 'tie'.THEME_NAME,			// Unique ID for hashing notices for multiple instances of TGMPA.
-        'default_path' => '',						// Default absolute path to pre-packaged plugins.
-        //'menu'       => 'tie-install-plugins',	// Menu slug.
-        'has_notices'  => true,						// Show admin notices or not.
-        'dismissable'  => true,						// If false, a user cannot dismiss the nag message.
-        'dismiss_msg'  => '',						// If 'dismissable' is false, this message will be output at top of nag.
-        'is_automatic' => false,					// Automatically activate plugins after installation or not.
-        'message'      => '',						// Message to output right before the plugins table.
+        'default_path' => '',                      // Default absolute path to pre-packaged plugins.
+        //'menu'       => 'tie-install-plugins', // Menu slug.
+        'has_notices'  => true,                    // Show admin notices or not.
+        'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
+        'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
+        'is_automatic' => false,                   // Automatically activate plugins after installation or not.
+        'message'      => '',                      // Message to output right before the plugins table.
 		'strings'      => array(
 			'page_title'                      => __( 'Install Required Plugins', 'tie' ),
 			'menu_title'                      => __( 'Install Plugins', 'tie' ),
@@ -1704,10 +1705,10 @@ function tie_remove_query_strings_2( $src ){
 }
 	
 if ( !is_admin() ) {
-	add_filter( 'script_loader_src', 	'tie_remove_query_strings_1', 15, 1 );
-	add_filter( 'style_loader_src', 	'tie_remove_query_strings_1', 15, 1 );
-	add_filter( 'script_loader_src', 	'tie_remove_query_strings_2', 15, 1 );
-	add_filter( 'style_loader_src', 	'tie_remove_query_strings_2', 15, 1 );
+	add_filter( 'script_loader_src', 'tie_remove_query_strings_1', 15, 1 );
+	add_filter( 'style_loader_src', 'tie_remove_query_strings_1', 15, 1 );
+	add_filter( 'script_loader_src', 'tie_remove_query_strings_2', 15, 1 );
+	add_filter( 'style_loader_src', 'tie_remove_query_strings_2', 15, 1 );
 }
 
 

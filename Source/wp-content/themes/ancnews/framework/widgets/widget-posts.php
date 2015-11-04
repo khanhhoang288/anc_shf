@@ -6,18 +6,18 @@ function tie_posts_list_widget() {
 class tie_posts_list extends WP_Widget {
 
 	function tie_posts_list() {
-		$widget_ops 	= array( 'classname' => 'posts-list'  );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'posts-list-widget' );
-		parent::__construct( 'posts-list-widget',THEME_NAME .' - '. __( 'Posts list' , 'tie'), $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'posts-list'  );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'posts-list-widget' );
+		$this->WP_Widget( 'posts-list-widget',THEME_NAME .' - '. __( 'Posts list' , 'tie'), $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
 		extract( $args );
 
-		$title 			= apply_filters('widget_title', $instance['title'] );
-		$no_of_posts 	= $instance['no_of_posts'];
-		$posts_order 	= $instance['posts_order'];
-		$thumb 			= $instance['thumb'];
+		$title = apply_filters('widget_title', $instance['title'] );
+		$no_of_posts = $instance['no_of_posts'];
+		$posts_order = $instance['posts_order'];
+		$thumb = $instance['thumb'];
 
 		echo $before_widget;
 			echo $before_title;
@@ -46,11 +46,11 @@ class tie_posts_list extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance 					= $old_instance;
-		$instance['title'] 			= strip_tags( $new_instance['title'] );
-		$instance['no_of_posts'] 	= strip_tags( $new_instance['no_of_posts'] );
-		$instance['posts_order'] 	= strip_tags( $new_instance['posts_order'] );
-		$instance['thumb'] 			= strip_tags( $new_instance['thumb'] );
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['no_of_posts'] = strip_tags( $new_instance['no_of_posts'] );
+		$instance['posts_order'] = strip_tags( $new_instance['posts_order'] );
+		$instance['thumb'] = strip_tags( $new_instance['thumb'] );
 		return $instance;
 	}
 

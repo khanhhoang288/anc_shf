@@ -6,27 +6,24 @@ function tie_social_widget_box() {
 class tie_social_widget extends WP_Widget {
 
 	function tie_social_widget() {
-		$widget_ops 	= array( 'classname' => 'social-icons-widget' );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'social' );
-		parent::__construct( 'social', THEME_NAME .' - '.__( 'Social Icons' , 'tie') , $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'social-icons-widget' );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'social' );
+		$this->WP_Widget( 'social', THEME_NAME .' - '.__( 'Social Icons' , 'tie') , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
 		extract( $args );
 
-		$title 		= apply_filters('widget_title', $instance['title'] );
-		$tran_bg 	= $instance['tran_bg'];
-		$newtap 	= '';
-		$colored 	= true;
+		$title = apply_filters('widget_title', $instance['title'] );
+		$tran_bg = $instance['tran_bg'];
+		
+		if( !empty($instance['newtap']) ) $newtap = $instance['newtap'];
+		else $newtap = '';
 
-		if( !empty($instance['newtap']) ){
-			$newtap = $instance['newtap'];
-		}
+		if( !empty($instance['gray']) ) $colored = false;
+		else $colored = true ;
 
-		if( !empty($instance['gray']) ){
-			$colored = false;
-		}
-
+			
 		if( !$tran_bg ){
 			echo $before_widget;
 			echo $before_title;
@@ -43,11 +40,11 @@ class tie_social_widget extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance 				= $old_instance;
-		$instance['title'] 		= strip_tags( $new_instance['title'] );
-		$instance['tran_bg'] 	= strip_tags( $new_instance['tran_bg'] );
-		$instance['newtap'] 	= strip_tags( $new_instance['newtap'] );
-		$instance['gray'] 		= strip_tags( $new_instance['gray'] );
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['tran_bg'] = strip_tags( $new_instance['tran_bg'] );
+		$instance['newtap'] = strip_tags( $new_instance['newtap'] );
+		$instance['gray'] = strip_tags( $new_instance['gray'] );
 		return $instance;
 	}
 

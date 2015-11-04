@@ -7,16 +7,16 @@ function tie_google_widget_box() {
 class tie_google_widget extends WP_Widget {
 
 	function tie_google_widget() {
-		$widget_ops 	= array( 'classname' => 'google-widget'  );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'google-widget' );
-		parent::__construct( 'google-widget', THEME_NAME .' - '. __( 'Google+ page' , 'tie'), $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'google-widget'  );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'google-widget' );
+		$this->WP_Widget( 'google-widget', THEME_NAME .' - '. __( 'Google+ page' , 'tie'), $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
 		extract( $args );
 
-		$title 		= apply_filters('widget_title', $instance['title'] );
-		$page_url 	= $instance['page_url'];
+		$title = apply_filters('widget_title', $instance['title'] );
+		$page_url = $instance['page_url'];
 
 		echo $before_widget;
 		if ( $title )
@@ -43,9 +43,9 @@ class tie_google_widget extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance 				= $old_instance;
-		$instance['title'] 		= strip_tags( $new_instance['title'] );
-		$instance['page_url'] 	= strip_tags( $new_instance['page_url'] );
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['page_url'] = strip_tags( $new_instance['page_url'] );
 		return $instance;
 	}
 

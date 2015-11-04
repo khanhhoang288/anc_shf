@@ -7,9 +7,9 @@ function tie_latest_tweet_widget() {
 class tie_Latest_Tweets extends WP_Widget {
 
 	function tie_Latest_Tweets() {
-		$widget_ops 	= array( 'classname' => 'twitter-widget'  );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'latest_tweets_widget' );
-		parent::__construct( 'latest_tweets_widget', THEME_NAME .' - '.__( 'Twitter' , 'tie') , $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'twitter-widget'  );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'latest_tweets_widget' );
+		$this->WP_Widget( 'latest_tweets_widget', THEME_NAME .' - '.__( 'Twitter' , 'tie') , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -25,8 +25,8 @@ class tie_Latest_Tweets extends WP_Widget {
 
 	if( !empty($twitter_username) && !empty($consumer_key) && !empty($consumer_secret) ){
 
-	    $token 			= get_option( 'tie_TwitterToken'.$widget_id );
-		$twitter_data 	= get_transient( 'list_tweets'.$widget_id );
+	    $token = get_option( 'tie_TwitterToken'.$widget_id );
+		$twitter_data = get_transient( 'list_tweets'.$widget_id );
 
 		if( empty( $twitter_data ) ){
 		 
@@ -37,19 +37,20 @@ class tie_Latest_Tweets extends WP_Widget {
 		 
 				// http post arguments
 				$args = array(
-					'method' 		=> 'POST',
-					'httpversion' 	=> '1.1',
-					'blocking' 		=> true,
-					'headers' 		=> array(
-							'Authorization' => 'Basic ' . $toSend,
-							'Content-Type' 	=> 'application/x-www-form-urlencoded;charset=UTF-8'
+					'method' => 'POST',
+					'httpversion' => '1.1',
+					'blocking' => true,
+					'headers' => array(
+						'Authorization' => 'Basic ' . $toSend,
+						'Content-Type' => 'application/x-www-form-urlencoded;charset=UTF-8'
 					),
 					'body' => array( 'grant_type' => 'client_credentials' )
 				);
 		 
 				add_filter('https_ssl_verify', '__return_false');
-				$response 	= wp_remote_post('https://api.twitter.com/oauth2/token', $args);
-				$keys 		= json_decode(wp_remote_retrieve_body($response));
+				$response = wp_remote_post('https://api.twitter.com/oauth2/token', $args);
+		 
+				$keys = json_decode(wp_remote_retrieve_body($response));
 		 
 				if($keys) {
 					// saving token to wp_options table
@@ -60,16 +61,16 @@ class tie_Latest_Tweets extends WP_Widget {
 			
 			// we have bearer token wether we obtained it from API or from options
 			$args = array(
-				'httpversion' 	=> '1.1',
-				'blocking' 		=> true,
-				'headers' 		=> array(
-						'Authorization' => "Bearer $token"
+				'httpversion' => '1.1',
+				'blocking' => true,
+				'headers' => array(
+					'Authorization' => "Bearer $token"
 				)
 			);
 		 
 			add_filter('https_ssl_verify', '__return_false');
-			$api_url 	= "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=$twitter_username&count=$no_of_tweets";
-			$response 	= wp_remote_get($api_url, $args);
+			$api_url = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=$twitter_username&count=$no_of_tweets";
+			$response = wp_remote_get($api_url, $args);
 
 			if (!is_wp_error($response)) {
 				$twitter_data = json_decode(wp_remote_retrieve_body($response));
@@ -85,30 +86,29 @@ class tie_Latest_Tweets extends WP_Widget {
 
 			if( is_array($twitter_data)){
             		$i=0;
-					$hyperlinks 	= true;
-					$twitter_users 	= true;
-					$update 		= true;
+					$hyperlinks = true;
+					$twitter_users = true;
+					$update = true;
 					echo '
 <div class="twitter-widget-content" >
 <ul class="twitter_update_list">';
 		            foreach($twitter_data as $item){
-		                    $msg 		= $item->text;
-		                    $permalink 	= 'http://twitter.com/#!/'. $twitter_username .'/status/'. $item->id_str;
-		                    $link 		= $permalink;
+		                    $msg = $item->text;
+		                    $permalink = 'http://twitter.com/#!/'. $twitter_username .'/status/'. $item->id_str;
+		                    $link = $permalink;
 		                     echo '
 <li class="twitter-item">
 	<i class="fa fa-twitter"></i>';
-		                      if ($hyperlinks){    $msg = $this->hyperlinks($msg); }
-		                      if ($twitter_users){ $msg = $this->twitter_users($msg); }
+		                      if ($hyperlinks) {    $msg = $this->hyperlinks($msg); }
+		                      if ($twitter_users)  { $msg = $this->twitter_users($msg); }
 		                      echo $msg;
 		                    if($update) {
 		                      $time = strtotime($item->created_at);
-		                      if ( ( abs( time() - $time) ) < 86400 ){
-		                        $h_time = sprintf( __ti( '%s ago' ), human_time_diff( $time ) );
-
-		                      }else{
+		                      if ( ( abs( time() - $time) ) < 86400 )
+		                        $h_time = human_time_diff( $time ) . '  ' . __ti('ago');
+		                      else
 		                        $h_time = date( 'Y/m/d' , $time);
-		                      }
+		                      
 							  echo '<small class="twitter-timestamp"><abbr title="' . date( 'Y/m/d H:i:s' , $time ) . '">' . $h_time . '</abbr></small>';
 		                     }
 		                    echo '</li>
@@ -141,14 +141,14 @@ class tie_Latest_Tweets extends WP_Widget {
 		$id = explode("-", $this->get_field_id("widget_id"));
 		$widget_id =  $id[1] . "-" . $id[2];
 
-		$instance 						= $old_instance;
-		$instance['title'] 				= strip_tags( $new_instance['title'] );
-		$instance['no_of_tweets'] 		= strip_tags( $new_instance['no_of_tweets'] );
-		$instance['username'] 			= strip_tags( $new_instance['username'] );
-		$instance['consumer_key'] 		= strip_tags( $new_instance['consumer_key'] );
-		$instance['consumer_secret'] 	= strip_tags( $new_instance['consumer_secret'] );
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['no_of_tweets'] = strip_tags( $new_instance['no_of_tweets'] );
+		$instance['username'] = strip_tags( $new_instance['username'] );
+		$instance['consumer_key'] = strip_tags( $new_instance['consumer_key'] );
+		$instance['consumer_secret'] = strip_tags( $new_instance['consumer_secret'] );
 		
-		delete_option(    'tie_TwitterToken'.$widget_id );
+		delete_option( 'tie_TwitterToken'.$widget_id );
 		delete_transient( 'list_tweets'.$widget_id );
 		return $instance;
 	}

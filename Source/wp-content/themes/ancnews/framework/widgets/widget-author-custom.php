@@ -6,23 +6,22 @@ function tie_author_custom_widget() {
 class tie_author_custom extends WP_Widget {
 
 	function tie_author_custom() {
-		$widget_ops 	= array( 'classname' => 'author-custom'  );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'author-custom-widget' );
-		parent::__construct( 'author-custom-widget', THEME_NAME .' - '.__( "Custom Author Content" , 'tie' ) , $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'author-custom'  );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'author-custom-widget' );
+		$this->WP_Widget( 'author-custom-widget', THEME_NAME .' - '.__( "Custom Author Content" , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
 		extract( $args );
 
-		$title 		= apply_filters('widget_title', $instance['title'] );
-		$tran_bg 	= $instance['tran_bg'];
-		$center 	= $instance['center'];
+		$title = apply_filters('widget_title', $instance['title'] );
+		$tran_bg = $instance['tran_bg'];
+		$center = $instance['center'];
 		
-		if ($center){
+		if ($center)
 			$center = 'style="text-align:center;"';
-		}else{
+		else
 			$center = '';
-		}
 
 		if ( get_the_author_meta( 'author_widget_content' ) && is_single() ) {
 			$text_code = get_the_author_meta( 'author_widget_content' );
@@ -47,9 +46,9 @@ class tie_author_custom extends WP_Widget {
 
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
-		$instance['title'] 		= strip_tags( $new_instance['title'] );
-		$instance['tran_bg'] 	= strip_tags( $new_instance['tran_bg'] );
-		$instance['center'] 	= strip_tags( $new_instance['center'] );
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['tran_bg'] = strip_tags( $new_instance['tran_bg'] );
+		$instance['center'] = strip_tags( $new_instance['center'] );
 		return $instance;
 	}
 
@@ -70,6 +69,9 @@ class tie_author_custom extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'center' ); ?>"><?php _e( 'Center content:' , 'tie') ?></label>
 			<input id="<?php echo $this->get_field_id( 'center' ); ?>" name="<?php echo $this->get_field_name( 'center' ); ?>" value="true" <?php if( !empty($instance['center']) ) echo 'checked="checked"'; ?> type="checkbox" />
 		</p>
+		
+
+
 	<?php
 	}
 }

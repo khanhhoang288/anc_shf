@@ -7,7 +7,7 @@ function tie_widget_tabs_box(){
 class tie_widget_tabs extends WP_Widget {
 	function tie_widget_tabs() {
 		$widget_ops = array( 'description' => 'Most Popular, Recent, Comments, Tags'  );
-		parent::__construct( 'widget_tabs', THEME_NAME .' - '.__( 'Tabs' , 'tie') , $widget_ops );
+		$this->WP_Widget( 'widget_tabs', THEME_NAME .' - '.__( 'Tabs' , 'tie') , $widget_ops );
 	}
 	function widget( $args, $instance ) {
 
@@ -90,10 +90,10 @@ class tie_widget_tabs extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance 					= $old_instance;
-		$instance['posts_number'] 	= strip_tags( $new_instance['posts_number'] );
-		$instance['posts_order'] 	= strip_tags( $new_instance['posts_order'] );
-		$instance['tabs_order'] 	= strip_tags( $new_instance['tabs_order'] );
+		$instance = $old_instance;
+		$instance['posts_number'] = strip_tags( $new_instance['posts_number'] );
+		$instance['posts_order'] = strip_tags( $new_instance['posts_order'] );
+		$instance['tabs_order'] = strip_tags( $new_instance['tabs_order'] );
 		return $instance;
 	}
 

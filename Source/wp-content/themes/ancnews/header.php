@@ -24,7 +24,7 @@
 		<div class="search-mobile">
 			<form method="get" id="searchform-mobile" action="<?php echo home_url(); ?>/">
 				<button class="search-button" type="submit" value="<?php if( !$is_IE ) _eti( 'Search' ) ?>"><i class="fa fa-search"></i></button>	
-				<input type="text" id="s-mobile" name="s" title="<?php _eti( 'Search' ) ?>" value="<?php _eti( 'Search' ) ?>" onfocus="if (this.value == '<?php _eti( 'Search' ) ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php _eti( 'Search' ) ?>';}"  />
+				<input type="text" id="s-mobile" name="s" value="<?php _eti( 'Search' ) ?>" onfocus="if (this.value == '<?php _eti( 'Search' ) ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php _eti( 'Search' ) ?>';}"  />
 			</form>
 		</div><!-- .search-mobile /-->
 	<?php endif; ?>
@@ -33,7 +33,7 @@
 		tie_get_social( true , false , 'ttip-none' ); ?>
 	<?php endif; ?>
 	
-		<div id="mobile-menu" <?php if( !tie_get_option('mobile_menu_hide_icons') ) echo' class="mobile-hide-icons"';?>></div>
+		<div id="mobile-menu" <?php if( tie_get_option('mobile_menu_hide_icons') ) echo' class="mobile-hide-icons"';?>></div>
 	</aside><!-- #slide-out /-->
 <?php endif; ?>
 
@@ -48,7 +48,7 @@
 		<div class="inner-wrapper">
 
 		<header id="theme-header" class="theme-header<?php echo $full_width.$center_logo ?>">
-			<?php if( tie_get_option( 'top_menu' ) ): ?>
+			<?php if(!tie_get_option( 'top_menu' )): ?>
 			<div id="top-nav" class="top-nav">
 				<div class="container">
 
@@ -64,7 +64,7 @@
 					<div class="search-block">
 						<form method="get" id="searchform-header" action="<?php echo home_url(); ?>/">
 							<button class="search-button" type="submit" value="<?php if( !$is_IE ) _eti( 'Search' ) ?>"><i class="fa fa-search"></i></button>	
-							<input class="search-live" type="text" id="s-header" name="s" title="<?php _eti( 'Search' ) ?>" value="<?php _eti( 'Search' ) ?>" onfocus="if (this.value == '<?php _eti( 'Search' ) ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php _eti( 'Search' ) ?>';}"  />
+							<input class="search-live" type="text" id="s-header" name="s" value="<?php _eti( 'Search' ) ?>" onfocus="if (this.value == '<?php _eti( 'Search' ) ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php _eti( 'Search' ) ?>';}"  />
 						</form>
 					</div><!-- .search-block /-->
 	<?php endif;
@@ -185,7 +185,7 @@ jQuery(document).ready(function($) {
 		</div>	
 		<?php $stick = ''; ?>
 		<?php if( tie_get_option( 'stick_nav' ) ) $stick = ' class="fixed-enabled"' ?>
-			<?php if( tie_get_option( 'main_nav' ) ): ?>
+			<?php if(!tie_get_option( 'main_nav' )): ?>
 			<?php
 			//UberMenu Support
 			$navID = 'main-nav';

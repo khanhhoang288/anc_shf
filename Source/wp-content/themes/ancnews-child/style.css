@@ -1,7 +1,7 @@
 /*
 Theme Name: ANC News Child Theme
-Theme URI: http: 
-Description: Day la child theme cua ANC News
+Theme URI: http://anctech.net
+Description: ANC News Child Theme
 Author: ANC
 Author URI: 
 Template: ancnews
@@ -15,5 +15,5 @@ Version: 1.0
 	text-transform: uppercase;
 }
 #wrapper.wide-layout #theme-header {
-	margin-top: -15px;
+	/*margin-top: -15px;*/
 }

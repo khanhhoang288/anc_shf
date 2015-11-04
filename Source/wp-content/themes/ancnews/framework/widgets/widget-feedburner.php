@@ -6,9 +6,9 @@ function tie_feedburner_widget_box() {
 class tie_feedburner_widget extends WP_Widget {
 
 	function tie_feedburner_widget() {
-		$widget_ops 	= array( 'classname' => 'widget-feedburner' , 'description' => 'Subscribe to feedburner via email' );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'widget-feedburner' );
-		parent::__construct( 'widget-feedburner',THEME_NAME .' - '.__( 'Feedburner' , 'tie' ) , $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'widget-feedburner' , 'description' => 'Subscribe to feedburner via email' );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'widget-feedburner' );
+		$this->WP_Widget( 'widget-feedburner',THEME_NAME .' - '.__( 'Feedburner' , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -35,9 +35,9 @@ class tie_feedburner_widget extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance 				= $old_instance;
-		$instance['title'] 		= strip_tags( $new_instance['title'] );
-		$instance['text_code'] 	= $new_instance['text_code'] ;
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['text_code'] = $new_instance['text_code'] ;
 		$instance['feedburner'] = strip_tags( $new_instance['feedburner'] );
 		
 		if (function_exists('icl_register_string')) {

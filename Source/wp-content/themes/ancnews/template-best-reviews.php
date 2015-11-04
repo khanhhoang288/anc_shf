@@ -15,7 +15,7 @@ Template Name: Best Reviews
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<?php //Above Post Banner
 		if( empty( $get_meta["tie_hide_above"][0] ) ){
-			if( !empty( $get_meta["tie_banner_above"][0] ) ) echo '<div class="e3lan e3lan-post">' .do_shortcode( htmlspecialchars_decode($get_meta["tie_banner_above"][0]) ).'</div>';
+			if( !empty( $get_meta["tie_banner_above"][0] ) ) echo '<div class="e3lan e3lan-post">' .htmlspecialchars_decode($get_meta["tie_banner_above"][0]) .'</div>';
 			else tie_banner('banner_above' , '<div class="e3lan e3lan-post">' , '</div>' );
 		}
 		?>
@@ -79,7 +79,7 @@ Template Name: Best Reviews
 		
 		<?php //Below Post Banner
 		if( empty( $get_meta["tie_hide_below"][0] ) ){
-			if( !empty( $get_meta["tie_banner_below"][0] ) ) echo '<div class="e3lan e3lan-post">' .do_shortcode( htmlspecialchars_decode($get_meta["tie_banner_below"][0]) ) .'</div>';
+			if( !empty( $get_meta["tie_banner_below"][0] ) ) echo '<div class="e3lan e3lan-post">' .htmlspecialchars_decode($get_meta["tie_banner_below"][0]) .'</div>';
 			else tie_banner('banner_below' , '<div class="e3lan e3lan-post">' , '</div>' );
 		}
 		?>

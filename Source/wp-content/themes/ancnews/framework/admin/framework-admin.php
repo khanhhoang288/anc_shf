@@ -347,20 +347,13 @@ $default_data = Array(
 		'logo_setting' 				=> 		'logo',
 		'logo_margin' 				=> 		'15',
 		'logo_margin_bottom'		=> 		'15',
-		
-		'top_menu'					=>		true,
-		'main_nav'					=>		true,
+			
 		'todaydate_format' 			=> 		'l , F j Y',
 		'top_search' 				=> 		true,
 		'live_search' 				=> 		true,
 		'top_social' 				=> 		true,
 		'stick_nav' 				=> 		true,
 		'random_article' 			=> 		true,
-
-		'mobile_menu_hide_icons'	=>		true,
-		'mobile_menu_active'		=>		true,
-		'mobile_menu_search'		=>		true,
-		'mobile_menu_social'		=>		true,
 
 		'breaking_news' 			=> 		true,
 		'breaking_type' 			=> 		'category',
@@ -392,10 +385,7 @@ $default_data = Array(
 		'post_views' 				=> 		true,
 		'post_tags' 				=> 		true,
 		
-		'rss_icon'					=>		true,	
-
 		'share_post' 				=> 		true,
-		'share_buttons_pages'		=> 		true,
 		'share_post_type' 			=> 		'flat',
 		'share_shortlink' 			=> 		true,
 		'share_tweet' 				=> 		true,
@@ -426,7 +416,6 @@ $default_data = Array(
 
 		'homepage_cats_colors'		=>		true,
 		'lazy_load'					=>		true,
-		'smoth_scroll'				=>		true,
 		
 		'background_type' 			=> 		'pattern',
 		

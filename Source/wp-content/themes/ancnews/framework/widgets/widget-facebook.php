@@ -7,9 +7,9 @@ function tie_acebook_widget_box() {
 class tie_facebook_widget extends WP_Widget {
 
 	function tie_facebook_widget() {
-		$widget_ops 	= array( 'classname' => 'facebook-widget' );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'facebook-widget' );
-		parent::__construct( 'facebook-widget',THEME_NAME .' - '.__( 'Facebook' , 'tie' ) , $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'facebook-widget' );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'facebook-widget' );
+		$this->WP_Widget( 'facebook-widget',THEME_NAME .' - '.__( 'Facebook' , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {

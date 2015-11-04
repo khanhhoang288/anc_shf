@@ -160,11 +160,6 @@ function tie_post_options_module(){
 			array(	"name"	=> __( 'Auto Play', 'tie' ),
 					"id"	=> "tie_audio_soundcloud_play",
 					"type"	=> "checkbox"));
-
-		tie_post_meta_box(				
-			array(	"name"	=> __( 'Visual Style', 'tie' ),
-					"id"	=> "tie_audio_soundcloud_visual",
-					"type"	=> "checkbox"));
 						
 		tie_post_meta_box(				
 			array(	"name"	=> __( 'MP3 file URL', 'tie' ),
@@ -375,40 +370,30 @@ function tie_save_post( $post_id ){
 			'tie_audio_oga',
 			'tie_audio_soundcloud',
 			'tie_audio_soundcloud_play',
-			'tie_audio_soundcloud_visual',
 			'tie_hide_above',
 			'tie_banner_above',
 			'tie_hide_below',
 			'tie_banner_below',
 			'tie_posts_num',
 			'post_color',
-			'post_background_full',
-			'tie_blog_cats',
-			'post_background',
-			'tie_authors'
+			'post_background_full'
 		);
 			
 		foreach( $custom_meta_fields as $custom_meta_field ){
-			if( isset( $_POST[$custom_meta_field] ) && !empty( $_POST[ $custom_meta_field] ) ){
-				$custom_meta_field_data = $_POST[$custom_meta_field];
-				if( is_array( $custom_meta_field_data ) ){
-					$custom_meta_field_data		= array_filter( $custom_meta_field_data );
-					if( !empty( $custom_meta_field_data ) ){
-						update_post_meta( $post_id, $custom_meta_field, $custom_meta_field_data );
-					}else{
-						delete_post_meta( $post_id, $custom_meta_field );
-					}
-				}else{
-					if( !empty( $custom_meta_field_data ) ){
-						update_post_meta( $post_id, $custom_meta_field, htmlspecialchars(stripslashes( $custom_meta_field_data )) );
-					}else{
-						delete_post_meta( $post_id, $custom_meta_field );
-					}
-				}
-			}else{
-				delete_post_meta( $post_id, $custom_meta_field );
-			}
+			if(isset($_POST[$custom_meta_field]) )
+				update_post_meta($post_id, $custom_meta_field, htmlspecialchars(stripslashes($_POST[$custom_meta_field])) );
+			else
+				delete_post_meta($post_id, $custom_meta_field);
 		}
+		
+		if(isset($_POST[ 'tie_blog_cats' ]) )		
+			update_post_meta($post_id, 'tie_blog_cats', $_POST['tie_blog_cats']);
+			
+		if(isset($_POST[ 'post_background' ]) )
+			update_post_meta($post_id, 'post_background', $_POST['post_background']);
+			
+		if(isset($_POST[ 'tie_authors' ]) )	
+			update_post_meta($post_id, 'tie_authors', $_POST['tie_authors']);
 
 	}
 }

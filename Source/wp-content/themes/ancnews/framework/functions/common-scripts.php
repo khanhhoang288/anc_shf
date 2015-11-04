@@ -72,7 +72,6 @@ function tie_register() {
 		"lightbox_arrows"		=> tie_get_option( 'lightbox_arrows' ), 
 		"sticky_sidebar"		=> $sticky_sidebar, 
 		"is_singular"			=> is_singular(), 
-		"SmothScroll"			=> tie_get_option( 'smoth_scroll' ), 
 		"reading_indicator"		=> tie_get_option( 'reading_indicator' ),
 		"lang_no_results"		=> __ti( 'No Results' ), 
 		"lang_results_found"	=> __ti( 'Results Found' ), 

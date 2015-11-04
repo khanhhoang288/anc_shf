@@ -29,18 +29,18 @@ if ( is_admin() && isset($_GET['activate'] ) && $pagenow == 'plugins.php' ) {
 	
 		$default_data = array(
 			'social' => array(
-				'facebook' 		=> array(	'id' => 'tielabs',	 		'text' => __( 'Fans',		 'tie' ) ),
-				'twitter' 		=> array(	'id' => 'tielabs',	 		'text' => __( 'Followers',	 'tie' ) ),
-				'google' 		=> array(								'text' => __( 'Followers',	 'tie' ) ),
-				'youtube'		=> array(	'id' => 'TEAMMESAI', 		'text' => __( 'Subscribers', 'tie' ) ,'type' => 'User'),
-				'vimeo' 		=> array(						 		'text' => __( 'Subscribers', 'tie' ) ),
-				'dribbble' 		=> array(	'id' => 'mo3aser',	 		'text' => __( 'Followers',	 'tie' ) ),
-				'soundcloud'  	=> array(								'text' => __( 'Followers',	 'tie' ) ),
-				'behance'  		=> array(								'text' => __( 'Followers',	 'tie' ) ),
-				'github'  		=> array(								'text' => __( 'Followers',	 'tie' ) ),
-				'instagram'  	=> array(								'text' => __( 'Followers',	 'tie' ) ),
-				'delicious'  	=> array(								'text' => __( 'Followers',	 'tie' ) ),
-				'rss'  			=> array(								'text' => __( 'Subscribers', 'tie' ) ),
+				'facebook' 		=> array(	'id' => 'tielabs',	 		'text' => __( 'Fans' , 'tie' ) ),
+				'twitter' 		=> array(	'id' => 'tielabs',	 		'text' => __( 'Followers' , 'tie' )  ),
+				'google' 		=> array(								'text' => __( 'Followers' , 'tie' ) ),
+				'youtube'		=> array(	'id' => 'TEAMMESAI', 		'text' => __( 'Subscribers' , 'tie' ) ,'type' => 'User'),
+				'vimeo' 		=> array(						 		'text' => __( 'Subscribers' , 'tie' ) ),
+				'dribbble' 		=> array(	'id' => 'mo3aser',	 		'text' => __( 'Followers' , 'tie' ) ),
+				'soundcloud'  	=> array(								'text' => __( 'Followers' , 'tie' ) ),
+				'behance'  		=> array(								'text' => __( 'Followers' , 'tie' ) ),
+				'forrst'  		=> array(								'text' => __( 'Followers' , 'tie' ) ),
+				'instagram'  	=> array(								'text' => __( 'Followers' , 'tie' ) ),
+				'delicious'  	=> array(								'text' => __( 'Followers' , 'tie' ) ),
+				'rss'  			=> array(								'text' => __( 'Subscribers','tie' ) ),
 			),
 		);
 		
@@ -65,7 +65,7 @@ function arq_lite_remote_get( $url , $json = true) {
 /*-----------------------------------------------------------------------------------*/
 function arq_lite_update_count( $data ){
 	global $arq_lite_options, $arq_lite_transient ;
-	$cache = 8 ;
+	$cache = 2 ;
 	if( is_array($data) ){
 		foreach( $data as $item => $value ){
 			$arq_lite_transient[$item] = $value;
@@ -101,7 +101,7 @@ function arq_lite_get_counters( $style = '' ){
 	global $arq_lite_data, $arq_lite_options, $arq_lite_social_items ;
 	
 
-	$arq_lite_social_items = array( 'rss', 'facebook', 'twitter', 'google+', 'youtube', 'vimeo', 'dribbble', 'soundcloud', 'behance', 'instagram', 'github', 'delicious' );
+	$arq_lite_social_items = array( 'rss', 'facebook', 'twitter', 'google+', 'youtube', 'vimeo', 'dribbble', 'soundcloud', 'behance', 'instagram', 'forrst', 'delicious' );
 
 	$new_window = ' target="_blank" ';
 	
@@ -205,15 +205,15 @@ foreach ( $arq_lite_social_items as $arq_lite_item ){
 		<?php
 		}
 		break;
-		case 'github': 
-		if( !empty($arq_lite_options['social']['github']['id']) ){
+		case 'forrst': 
+		if( !empty($arq_lite_options['social']['forrst']['id']) ){
 			$text = __( 'Followers' , 'tie' );
-			if( !empty($arq_lite_options['social']['github']['text']) ) $text = $arq_lite_options['social']['github']['text'];
+			if( !empty($arq_lite_options['social']['forrst']['text']) ) $text = $arq_lite_options['social']['forrst']['text'];
 		?>
-			<li class="arq-lite-github">
-				<a href="http://github.com/<?php echo $arq_lite_options['social']['github']['id'] ?>"<?php echo $new_window ?>>
-					<i class="fa fa-github"></i> 
-					<span><?php echo arq_lite_format_num( arq_lite_github_count() ) ?></span>
+			<li class="arq-lite-forrst">
+				<a href="http://forrst.com/people/<?php echo $arq_lite_options['social']['forrst']['id'] ?>"<?php echo $new_window ?>>
+					<i class="tieicon-forrst"></i> 
+					<span><?php echo arq_lite_format_num( arq_lite_forrst_count() ) ?></span>
 					<small><?php echo $text; ?></small>
 				</a>
 			</li>
@@ -404,7 +404,7 @@ function arq_lite_facebook_count(){
 		$id = $arq_lite_options['social']['facebook']['id'];
 		try {
 			$access_token = get_option( 'facebook_access_token' ) ;
-			$data = @arq_lite_remote_get( "https://graph.facebook.com/v2.0/$id?access_token=$access_token&fields=likes");			
+			$data = @arq_lite_remote_get( "https://graph.facebook.com/v2.0/$id?access_token=$access_token");			
 			$result = (int) $data['likes'];	
 		} catch (Exception $e) {
 			$result = 0;
@@ -466,16 +466,10 @@ function arq_lite_youtube_count(){
 		$result = $arq_lite_options['data']['youtube'];
 	}
 	else{
-		$id  = $arq_lite_options['social']['youtube']['id'];
-		$api = $arq_lite_options['social']['youtube']['key'];
+		$id = $arq_lite_options['social']['youtube']['id'];
 		try {		
-			if( !empty($arq_lite_options['social']['youtube']['type']) && $arq_lite_options['social']['youtube']['type'] == 'Channel' ){
-				$data = @arq_lite_remote_get("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=$id&key=$api");
-			}else{
-				$data = @arq_lite_remote_get("https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername=$id&key=$api");
-			}
-			$result = (int) $data['items'][0]['statistics']['subscriberCount'];	
-
+			$data = @arq_lite_remote_get("http://gdata.youtube.com/feeds/api/users/$id?alt=json");
+			$result = (int) $data['entry']['yt$statistics']['subscriberCount'];	
 		} catch (Exception $e) {
 			$result = 0;
 		}
@@ -544,30 +538,30 @@ function arq_lite_dribbble_count() {
 	return $result;
 }
 
-/* Github Followers */
-function arq_lite_github_count() {
+/* Forrst Followers */
+function arq_lite_forrst_count() {
 	global $arq_lite_data, $arq_lite_options, $arq_lite_transient;
 
-	if( !empty($arq_lite_transient['github']) ){
-		$result = $arq_lite_transient['github'];
+	if( !empty($arq_lite_transient['forrst']) ){
+		$result = $arq_lite_transient['forrst'];
 	}
-	elseif( empty($arq_lite_transient['github']) && !empty($arq_lite_data) && !empty( $arq_lite_options['data']['github'] )  ){
-		$result = $arq_lite_options['data']['github'];
+	elseif( empty($arq_lite_transient['forrst']) && !empty($arq_lite_data) && !empty( $arq_lite_options['data']['forrst'] )  ){
+		$result = $arq_lite_options['data']['forrst'];
 	}
 	else{
-		$id = $arq_lite_options['social']['github']['id'];
+		$id = $arq_lite_options['social']['forrst']['id'];
 		try {		
-			$data = @arq_lite_remote_get("https://api.github.com/users/$id");
-			$result = (int) $data['followers'];	
+			$data = @arq_lite_remote_get("http://forrst.com/api/v2/users/info?username=$id");
+			$result = (int) $data['resp']['typecast_followers'];	
 		} catch (Exception $e) {
 			$result = 0;
 		}
 		
 		if( !empty( $result ) ) //To update the stored data
-			$arq_lite_data['github'] = $result; 
+			$arq_lite_data['forrst'] = $result; 
 
-		if( empty( $result ) && !empty( $arq_lite_options['data']['github'] ) ) //Get the stored data
-			$result = $arq_lite_options['data']['github'];	
+		if( empty( $result ) && !empty( $arq_lite_options['data']['forrst'] ) ) //Get the stored data
+			$result = $arq_lite_options['data']['forrst'];	
 	}
 	return $result;
 }
@@ -734,12 +728,14 @@ function arqam_lite_counter_widget_box() {
 class arqam_lite_counter_widget extends WP_Widget {
 
 	function arqam_lite_counter_widget() {
-		$widget_ops 	= array( 'classname' => 'arqam_lite_counter-widget', 'description' => ''  );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'arqam_lite_counter-widget' );
-		parent::__construct( 'arqam_lite_counter-widget', ARQAM_LITE_Plugin. ' - Social Counter', $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'arqam_lite_counter-widget', 'description' => ''  );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'arqam_lite_counter-widget' );
+		$this->WP_Widget( 'arqam_lite_counter-widget', ARQAM_LITE_Plugin. ' - Social Counter', $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
+
+	
 		arq_lite_get_counters( $instance['style'] );
 	}
 
@@ -870,7 +866,8 @@ function arqam_lite_options() {
 if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $current_page == 'arqam_lite' ){
 ?>
 <div class="wrap">	
-	<h1><?php _e( 'FaceBook App info' , 'tie' ) ?></h1>
+	<div id="icon-options-general" class="icon32"><br></div>
+	<h2><?php _e( 'FaceBook App info' , 'tie' ) ?></h2>
 	<br />
 	<form method="post">
 		<div id="poststuff">
@@ -891,7 +888,8 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php printf( __( 'Enter Your App ID and App Secret, <a href="%s" target="_blank">Click Here</a> For More Details.' , 'tie' ), 'http://themes.tielabs.com/docs/sahifa/#counter' ) ?></em></p></div>
+							<div>
+								<strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your App ID and App Secret ,' , 'tie' ) ?> <a href="http://themes.tielabs.com/docs/sahifa/#counter" target="_blank"><?php _e( 'Click Here' , 'tie' ) ?></a> <?php _e( 'For More Details.' , 'tie' ) ?></em></p></div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -959,7 +957,8 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 	}
 ?>
 <div class="wrap">	
-	<h1><?php _e( 'Instagram App info' , 'tie' ) ?></h1>
+	<div id="icon-options-general" class="icon32"><br></div>
+	<h2><?php _e( 'Instagram App info' , 'tie' ) ?></h2>
 	<br />
 	<form method="post">
 		<div id="poststuff">
@@ -986,7 +985,10 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php printf( __( 'Enter Your App Client ID and App Client Secret, <a href="%s" target="_blank">Click Here</a> For More Details.' , 'tie' ), 'http://themes.tielabs.com/docs/sahifa/#counter' ) ?></em></p></div>
+							<div>
+								<strong><?php _e( 'Need Help?' , 'tie' ) ?></strong>
+								<p><em><?php _e( 'Enter Your App Client ID and App Client Secret ,' , 'tie' ) ?> <a href="http://themes.tielabs.com/docs/sahifa/#counter" target="_blank"><?php _e( 'Click Here' , 'tie' ) ?></a> <?php _e( 'For More Details.' , 'tie' ) ?></em></p></div>
+
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -1009,7 +1011,8 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 	
 	if ( isset($_REQUEST['saved'])) echo '<div id="setting-error-settings_updated" class="updated settings-error"><p><strong>'. __( 'Settings saved.' , 'tie' ) .'</strong></p></div>'; ?>
 <div class="wrap">	
-	<h1><?php _e( 'Arqam Lite Settings' , 'tie' ) ?> <a href="http://codecanyon.net/item/arqam-retina-responsive-wp-social-counter-plugin/5085289?ref=tielabs" target="_blank" class="page-title-action"><?php _e( 'Need More?' , 'tie' ) ?></a> </h1>
+	<div id="icon-options-general" class="icon32"><br></div>
+	<h2><?php _e( 'Arqam Lite Settings' , 'tie' ) ?></h2>
 	<br />
 	<form method="post">
 		<div id="poststuff">
@@ -1037,7 +1040,8 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php printf( __( 'Enter Your Facebook Page Name or ID and click on Get Access Token to get your App Access Token, <a href="%s" target="_blank">Click Here</a> For More Details.' , 'tie' ), 'http://themes.tielabs.com/docs/sahifa/#counter' ) ?></em></p></div>
+							<div>
+								<strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Facebook Page Name or ID and click on Get Access Token to get your App Access Token, ' , 'tie' ) ?> <a href="http://themes.tielabs.com/docs/sahifa/#counter" target="_blank"><?php _e( 'Click Here' , 'tie' ) ?></a> <?php _e( 'For More Details.' , 'tie' ) ?></em></p></div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -1066,7 +1070,8 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php printf( __( 'Enter Your Twitter Account Username , your APP Consumer key and Consumer secret, <a href="%s" target="_blank">Click Here</a> For More Details.' , 'tie' ), 'http://themes.tielabs.com/docs/sahifa/#counter' ) ?></em></p></div>
+							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Twitter Account Username , your APP Consumer key and Consumer secret ,' , 'tie' ) ?> <a href="http://themes.tielabs.com/docs/sahifa/#counter" target="_blank"><?php _e( 'Click Here' , 'tie' ) ?></a> <?php _e( 'For More Details.' , 'tie' ) ?></em></p>
+							</div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -1091,7 +1096,7 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php printf( __( 'Enter Your Google+ page or profile ID and Google API Key, <a href="%s" target="_blank">Click Here</a> For More Details.' , 'tie' ), 'http://themes.tielabs.com/docs/sahifa/#counter' ) ?></em></p></div>
+								<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Google+ page or profile ID and Google API Key ,' , 'tie' ) ?> <a href="http://themes.tielabs.com/docs/sahifa/#counter" target="_blank"><?php _e( 'Click Here' , 'tie' ) ?></a> <?php _e( 'For More Details.' , 'tie' ) ?></em></p></div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -1104,10 +1109,6 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									<tr>
 										<th scope="row"><label for="social[youtube][id]"><?php _e( 'Username or Channel ID' , 'tie' ) ?></label></th>
 										<td><input type="text" name="social[youtube][id]" class="code" id="social[youtube][id]" value="<?php if( !empty($arq_lite_options['social']['youtube']['id']) ) echo $arq_lite_options['social']['youtube']['id'] ?>"></td>
-									</tr>
-									<tr>
-										<th scope="row"><label for="social[youtube][key]"><?php _e( 'Youtube API Key' , 'tie' ) ?></label></th>
-										<td><input type="text" name="social[youtube][key]" class="code" id="social[youtube][key]" value="<?php if( !empty($arq_lite_options['social']['youtube']['key']) ) echo $arq_lite_options['social']['youtube']['key'] ?>"></td>
 									</tr>
 									<tr>
 										<th scope="row"><label for="social[youtube][text]"><?php _e( 'Text Below The Number' , 'tie' ) ?></label></th>
@@ -1127,7 +1128,7 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php printf( __( 'Enter Your Youtube username or Channel ID, API Key and choose User or Channel from Type menu, <a href="%s" target="_blank">Click Here</a> For More Details.' , 'tie' ), 'http://themes.tielabs.com/docs/sahifa/#counter' ) ?></em></p></div>
+							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your YouTube username or Channel ID and choose User or Channel from Type menu ,' , 'tie' ) ?></em></p></div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -1148,7 +1149,7 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Vimeo Channel Name.' , 'tie' ) ?> </em></p></div>
+							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Vimeo Channel Name ,' , 'tie' ) ?> </em></p></div>
 
 							<div class="clear"></div>
 						</div>
@@ -1169,7 +1170,7 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Dribbble Account Username.' , 'tie' ) ?></em></p></div>
+							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Dribbble Account Username .' , 'tie' ) ?></em></p></div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -1193,7 +1194,7 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php printf( __( 'Enter Your SoundCloud Account Username and the API Key, <a href="%s" target="_blank">Click Here</a> For More Details.' , 'tie' ), 'http://themes.tielabs.com/docs/sahifa/#counter' ) ?></em></p></div>
+							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your SoundCloud Account Username and the API Key,' , 'tie' ) ?> <a href="http://themes.tielabs.com/docs/sahifa/#counter" target="_blank"><?php _e( 'Click Here' , 'tie' ) ?></a> <?php _e( 'For More Details.' , 'tie' ) ?></em></p></div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -1217,27 +1218,28 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php printf( __( 'Enter Your Behance Account Username and the API Key, <a href="%s" target="_blank">Click Here</a> For More Details.' , 'tie' ), 'http://themes.tielabs.com/docs/sahifa/#counter' ) ?></em></p></div>
+							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Behance Account Username and the API Key,' , 'tie' ) ?> <a href="http://themes.tielabs.com/docs/sahifa/#counter" target="_blank"><?php _e( 'Click Here' , 'tie' ) ?></a> <?php _e( 'For More Details.' , 'tie' ) ?></em></p></div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
 					
 					<div class="postbox">
-						<h3 class="hndle"><span><?php _e( 'Github' , 'tie' ) ?></span></h3>
+						<h3 class="hndle"><span><?php _e( 'Forrst' , 'tie' ) ?></span></h3>
 						<div class="inside">
 							<table class="links-table" cellpadding="0">
 								<tbody>
 									<tr>
-										<th scope="row"><label for="social[github][id]"><?php _e( 'UserName' , 'tie' ) ?></label></th>
-										<td><input type="text" name="social[github][id]" class="code" id="social[github][id]" value="<?php if( !empty($arq_lite_options['social']['github']['id']) ) echo $arq_lite_options['social']['github']['id'] ?>"></td>
+										<th scope="row"><label for="social[forrst][id]"><?php _e( 'UserName' , 'tie' ) ?></label></th>
+										<td><input type="text" name="social[forrst][id]" class="code" id="social[forrst][id]" value="<?php if( !empty($arq_lite_options['social']['forrst']['id']) ) echo $arq_lite_options['social']['forrst']['id'] ?>"></td>
 									</tr>
 									<tr>
-										<th scope="row"><label for="social[github][text]"><?php _e( 'Text Below The Number' , 'tie' ) ?></label></th>
-										<td><input type="text" name="social[github][text]" class="code" id="social[github][text]" value="<?php if( !empty($arq_lite_options['social']['github']['text']) ) echo $arq_lite_options['social']['github']['text'] ?>"></td>
+										<th scope="row"><label for="social[forrst][text]"><?php _e( 'Text Below The Number' , 'tie' ) ?></label></th>
+										<td><input type="text" name="social[forrst][text]" class="code" id="social[forrst][text]" value="<?php if( !empty($arq_lite_options['social']['forrst']['text']) ) echo $arq_lite_options['social']['forrst']['text'] ?>"></td>
 									</tr>
+
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Github Account Username.' , 'tie' ) ?></em></p></div>
+							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Forrst Account Username .' , 'tie' ) ?></em></p></div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -1258,7 +1260,7 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Delicious Account Username.' , 'tie' ) ?></em></p></div>
+							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Delicious Account Username .' , 'tie' ) ?></em></p></div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -1285,7 +1287,7 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php printf( __( 'Enter Your Instagram Username and click on Get Access Token to get your App Access Token, <a href="%s" target="_blank">Click Here</a> For More Details.' , 'tie' ), 'http://themes.tielabs.com/docs/sahifa/#counter' ) ?></em></p></div>
+							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Instagram Username and click on Get Access Token to get your App Access Token,' , 'tie' ) ?> <a target="_blank" href="http://themes.tielabs.com/docs/sahifa/#counter" target="_blank"><?php _e( 'Click Here' , 'tie' ) ?></a> <?php _e( 'For More Details.' , 'tie' ) ?></em></p></div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -1344,7 +1346,7 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									</tr>
 								</tbody>
 							</table>
-							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php printf( __( 'Enter Your Feed URl and the Feedpress Json file URL or Number of Subscribers manually  <a href="%s" target="_blank">Click Here</a> For More Details.' , 'tie' ), 'http://themes.tielabs.com/docs/sahifa/#counter' ) ?></em></p></div>
+							<div><strong><?php _e( 'Need Help?' , 'tie' ) ?></strong><p><em><?php _e( 'Enter Your Feed URl and the Feedpress Json file URL or Number of Subscribers manually ,' , 'tie' ) ?> <a href="http://themes.tielabs.com/docs/sahifa/#counter" target="_blank"><?php _e( 'Click Here' , 'tie' ) ?></a> <?php _e( 'For More Details.' , 'tie' ) ?></em></p></div>
 							<div class="clear"></div>
 						</div>
 					</div> <!-- Box end /-->
@@ -1357,7 +1359,7 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 						<img style="max-width:100%;" src="http://themes.tielabs.com/images/get-arqam.png" alt="" />
 					</a>
 						<div class="inside" style="background-color: #E8FBFF; border:1px solid #43D1EC; padding:10px; margin-bottom:15px;">
-							<strong><?php _e( 'Need More?' , 'tie' ) ?></strong>
+							<strong><?php _e( 'Need More ?' , 'tie' ) ?></strong>
 							<p>
 								<?php _e( 'Purchase the full version of Arqam plugin to get all following features :' , 'tie' ) ?>
 								<ul style="list-style-type: disc;list-style-position: inside;">		
@@ -1366,30 +1368,22 @@ if( isset( $_REQUEST['service'] ) && 'arq-facebook' == $_REQUEST['service'] && $
 									<li><?php _e( 'More Layout options.' , 'tie' ) ?></li>
 									<li><strong><?php _e( 'More Social Networks:' , 'tie' ) ?></strong>
 
-
 										<ol>
-											<li>Spotify</li>
-											<li>Goodreads</li>
-											<li>Mixcloud</li>
-											<li>Twitch</li>
 											<li>Pinterest</li>
 											<li>LinkedIn</li>
 											<li>Tumblr</li>
 											<li>Flickr</li>
 											<li>Foursquare</li>
 											<li>500px</li>
+											<li>Github</li>
 											<li>Vk</li>
 											<li>Envato</li>
 											<li>MailChimp List</li>
 											<li>Vine</li>
 											<li>Steam</li>
-											<li>myMail plugin list</li>
-											<li>Mailpoet plugin List.</li>
 											<li><?php _e( 'Members Number' , 'tie' ) ?></li>
 											<li><?php _e( 'Posts Number' , 'tie' ) ?></li>
 											<li><?php _e( 'Comments Number' , 'tie' ) ?></li>
-											<li>bbPress topics, replies and forums counters.</li>
-											<li>BuddyPress groups counter.</li>
 										</ol>
 									</li>
 									

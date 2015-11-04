@@ -7,9 +7,9 @@ function tie_video_widget_box() {
 class tie_video_widget extends WP_Widget {
 
 	function tie_video_widget() {
-		$widget_ops 	= array( 'classname' => 'video-widget', 'description' => ''  );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'video-widget' );
-		parent::__construct( 'video-widget', THEME_NAME .' - '.__( 'Video' , 'tie') , $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'video-widget', 'description' => ''  );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'video-widget' );
+		$this->WP_Widget( 'video-widget', THEME_NAME .' - '.__( 'Video' , 'tie') , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
@@ -60,10 +60,10 @@ class tie_video_widget extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance 				= $old_instance;
-		$instance['title'] 		= strip_tags( $new_instance['title'] );
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
 		$instance['embed_code'] = $new_instance['embed_code'] ;
-		$instance['video_url'] 	= strip_tags( $new_instance['video_url'] );
+		$instance['video_url'] = strip_tags( $new_instance['video_url'] );
 		return $instance;
 	}
 

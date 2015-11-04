@@ -244,12 +244,11 @@ class tie_mega_menu_walker extends Walker_Nav_Menu {
 					$cat_query = new WP_Query( $args ); 
 					while ( $cat_query->have_posts() ) {
 						$cat_query->the_post();
-						$img_classes 	= tie_get_post_class( 'post-thumbnail' );
-						$post_time 		= tie_get_time( true );
-						$img_title 		= esc_attr( get_the_title() );
+						$img_classes = tie_get_post_class( 'post-thumbnail' );
+						$post_time = tie_get_time( true );
 						$output .= '<div class="mega-menu-post">';
 						if ( function_exists("has_post_thumbnail") && has_post_thumbnail() )
-						$output .= '<div '.$img_classes.'><a class="mega-menu-link" href="'. get_permalink().'" title="'.get_the_title().'"><img src="'.tie_thumb_src( 'tie-medium' ).'" width="310" height="165" alt="'.$img_title.'" /><span class="fa overlay-icon"></span></a></div>';
+						$output .= '<div '.$img_classes.'><a class="mega-menu-link" href="'. get_permalink().'" title="'.get_the_title().'"><img src="'.tie_thumb_src( 'tie-medium' ).'" width="310" height="165" /><span class="fa overlay-icon"></span></a></div>';
 						$output .= '<h3 class="post-box-title"><a class="mega-menu-link" href="'. get_permalink().'" title="'.get_the_title().'">'.get_the_title().'</a></h3>
 									'.$post_time.'
 							</div> <!-- mega-menu-post -->';
@@ -286,21 +285,19 @@ class tie_mega_menu_walker extends Walker_Nav_Menu {
 				$cat_query = new WP_Query( $args ); 
 				while ( $cat_query->have_posts() ) { $count ++ ;
 					$cat_query->the_post();
-					$img_classes 	= tie_get_post_class( 'post-thumbnail' );
-					$post_time 		= tie_get_time( true );
-					$img_title 		= esc_attr( get_the_title() );
-
+					$img_classes = tie_get_post_class( 'post-thumbnail' );
+					$post_time = tie_get_time( true );
 					if( $count == 1){
 						$output .= '<div class="mega-recent-post">';
 						if ( function_exists("has_post_thumbnail") && has_post_thumbnail() )
-						$output .= '<div '.$img_classes.'><a class="mega-menu-link" href="'. get_permalink().'" title="'.get_the_title().'"><img src="'.tie_thumb_src( 'slider' ).'" width="660" height="330" alt="'.$img_title.'" /><span class="fa overlay-icon"></span></a></div>';
+						$output .= '<div '.$img_classes.'><a class="mega-menu-link" href="'. get_permalink().'" title="'.get_the_title().'"><img src="'.tie_thumb_src( 'slider' ).'"  width="660" height="330" /><span class="fa overlay-icon"></span></a></div>';
 						$output .= '<h3 class="post-box-title"><a class="mega-menu-link" href="'. get_permalink().'" title="'.get_the_title().'">'.get_the_title().'</a></h3>
 						'.$post_time.'
 						</div> <!-- mega-recent-post -->';
 					}else{
 						$output_more_posts .= '<li>';
 						if ( function_exists("has_post_thumbnail") && has_post_thumbnail() )
-						$output_more_posts .= '<div '.$img_classes.'><a class="mega-menu-link" href="'. get_permalink().'" title="'.get_the_title().'"><img src="'.tie_thumb_src( ).'" width="110" height="75" alt="'.$img_title.'" /><span class="fa overlay-icon"></span></a></div>';
+						$output_more_posts .= '<div '.$img_classes.'><a class="mega-menu-link" href="'. get_permalink().'" title="'.get_the_title().'"><img src="'.tie_thumb_src( ).'"  width="110" height="75" /><span class="fa overlay-icon"></span></a></div>';
 						$output_more_posts .= '<h3 class="post-box-title"><a class="mega-menu-link" href="'. get_permalink().'" title="'.get_the_title().'">'.get_the_title().'</a></h3>'.$post_time;
 						$output_more_posts .= '</li>';
 					}
@@ -342,7 +339,7 @@ function tie_custom_nav_edit_walker($walker,$menu_id) {
 
 
 // The Custom Tielabs menu fields
-add_action( 'wp_nav_menu_item_custom_fields', 'tie_add_megamenu_fields', 10, 4 );
+add_action( 'tie_nav_menu_item_custom_fields', 'tie_add_megamenu_fields', 10, 4 );
 function tie_add_megamenu_fields( $item_id, $item, $depth, $args ) { ?>
 
 	<div class="clear"></div>
@@ -360,7 +357,7 @@ function tie_add_megamenu_fields( $item_id, $item, $depth, $args ) { ?>
 			<label for="edit-menu-item-megamenu-type-<?php echo $item_id; ?>">
 				<?php _e( 'Enable Mega Menu ?', 'tie' ); ?>
 				<select id="edit-menu-item-megamenu-type-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-type" name="menu-item-tie-megamenu-type[<?php echo $item_id; ?>]">
-					<option value=""><?php _e( 'Disable', 'tie' ); ?></option>
+					<option value="disable" <?php selected( $item->tie_megamenu_type, 'disable' ); ?>><?php _e( 'Disable', 'tie' ); ?></option>
 					<?php  if( $item->object == 'category' ){  ?>
 					<option value="sub-posts" <?php selected( $item->tie_megamenu_type, 'sub-posts' ); ?>><?php _e( 'Sub Categories + Posts', 'tie' ); ?></option>
 					<option value="recent" <?php selected( $item->tie_megamenu_type, 'recent' ); ?>><?php _e( 'Recent post + Check also', 'tie' ); ?></option>
@@ -369,11 +366,11 @@ function tie_add_megamenu_fields( $item_id, $item, $depth, $args ) { ?>
 				</select>
 			</label>
 		</p>
+
 		<p class="field-megamenu-columns description description-wide">
 			<label for="edit-menu-item-megamenu-columns-<?php echo $item_id; ?>">
 				<?php _e( 'Mega Links - Columns', 'tie' ); ?>
 				<select id="edit-menu-item-megamenu-columns-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-columns" name="menu-item-tie-megamenu-columns[<?php echo $item_id; ?>]">
-					<option value=""></option>
 					<option value="2" <?php selected( $item->tie_megamenu_columns, '2' ); ?>>2</option>
 					<option value="3" <?php selected( $item->tie_megamenu_columns, '3' ); ?>>3</option>
 					<option value="4" <?php selected( $item->tie_megamenu_columns, '4' ); ?>>4</option>
@@ -388,19 +385,16 @@ function tie_add_megamenu_fields( $item_id, $item, $depth, $args ) { ?>
 			</label>
 			<input type="text" id="edit-menu-item-megamenu-image-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-image" name="menu-item-tie-megamenu-image[<?php echo $item_id; ?>]" value="<?php echo $item->tie_megamenu_image; ?>" />
 			<select id="edit-menu-item-megamenu-position-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-position" name="menu-item-tie-megamenu-position[<?php echo $item_id; ?>]">
-				<option value=""></option>
 				<option value="center" <?php selected( $item->tie_megamenu_position, 'center' ); ?>><?php _e( 'Center', 'tie' ); ?></option>
 				<option value="right" <?php selected( $item->tie_megamenu_position, 'right' ); ?>><?php _e( 'Right', 'tie' ); ?></option>
 				<option value="left" <?php selected( $item->tie_megamenu_position, 'left' ); ?>><?php _e( 'Left', 'tie' ); ?></option>
 			</select>
 			<select id="edit-menu-item-megamenu-position-y-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-position-y" name="menu-item-tie-megamenu-position-y[<?php echo $item_id; ?>]">
-				<option value=""></option>
 				<option value="center" <?php selected( $item->tie_megamenu_position_y, 'center' ); ?>><?php _e( 'Center', 'tie' ); ?></option>
 				<option value="top" <?php selected( $item->tie_megamenu_position_y, 'top' ); ?>><?php _e( 'Top', 'tie' ); ?></option>
 				<option value="bottom" <?php selected( $item->tie_megamenu_position_y, 'bottom' ); ?>><?php _e( 'Bottom', 'tie' ); ?></option>
 			</select>
 			<select id="edit-menu-item-megamenu-repeat-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-repeat" name="menu-item-tie-megamenu-repeat[<?php echo $item_id; ?>]">
-				<option value=""></option>
 				<option value="no-repeat" <?php selected( $item->tie_megamenu_repeat, 'no-repeat' ); ?>><?php _e( 'no-repeat', 'tie' ); ?></option>
 				<option value="repeat" <?php selected( $item->tie_megamenu_repeat, 'repeat' ); ?>><?php _e( 'repeat', 'tie' ); ?></option>
 				<option value="repeat-x" <?php selected( $item->tie_megamenu_repeat, 'repeat-x' ); ?>><?php _e( 'repeat-x', 'tie' ); ?></option>
@@ -435,33 +429,59 @@ function tie_add_megamenu_fields( $item_id, $item, $depth, $args ) { ?>
 
 
 // Save The custom Fields
-add_action('wp_update_nav_menu_item', 'tie_custom_nav_update', 10, 3);
+add_action('wp_update_nav_menu_item', 'tie_custom_nav_update',10, 3);
 function tie_custom_nav_update($menu_id, $menu_item_db_id, $args ) {
 
-	$custom_meta_fields = array(
-		'menu-item-tie-megamenu-type',
-		'menu-item-tie-megamenu-columns',
-		'menu-item-tie-megamenu-icon',
-		'menu-item-tie-megamenu-image',
-		'menu-item-tie-megamenu-position',
-		'menu-item-tie-megamenu-position-y',
-		'menu-item-tie-megamenu-min-height',
-		'menu-item-tie-megamenu-repeat',
-		'menu-item-tie-megamenu-padding-left',
-		'menu-item-tie-megamenu-padding-right'
-	);
-		
-	foreach( $custom_meta_fields as $custom_meta_field ){
-		$save_option_name		= str_replace( 'menu-item-', '', $custom_meta_field);
-		$save_option_name		= str_replace( '-', '_', $save_option_name);
-
-		if ( !empty($_REQUEST[ $custom_meta_field ][ $menu_item_db_id ] ) ) {
-			$custom_value = $_REQUEST[ $custom_meta_field ][ $menu_item_db_id ];
-			update_post_meta( $menu_item_db_id, $save_option_name, $custom_value );
-		}else{
-			delete_post_meta( $menu_item_db_id, $save_option_name );
-		}
+	if ( isset($_REQUEST['menu-item-tie-megamenu-type']) ) {
+		$custom_value = $_REQUEST['menu-item-tie-megamenu-type'][$menu_item_db_id];
+		update_post_meta( $menu_item_db_id, 'tie_megamenu_type', $custom_value );
 	}
+	
+	if ( isset($_REQUEST['menu-item-tie-megamenu-columns']) ) {
+		$custom_value = $_REQUEST['menu-item-tie-megamenu-columns'][$menu_item_db_id];
+		update_post_meta( $menu_item_db_id, 'tie_megamenu_columns', $custom_value );
+	}
+	
+	if ( isset($_REQUEST['menu-item-tie-megamenu-icon']) ) {
+		$custom_value = $_REQUEST['menu-item-tie-megamenu-icon'][$menu_item_db_id];
+		update_post_meta( $menu_item_db_id, 'tie_megamenu_icon', $custom_value );
+	}
+	
+	if ( isset($_REQUEST['menu-item-tie-megamenu-image']) ) {
+		$custom_value = $_REQUEST['menu-item-tie-megamenu-image'][$menu_item_db_id];
+		update_post_meta( $menu_item_db_id, 'tie_megamenu_image', $custom_value );
+	}
+	
+	if ( isset($_REQUEST['menu-item-tie-megamenu-position']) ) {
+		$custom_value = $_REQUEST['menu-item-tie-megamenu-position'][$menu_item_db_id];
+		update_post_meta( $menu_item_db_id, 'tie_megamenu_position', $custom_value );
+	}
+	
+	if ( isset($_REQUEST['menu-item-tie-megamenu-position-y']) ) {
+		$custom_value = $_REQUEST['menu-item-tie-megamenu-position-y'][$menu_item_db_id];
+		update_post_meta( $menu_item_db_id, 'tie_megamenu_position_y', $custom_value );
+	}	
+	
+	if ( isset($_REQUEST['menu-item-tie-megamenu-min-height']) ) {
+		$custom_value = $_REQUEST['menu-item-tie-megamenu-min-height'][$menu_item_db_id];
+		update_post_meta( $menu_item_db_id, 'tie_megamenu_min_height', $custom_value );
+	}
+	
+	if ( isset($_REQUEST['menu-item-tie-megamenu-repeat']) ) {
+		$custom_value = $_REQUEST['menu-item-tie-megamenu-repeat'][$menu_item_db_id];
+		update_post_meta( $menu_item_db_id, 'tie_megamenu_repeat', $custom_value );
+	}
+	
+	if ( isset($_REQUEST['menu-item-tie-megamenu-padding-left']) ) {
+		$custom_value = $_REQUEST['menu-item-tie-megamenu-padding-left'][$menu_item_db_id];
+		update_post_meta( $menu_item_db_id, 'tie_megamenu_padding_left', $custom_value );
+	}	
+	
+	if ( isset($_REQUEST['menu-item-tie-megamenu-padding-right']) ) {
+		$custom_value = $_REQUEST['menu-item-tie-megamenu-padding-right'][$menu_item_db_id];
+		update_post_meta( $menu_item_db_id, 'tie_megamenu_padding_right', $custom_value );
+	}
+
 }
 
 /*
@@ -665,7 +685,7 @@ class tie_mega_menu_edit_walker extends Walker_Nav_Menu {
 				<?php
 					//By Tielabs **************************************************
 					
-						do_action( 'wp_nav_menu_item_custom_fields', $item_id, $item, $depth, $args );
+						do_action( 'tie_nav_menu_item_custom_fields', $item_id, $item, $depth, $args );
 						
 					// END ********************************************************
 				?>

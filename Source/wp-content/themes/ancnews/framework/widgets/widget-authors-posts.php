@@ -6,18 +6,18 @@ function tie_authors_posts_widget() {
 class tie_authors_posts extends WP_Widget {
 
 	function tie_authors_posts() {
-		$widget_ops 	= array( 'classname' => 'authors-posts' );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'authors-posts-widget' );
-		parent::__construct( 'authors-posts-widget', THEME_NAME .' - '.__( "Authors Posts" , 'tie' ) , $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'authors-posts' );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'authors-posts-widget' );
+		$this->WP_Widget( 'authors-posts-widget', THEME_NAME .' - '.__( "Authors Posts" , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
 		extract( $args );
 
-		$title 			= apply_filters('widget_title', $instance['title'] );
-		$no_of_posts 	= $instance['no_of_posts'];
-		$cats_id 		= $instance['cats_id'];
-		$thumb 			= $instance['thumb'];
+		$title = apply_filters('widget_title', $instance['title'] );
+		$no_of_posts = $instance['no_of_posts'];
+		$cats_id = $instance['cats_id'];
+		$thumb = $instance['thumb'];
 
 		echo $before_widget;
 			echo $before_title;
@@ -32,11 +32,13 @@ class tie_authors_posts extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance 					= $old_instance;
-		$instance['title'] 			= strip_tags( $new_instance['title'] );
-		$instance['no_of_posts'] 	= strip_tags( $new_instance['no_of_posts'] );
-		$instance['cats_id'] 		= implode(',' , $new_instance['cats_id']  );
-		$instance['thumb'] 			= strip_tags( $new_instance['thumb'] );
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['no_of_posts'] = strip_tags( $new_instance['no_of_posts'] );
+		
+		$instance['cats_id'] = implode(',' , $new_instance['cats_id']  );
+
+		$instance['thumb'] = strip_tags( $new_instance['thumb'] );
 		return $instance;
 	}
 
@@ -45,7 +47,7 @@ class tie_authors_posts extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults );
 		
 		$categories_obj = get_categories();
-		$categories 	= array();
+		$categories = array();
 
 		foreach ($categories_obj as $pn_cat) {
 			$categories[$pn_cat->cat_ID] = $pn_cat->cat_name;

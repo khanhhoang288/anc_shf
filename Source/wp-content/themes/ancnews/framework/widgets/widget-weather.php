@@ -55,8 +55,6 @@ function tie_weather_logic( $atts ){
 		
 		// NOW
 		$now_ping = "http://api.openweathermap.org/data/2.5/weather?" . $api_query . "&lang=" . $locale . "&units=" . $units;
-		$now_ping = str_replace(" ", "", $now_ping);
-
 		$now_ping_get = wp_remote_get( $now_ping );
 	
 		if( is_wp_error( $now_ping_get ) ){
@@ -76,8 +74,6 @@ function tie_weather_logic( $atts ){
 		if( $days_to_show != "hide" )
 		{
 			$forecast_ping = "http://api.openweathermap.org/data/2.5/forecast/daily?" . $api_query . "&lang=" . $locale . "&units=" . $units ."&cnt=7";
-			$forecast_ping = str_replace(" ", "", $forecast_ping);
-
 			$forecast_ping_get = wp_remote_get( $forecast_ping );
 		
 			if( is_wp_error( $forecast_ping_get ) ){
@@ -219,7 +215,7 @@ function tie_weather_error( $msg = false )
 // AWESOME WEATHER WIDGET, WIDGET CLASS, SO MANY WIDGETS
 class TIE_WeatherWidget extends WP_Widget 
 {
-	function TIE_WeatherWidget() { parent::__construct(false, $name =  THEME_NAME .' - '.__( 'Weather' , 'tie' ) ); }
+	function TIE_WeatherWidget() { parent::WP_Widget(false, $name =  THEME_NAME .' - '.__( 'Weather' , 'tie' ) ); }
 
     function widget($args, $instance) 
     {	
@@ -289,7 +285,4 @@ class TIE_WeatherWidget extends WP_Widget
     }
 }
 
-add_action( 'widgets_init', 'tie_weather_widget' );
-function tie_weather_widget() {
-	register_widget( 'TIE_WeatherWidget' );
-}
+add_action( 'widgets_init', create_function('', 'return register_widget("TIE_WeatherWidget");') );

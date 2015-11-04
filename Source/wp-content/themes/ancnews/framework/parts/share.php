@@ -4,35 +4,32 @@ global $post, $page_builder_id;
 $share_box_class= "mini-share-post";
 if( is_singular() && empty( $page_builder_id )  ) $share_box_class = "share-post";
 
-$post_link	= tie_get_option( 'share_shortlink' ) ? esc_url( wp_get_shortlink() ) : esc_url( get_permalink() );
-$post_title = wp_strip_all_tags( get_the_title() );
-$protocol	= is_ssl() ? 'https' : 'http';
+$post_link = tie_get_option( 'share_shortlink' ) ? wp_get_shortlink() : get_permalink();
+$protocol = is_ssl() ? 'https' : 'http';
 
 ?>
 <div class="<?php echo $share_box_class ?>">
 	<span class="share-text"><?php _eti( 'Share' );?></span>
 	
-	<?php if( tie_get_option( 'share_post_type' ) == 'flat' ) :
-			$post_title = htmlspecialchars(urlencode(html_entity_decode( $post_title, ENT_COMPAT, 'UTF-8')), ENT_COMPAT, 'UTF-8');
-	 ?>
+	<?php if( tie_get_option( 'share_post_type' ) == 'flat' ) : ?>
 	<ul class="flat-social">	
 	<?php if( tie_get_option( 'share_facebook' ) ): ?>
 		<li><a href="http://www.facebook.com/sharer.php?u=<?php echo $post_link; ?>" class="social-facebook" rel="external" target="_blank"><i class="fa fa-facebook"></i> <span><?php _eti( 'Facebook' );?></span></a></li>
 	<?php endif; ?>	
 	<?php if( tie_get_option( 'share_tweet' ) ): ?>
-		<li><a href="https://twitter.com/intent/tweet?text=<?php echo $post_title; ?><?php if( tie_get_option( 'share_twitter_username' )) echo ' via %40'.tie_get_option( 'share_twitter_username' ); ?>&url=<?php echo $post_link; ?>" class="social-twitter" rel="external" target="_blank"><i class="fa fa-twitter"></i> <span><?php _eti( 'Twitter' );?></span></a></li>
+		<li><a href="http://twitter.com/home?status=<?php the_title(); ?> <?php echo $post_link; ?> <?php if( tie_get_option( 'share_twitter_username' )) echo 'via @'.tie_get_option( 'share_twitter_username' ); ?>" class="social-twitter" rel="external" target="_blank"><i class="fa fa-twitter"></i> <span><?php _eti( 'Twitter' );?></span></a></li>
 	<?php endif; ?>
 	<?php if( tie_get_option( 'share_google' ) ): ?>
-		<li><a href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=<?php echo $post_link; ?>&amp;name=<?php echo $post_title; ?>" class="social-google-plus" rel="external" target="_blank"><i class="fa fa-google-plus"></i> <span><?php _eti( 'Google +' );?></span></a></li>
+		<li><a href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=<?php echo $post_link; ?>&amp;name=<?php the_title(); ?>" class="social-google-plus" rel="external" target="_blank"><i class="fa fa-google-plus"></i> <span><?php _eti( 'Google +' );?></span></a></li>
 	<?php endif; ?>
 	<?php if( tie_get_option( 'share_stumble' ) ): ?>
-		<li><a href="http://www.stumbleupon.com/submit?url=<?php echo $post_link; ?>&title=<?php echo $post_title;?>" class="social-stumble" rel="external" target="_blank"><i class="fa fa-stumbleupon"></i> <span><?php _eti( 'Stumbleupon' );?></a></span></li>
+		<li><a href="http://www.stumbleupon.com/submit?url=<?php echo $post_link; ?>&title=<?php the_title(); ?>" class="social-stumble" rel="external" target="_blank"><i class="fa fa-stumbleupon"></i> <span><?php _eti( 'Stumbleupon' );?></a></span></li>
 	<?php endif; ?>
 	<?php if( tie_get_option( 'share_linkdin' ) ): ?>
-		<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $post_link; ?>&title=<?php echo $post_title; ?>" class="social-linkedin" rel="external" target="_blank"><i class="fa fa-linkedin"></i> <span><?php _eti( 'LinkedIn' );?></span></a></li>
+		<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $post_link; ?>&title=<?php the_title(); ?>" class="social-linkedin" rel="external" target="_blank"><i class="fa fa-linkedin"></i> <span><?php _eti( 'LinkedIn' );?></span></a></li>
 	<?php endif; ?>
 	<?php if( tie_get_option( 'share_pinterest' ) ): ?>
-		<li><a href="http://pinterest.com/pin/create/button/?url=<?php echo $post_link; ?>&amp;description=<?php echo $post_title; ?>&amp;media=<?php echo tie_thumb_src( 'slider' ); ?>" class="social-pinterest" rel="external" target="_blank"><i class="fa fa-pinterest"></i> <span><?php _eti( 'Pinterest' );?></span></a></li>
+		<li><a href="http://pinterest.com/pin/create/button/?url=<?php echo $post_link; ?>&amp;description=<?php the_title(); ?>&amp;media=<?php echo tie_thumb_src( 'slider' ); ?>" class="social-pinterest" rel="external" target="_blank"><i class="fa fa-pinterest"></i> <span><?php _eti( 'Pinterest' );?></span></a></li>
 	<?php endif; ?>
 	</ul>
 	<?php
@@ -46,9 +43,9 @@ $protocol	= is_ssl() ? 'https' : 'http';
 		  js = d.createElement(s); js.src = url; js.id = id;
 		  fjs.parentNode.insertBefore(js, fjs);
 		};
-		load('//connect.facebook.net/en/all.js#xfbml=1', 	'fbjssdk' );
-		load('https://apis.google.com/js/plusone.js', 		'gplus1js');
-		load('//platform.twitter.com/widgets.js', 			'tweetjs' );
+		load('//connect.facebook.net/en/all.js#xfbml=1', 'fbjssdk');
+		load('https://apis.google.com/js/plusone.js', 'gplus1js');
+		load('//platform.twitter.com/widgets.js', 'tweetjs');
 	  }
 	  if (w.addEventListener) { w.addEventListener("load", go, false); }
 	  else if (w.attachEvent) { w.attachEvent("onload",go); }
@@ -61,7 +58,7 @@ $protocol	= is_ssl() ? 'https' : 'http';
 		</li>
 	<?php endif; ?>	
 	<?php if( tie_get_option( 'share_tweet' ) ): ?>
-		<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $post_link; ?>" data-text="<?php echo $post_title; ?>" data-via="<?php echo tie_get_option( 'share_twitter_username' ) ?>" data-lang="en">tweet</a></li>
+		<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $post_link; ?>" data-text="<?php the_title(); ?>" data-via="<?php echo tie_get_option( 'share_twitter_username' ) ?>" data-lang="en">tweet</a></li>
 	<?php endif; ?>
 	<?php if( tie_get_option( 'share_google' ) ): ?>
 		<li style="width:80px;"><div class="g-plusone" data-size="medium" data-href="<?php echo $post_link; ?>"></div></li>
@@ -87,3 +84,7 @@ $protocol	= is_ssl() ? 'https' : 'http';
 	<?php endif; ?>
 	<div class="clear"></div>
 </div> <!-- .share-post -->
+
+
+
+

@@ -23,11 +23,10 @@
 		<?php
 		if( $query != 'custom' ):
 			if( $query == 'tag' ){
-				$sep  = '';
 				$tags = explode (',' , $tag );
 				foreach ($tags as $tag){
 					$theTagId = get_term_by( 'name', $tag, 'post_tag' );
-					if( !empty( $fea_tags ) ) $sep = ' , ';
+					if($fea_tags) $sep = ' , ';
 					$fea_tags .=  $sep . $theTagId->slug;
 				}
 				$args = array('tag' => $fea_tags, 'posts_per_page'=> $number, 'no_found_rows' => 1 );
@@ -68,11 +67,11 @@
 				<?php if( $effect == 'ticker' ): ?>
 				createTicker(); 
 				<?php else: ?>
-				jQuery('#breaking-news ul').innerFade({animationtype: '<?php echo $effect ?>', speed: <?php echo $speed ?> , timeout: <?php echo $timeout ?>});
+				jQuery('#breaking-news ul').innerfade({animationtype: '<?php echo $effect ?>', speed: <?php echo $speed ?> , timeout: <?php echo $timeout ?>});
 				<?php endif; ?>
 			});
 			<?php if( $effect == 'ticker' ): ?>                                                 
-			function rotateTicker(){                                   
+			function rotateTicker(){                                    
 				if( i == tickerItems.length ){ i = 0; }                                                         
 				tickerText = tickerItems[i];                              
 				c = 0;                                                    

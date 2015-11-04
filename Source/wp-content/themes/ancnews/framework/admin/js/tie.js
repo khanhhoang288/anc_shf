@@ -74,34 +74,34 @@ jQuery(document).ready(function() {
 	
 	if (selected_item == 'video') {jQuery('#tie_video_url-item, #tie_video_self-item, #tie_embed_code-item').show();}
 	if (selected_item == 'audio') {jQuery('#tie_audio_mp3-item, #tie_audio_m4a-item, #tie_audio_oga-item').show();}
-	if (selected_item == 'soundcloud') {jQuery('#tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item, #tie_audio_soundcloud_visual-item').show();}
+	if (selected_item == 'soundcloud') {jQuery('#tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item').show();}
 	if (selected_item == 'slider') {jQuery('#tie_post_slider-item').show();}
 	if (selected_item == 'map') {jQuery('#tie_googlemap_url-item').show();}
 	
 	jQuery("select[name='tie_post_head']").change(function(){
 		var selected_item = jQuery("select[name='tie_post_head'] option:selected").val();
 		if (selected_item == 'video') {
-			jQuery('#tie_post_slider-item, #tie_googlemap_url-item, #tie_audio_mp3-item, #tie_audio_m4a-item, #tie_audio_oga-item, #tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item, #tie_audio_soundcloud_visual-item').hide();
+			jQuery('#tie_post_slider-item, #tie_googlemap_url-item, #tie_audio_mp3-item, #tie_audio_m4a-item, #tie_audio_oga-item, #tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item').hide();
 			jQuery('#tie_video_url-item, #tie_video_self-item, #tie_embed_code-item').fadeIn();
 		}
 		if (selected_item == 'audio') {
-			jQuery('#tie_video_url-item, #tie_video_self-item, #tie_embed_code-item, #tie_post_slider-item, #tie_googlemap_url-item, #tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item, #tie_audio_soundcloud_visual-item').hide();
+			jQuery('#tie_video_url-item, #tie_video_self-item, #tie_embed_code-item, #tie_post_slider-item, #tie_googlemap_url-item, #tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item').hide();
 			jQuery('#tie_audio_mp3-item, #tie_audio_m4a-item, #tie_audio_oga-item').fadeIn();
 		}
 		if (selected_item == 'soundcloud') {
 			jQuery('#tie_video_url-item, #tie_video_self-item, #tie_embed_code-item, #tie_post_slider-item, #tie_googlemap_url-item, #tie_audio_mp3-item, #tie_audio_m4a-item, #tie_audio_oga-item').hide();
-			jQuery('#tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item, #tie_audio_soundcloud_visual-item').fadeIn();
+			jQuery('#tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item').fadeIn();
 		}
 		if (selected_item == 'slider') {
-			jQuery('#tie_video_url-item, #tie_video_self-item, #tie_embed_code-item, #tie_googlemap_url-item, #tie_audio_mp3-item, #tie_audio_m4a-item, #tie_audio_oga-item, #tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item, #tie_audio_soundcloud_visual-item').hide();
+			jQuery('#tie_video_url-item, #tie_video_self-item, #tie_embed_code-item, #tie_googlemap_url-item, #tie_audio_mp3-item, #tie_audio_m4a-item, #tie_audio_oga-item, #tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item').hide();
 			jQuery('#tie_post_slider-item').fadeIn();
 		}
 		if (selected_item == 'map') {
-			jQuery('#tie_video_url-item, #tie_video_self-item, #tie_embed_code-item, #tie_post_slider-item, #tie_audio_mp3-item, #tie_audio_m4a-item, #tie_audio_oga-item, #tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item, #tie_audio_soundcloud_visual-item').hide();
+			jQuery('#tie_video_url-item, #tie_video_self-item, #tie_embed_code-item, #tie_post_slider-item, #tie_audio_mp3-item, #tie_audio_m4a-item, #tie_audio_oga-item, #tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item').hide();
 			jQuery('#tie_googlemap_url-item').fadeIn();
 		}
 		if (selected_item == 'thumb' || selected_item == 'none' || selected_item == '') {
-			jQuery('#tie_video_url-item, #tie_video_self-item, #tie_embed_code-item, #tie_post_slider-item, #tie_googlemap_url-item, #tie_audio_mp3-item, #tie_audio_m4a-item, #tie_audio_oga-item, #tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item, #tie_audio_soundcloud_visual-item').hide();
+			jQuery('#tie_video_url-item, #tie_video_self-item, #tie_embed_code-item, #tie_post_slider-item, #tie_googlemap_url-item, #tie_audio_mp3-item, #tie_audio_m4a-item, #tie_audio_oga-item, #tie_audio_soundcloud-item, #tie_audio_soundcloud_play-item').hide();
 		}
 	 });
 	 
@@ -124,6 +124,18 @@ jQuery(document).ready(function() {
 		}
 		if (selected_item == 'template-authors.php') {
 			jQuery('#tie-template-authors').fadeIn();
+		}
+	 });
+
+// Display on Home
+	var selected_radio = jQuery("input[name='tie_options[on_home]']:checked").val();
+	if (selected_radio == 'latest') {	jQuery('#Home_Builder').hide();	}
+	jQuery("input[name='tie_options[on_home]']").change(function(){
+		var selected_radio = jQuery("input[name='tie_options[on_home]']:checked").val();
+		if (selected_radio == 'latest') {
+			jQuery('#Home_Builder').fadeOut();
+		}else{
+			jQuery('#Home_Builder').fadeIn();
 		}
 	 });
 	

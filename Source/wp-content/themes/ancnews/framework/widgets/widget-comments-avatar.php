@@ -6,17 +6,17 @@ function tie_comments_avatar_widget() {
 class tie_comments_avatar extends WP_Widget {
 
 	function tie_comments_avatar() {
-		$widget_ops 	= array( 'classname' => 'comments-avatar' );
-		$control_ops 	= array( 'width' => 250, 'height' => 350, 'id_base' => 'comments_avatar-widget' );
-		parent::__construct( 'comments_avatar-widget', THEME_NAME .' - '.__( 'Recent Comments with avatar' , 'tie' ) , $widget_ops, $control_ops );
+		$widget_ops = array( 'classname' => 'comments-avatar' );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'comments_avatar-widget' );
+		$this->WP_Widget( 'comments_avatar-widget', THEME_NAME .' - '.__( 'Recent Comments with avatar' , 'tie' ) , $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
 		extract( $args );
 
-		$title 			= apply_filters('widget_title', $instance['title'] );
+		$title = apply_filters('widget_title', $instance['title'] );
 		$no_of_comments = $instance['no_of_comments'];
-		$avatar_size	= $instance['avatar_size'];
+		$avatar_size = $instance['avatar_size'];
 
 		echo $before_widget;
 		if ( $title )
@@ -31,10 +31,10 @@ class tie_comments_avatar extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance 					= $old_instance;
-		$instance['title'] 			= strip_tags( $new_instance['title'] );
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
 		$instance['no_of_comments'] = strip_tags( $new_instance['no_of_comments'] );
-		$instance['avatar_size'] 	= strip_tags( $new_instance['avatar_size'] );
+		$instance['avatar_size'] = strip_tags( $new_instance['avatar_size'] );
 		return $instance;
 	}
 

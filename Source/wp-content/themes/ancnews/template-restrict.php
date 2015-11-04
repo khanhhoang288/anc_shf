@@ -16,7 +16,7 @@ Template Name: Restrict Page Require a Login
 		<?php $get_meta = get_post_custom($post->ID);  ?>
 		<?php //Above Post Banner
 		if( empty( $get_meta["tie_hide_above"][0] ) ){
-			if( !empty( $get_meta["tie_banner_above"][0] ) ) echo '<div class="e3lan e3lan-post">' .do_shortcode( htmlspecialchars_decode($get_meta["tie_banner_above"][0]) ) .'</div>';
+			if( !empty( $get_meta["tie_banner_above"][0] ) ) echo '<div class="e3lan e3lan-post">' .htmlspecialchars_decode($get_meta["tie_banner_above"][0]) .'</div>';
 			else tie_banner('banner_above' , '<div class="e3lan e3lan-post">' , '</div>' );
 		}
 		?>
@@ -48,7 +48,7 @@ Template Name: Restrict Page Require a Login
 		
 		<?php //Below Post Banner
 		if( empty( $get_meta["tie_hide_below"][0] ) ){
-			if( !empty( $get_meta["tie_banner_below"][0] ) ) echo '<div class="e3lan e3lan-post">' .do_shortcode( htmlspecialchars_decode($get_meta["tie_banner_below"][0]) ) .'</div>';
+			if( !empty( $get_meta["tie_banner_below"][0] ) ) echo '<div class="e3lan e3lan-post">' .htmlspecialchars_decode($get_meta["tie_banner_below"][0]) .'</div>';
 			else tie_banner('banner_below' , '<div class="e3lan e3lan-post">' , '</div>' );
 		}
 		?>

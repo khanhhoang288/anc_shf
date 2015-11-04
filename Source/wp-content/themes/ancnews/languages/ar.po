@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sahifa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-22 15:33+0200\n"
-"PO-Revision-Date: 2015-08-22 15:33+0200\n"
+"POT-Creation-Date: 2015-05-24 00:03+0200\n"
+"PO-Revision-Date: 2015-05-24 00:05+0200\n"
 "Last-Translator: Fouad Badawy <support@tielabs.com>\n"
 "Language-Team: Tielabs <info@tielabs.com>\n"
 "Language: ar\n"
@@ -20,28 +20,25 @@ msgstr ""
 "X-Poedit-SearchPath-1: ..\n"
 "X-Poedit-SearchPathExcluded-0: ../framework/admin/inc/tgm\n"
 
-#: ../404.php:6 ../framework/functions/translation.php:8
+#: ../404.php:6
 msgid "404 :("
 msgstr "404 :("
 
 #: ../404.php:7 ../framework/functions/breadcrumbs.php:125
-#: ../framework/functions/translation.php:6
-#: ../framework/functions/translation.php:9 ../framework/parts/not-found.php:2
+#: ../framework/functions/translation.php:6 ../framework/parts/not-found.php:2
 msgid "Not Found"
 msgstr "غير موجود !"
 
-#: ../404.php:10 ../framework/functions/translation.php:11
-#: ../framework/parts/not-found.php:4
+#: ../404.php:10 ../framework/parts/not-found.php:4
 msgid ""
 "Apologies, but the page you requested could not be found. Perhaps searching "
 "will help."
 msgstr "المعذرة ولكن الصفحة المطلوبة غير موجودة .. حاول إستخدام محرك البحث ."
 
 #: ../404.php:14 ../404.php:15 ../framework/admin/framework-admin.php:276
-#: ../framework/admin/framework-panel.php:474
-#: ../framework/admin/framework-panel.php:533
+#: ../framework/admin/framework-panel.php:487
+#: ../framework/admin/framework-panel.php:546
 #: ../framework/functions/translation.php:14
-#: ../framework/functions/translation.php:16
 #: ../framework/parts/not-found.php:8 ../framework/parts/not-found.php:9
 #: ../framework/widgets/widget-search.php:10
 #: ../framework/widgets/widget-search.php:15
@@ -50,56 +47,54 @@ msgstr "المعذرة ولكن الصفحة المطلوبة غير موجود�
 msgid "Search"
 msgstr "بحث"
 
-#: ../404.php:30 ../framework/functions/translation.php:10
-#: ../framework/parts/check-also.php:34
+#: ../404.php:30 ../framework/parts/check-also.php:34
 msgid "Check Also"
 msgstr "شاهد أيضاً"
 
-#: ../archive.php:9 ../framework/functions/translation.php:26
+#: ../archive.php:9
 #, php-format
 msgid "Daily Archives: <span>%s</span>"
 msgstr "أرشيف يوم: <span>%s</span>"
 
-#: ../archive.php:11 ../framework/functions/translation.php:27
+#: ../archive.php:11
 #, php-format
 msgid "Monthly Archives: <span>%s</span>"
 msgstr "أرشيف شهر: <span>%s</span>"
 
-#: ../archive.php:13 ../framework/functions/translation.php:28
+#: ../archive.php:13
 #, php-format
 msgid "Yearly Archives: <span>%s</span>"
 msgstr "أرشيف سنة: <span>%s</span>"
 
-#: ../archive.php:15 ../framework/functions/translation.php:30
+#: ../archive.php:15
 msgid "Blog Archives"
 msgstr "أرشيف الموقع"
 
-#: ../author.php:16 ../author.php:39 ../category.php:22
-#: ../framework/functions/translation.php:31 ../tag.php:13
+#: ../author.php:16 ../author.php:39 ../category.php:22 ../tag.php:13
 msgid "Feed Subscription"
 msgstr "الإشتراك في الخلاصات"
 
-#: ../comments.php:13 ../framework/functions/translation.php:36
+#: ../comments.php:13
 msgid "No comments"
 msgstr "لا تعليقات"
 
-#: ../comments.php:13 ../framework/functions/translation.php:37
+#: ../comments.php:13
 msgid "One comment"
 msgstr "تعليق واحد"
 
-#: ../comments.php:13 ../framework/functions/translation.php:40
+#: ../comments.php:13
 msgid "comments"
 msgstr "تعليقات"
 
-#: ../comments.php:19 ../framework/functions/translation.php:42
+#: ../comments.php:19
 msgid "<span>&larr;</span> Older Comments"
 msgstr "<span>&larr;</span> تعليقات أقدم"
 
-#: ../comments.php:20 ../framework/functions/translation.php:43
+#: ../comments.php:20
 msgid "Newer Comments <span>&rarr;</span>"
 msgstr "تعليقات أحدث <span>&rarr;</span>"
 
-#: ../footer.php:31 ../framework/functions/translation.php:106
+#: ../footer.php:31
 msgid "Scroll To Top"
 msgstr "إلى الأعلى"
 
@@ -146,11 +141,11 @@ msgid "Use the button above to add slides."
 msgstr "استخدم الزر بالأعلى لإضافة سلايدز."
 
 #: ../framework/admin/custom-slider.php:134
-#: ../framework/admin/framework-panel.php:927
-#: ../framework/admin/framework-panel.php:952
-#: ../framework/admin/framework-panel.php:977
-#: ../framework/admin/framework-panel.php:1002
-#: ../framework/admin/framework-panel.php:1027
+#: ../framework/admin/framework-panel.php:940
+#: ../framework/admin/framework-panel.php:965
+#: ../framework/admin/framework-panel.php:990
+#: ../framework/admin/framework-panel.php:1015
+#: ../framework/admin/framework-panel.php:1040
 msgid "Title"
 msgstr "العنوان"
 
@@ -181,29 +176,29 @@ msgid "Update"
 msgstr "تحديث"
 
 #: ../framework/admin/framework-admin.php:105
-#: ../framework/admin/framework-builder.php:238
-#: ../framework/admin/framework-builder.php:360
-#: ../framework/admin/framework-builder.php:387
-#: ../framework/admin/framework-builder.php:403
-#: ../framework/widgets/widget-authors-posts.php:65
-#: ../framework/widgets/widget-category.php:65
+#: ../framework/admin/framework-builder.php:231
+#: ../framework/admin/framework-builder.php:353
+#: ../framework/admin/framework-builder.php:380
+#: ../framework/admin/framework-builder.php:396
+#: ../framework/widgets/widget-authors-posts.php:67
+#: ../framework/widgets/widget-category.php:67
 #: ../framework/widgets/widget-news-pic.php:65
 #: ../framework/widgets/widget-slider.php:138
 msgid "Category:"
 msgstr "تصنيف :"
 
 #: ../framework/admin/framework-admin.php:106
-#: ../framework/admin/framework-builder.php:243
+#: ../framework/admin/framework-builder.php:236
 msgid "Posts Order:"
 msgstr "ترتيب التدوينات"
 
 #: ../framework/admin/framework-admin.php:107
-#: ../framework/admin/framework-builder.php:244
-#: ../framework/admin/framework-builder.php:270
-#: ../framework/admin/framework-builder.php:366
+#: ../framework/admin/framework-builder.php:237
+#: ../framework/admin/framework-builder.php:263
+#: ../framework/admin/framework-builder.php:359
 #: ../framework/widgets/widget-author.php:126
-#: ../framework/widgets/widget-authors-posts.php:60
-#: ../framework/widgets/widget-category.php:60
+#: ../framework/widgets/widget-authors-posts.php:62
+#: ../framework/widgets/widget-category.php:62
 #: ../framework/widgets/widget-news-pic.php:60
 #: ../framework/widgets/widget-posts.php:66
 #: ../framework/widgets/widget-slider.php:133
@@ -212,36 +207,36 @@ msgid "Number of posts to show:"
 msgstr "عدد التدوينات المراد إظهارها :"
 
 #: ../framework/admin/framework-admin.php:108
-#: ../framework/admin/framework-builder.php:245
-#: ../framework/admin/framework-builder.php:271
-#: ../framework/admin/framework-builder.php:367
-#: ../framework/admin/framework-builder.php:393
-#: ../framework/admin/framework-builder.php:409
+#: ../framework/admin/framework-builder.php:238
+#: ../framework/admin/framework-builder.php:264
+#: ../framework/admin/framework-builder.php:360
+#: ../framework/admin/framework-builder.php:386
+#: ../framework/admin/framework-builder.php:402
 msgid "Offset - number of posts to pass over:"
 msgstr "التخطي - عدد التدوينات المتخطاة:"
 
 #: ../framework/admin/framework-admin.php:109
-#: ../framework/admin/framework-builder.php:247
+#: ../framework/admin/framework-builder.php:240
 msgid "Hide thumbnail for the First post"
 msgstr "إخفاء صورة أول خبر"
 
 #: ../framework/admin/framework-admin.php:110
-#: ../framework/admin/framework-builder.php:251
+#: ../framework/admin/framework-builder.php:244
 msgid "Hide all small thumbnails"
 msgstr "إخفاء كل المصغرات"
 
 #: ../framework/admin/framework-admin.php:111
-#: ../framework/admin/framework-builder.php:264
+#: ../framework/admin/framework-builder.php:257
 msgid "Exclude These Categories:"
 msgstr "إستثناء تصنيفات:"
 
 #: ../framework/admin/framework-admin.php:112
 #: ../framework/admin/framework-admin.php:187
-#: ../framework/admin/framework-builder.php:269
-#: ../framework/admin/framework-builder.php:339
-#: ../framework/admin/framework-builder.php:365
-#: ../framework/admin/framework-builder.php:392
-#: ../framework/admin/framework-builder.php:408
+#: ../framework/admin/framework-builder.php:262
+#: ../framework/admin/framework-builder.php:332
+#: ../framework/admin/framework-builder.php:358
+#: ../framework/admin/framework-builder.php:385
+#: ../framework/admin/framework-builder.php:401
 #: ../framework/widgets/widget-ads.php:82
 #: ../framework/widgets/widget-ads.php:202
 #: ../framework/widgets/widget-ads.php:324
@@ -252,9 +247,9 @@ msgstr "إستثناء تصنيفات:"
 #: ../framework/widgets/widget-ads.php:898
 #: ../framework/widgets/widget-ads.php:1010
 #: ../framework/widgets/widget-ads.php:1122
-#: ../framework/widgets/widget-author-custom.php:60
-#: ../framework/widgets/widget-authors-posts.php:56
-#: ../framework/widgets/widget-category.php:56
+#: ../framework/widgets/widget-author-custom.php:59
+#: ../framework/widgets/widget-authors-posts.php:58
+#: ../framework/widgets/widget-category.php:58
 #: ../framework/widgets/widget-comments-avatar.php:46
 #: ../framework/widgets/widget-custom-author.php:56
 #: ../framework/widgets/widget-facebook.php:49
@@ -265,59 +260,59 @@ msgstr "إستثناء تصنيفات:"
 #: ../framework/widgets/widget-news-pic.php:56
 #: ../framework/widgets/widget-posts.php:62
 #: ../framework/widgets/widget-social.php:56
-#: ../framework/widgets/widget-soundcloud.php:48
+#: ../framework/widgets/widget-soundcloud.php:46
 #: ../framework/widgets/widget-text-html.php:65
 #: ../framework/widgets/widget-timeline.php:56
-#: ../framework/widgets/widget-twitter.php:164
+#: ../framework/widgets/widget-twitter.php:163
 #: ../framework/widgets/widget-video.php:75
-#: ../framework/widgets/widget-weather.php:257
+#: ../framework/widgets/widget-weather.php:253
 #: ../framework/widgets/widget-youtube.php:45
 msgid "Title:"
 msgstr "العنوان:"
 
 #: ../framework/admin/framework-admin.php:113
-#: ../framework/admin/framework-builder.php:273
+#: ../framework/admin/framework-builder.php:266
 msgid "Show Pagination"
 msgstr "عرض نظام الصفحات"
 
 #: ../framework/admin/framework-admin.php:114
-#: ../framework/admin/framework-builder.php:278
-#: ../framework/admin/framework-panel.php:1933
+#: ../framework/admin/framework-builder.php:271
+#: ../framework/admin/framework-panel.php:1946
 msgid "Show Social Buttons"
 msgstr "إظهار أزرار الشبكات الإجتماعية"
 
 #: ../framework/admin/framework-admin.php:115
-#: ../framework/admin/framework-builder.php:283
+#: ../framework/admin/framework-builder.php:276
 msgid ""
 "WordPress WARNING: Setting the offset option breaks pagination, disable the "
 "pagination option if you want to use the offset option."
 msgstr "تنبيه WordPress : لايمكن تفعيل خيار التخطي مع تفعيل نظام الصفحات."
 
 #: ../framework/admin/framework-admin.php:116
-#: ../framework/admin/framework-builder.php:289
+#: ../framework/admin/framework-builder.php:282
 msgid "Categories Tabs Block"
 msgstr "بلوك تابات للأقسام"
 
 #: ../framework/admin/framework-admin.php:117
-#: ../framework/admin/framework-builder.php:259
+#: ../framework/admin/framework-builder.php:252
 #: ../framework/admin/framework-category.php:51
 #: ../framework/widgets/widget-posts.php:58
 msgid "Recent Posts"
 msgstr "أخر التدوينات"
 
 #: ../framework/admin/framework-admin.php:118
-#: ../framework/admin/framework-builder.php:233
+#: ../framework/admin/framework-builder.php:226
 msgid "Category Block:"
 msgstr "بلوك أخبار من تصنيف :"
 
 #: ../framework/admin/framework-admin.php:119
-#: ../framework/admin/framework-builder.php:313
+#: ../framework/admin/framework-builder.php:306
 msgid "Choose Categories:"
 msgstr "إختر التصنيفات:"
 
 #: ../framework/admin/framework-admin.php:120
-#: ../framework/admin/framework-builder.php:217
-#: ../framework/admin/framework-builder.php:325
+#: ../framework/admin/framework-builder.php:210
+#: ../framework/admin/framework-builder.php:318
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -326,17 +321,17 @@ msgid "Recent Products"
 msgstr "أخر المنتجات"
 
 #: ../framework/admin/framework-admin.php:122
-#: ../framework/admin/framework-builder.php:340
+#: ../framework/admin/framework-builder.php:333
 msgid "Number of Products to show:"
 msgstr "عدد المنتجات:"
 
 #: ../framework/admin/framework-admin.php:123
-#: ../framework/admin/framework-builder.php:341
+#: ../framework/admin/framework-builder.php:334
 msgid "Offset - number of Products to pass over:"
 msgstr "التخطي - عدد المنتجات المتخطاة:"
 
 #: ../framework/admin/framework-admin.php:124
-#: ../framework/admin/framework-builder.php:342
+#: ../framework/admin/framework-builder.php:335
 msgid "Display Mode:"
 msgstr "نمط العرض:"
 
@@ -345,59 +340,59 @@ msgid "Default Layout"
 msgstr "الإفتراضي"
 
 #: ../framework/admin/framework-admin.php:126
-#: ../framework/admin/framework-builder.php:203
+#: ../framework/admin/framework-builder.php:196
 msgid "Scrolling Block"
 msgstr "مربع متحرك"
 
 #: ../framework/admin/framework-admin.php:127
-#: ../framework/admin/framework-builder.php:345
+#: ../framework/admin/framework-builder.php:338
 msgid "Scrolling"
 msgstr "متحرك"
 
 #: ../framework/admin/framework-admin.php:128
-#: ../framework/admin/framework-builder.php:371
+#: ../framework/admin/framework-builder.php:364
 #: ../framework/widgets/widget-text-html.php:11
 msgid "Text or HTML"
 msgstr "نص او HTML"
 
 #: ../framework/admin/framework-admin.php:129
-#: ../framework/admin/framework-builder.php:378
-#: ../framework/admin/framework-panel.php:1471
-#: ../framework/admin/framework-panel.php:1547
-#: ../framework/admin/framework-panel.php:1623
-#: ../framework/admin/framework-panel.php:1695
-#: ../framework/admin/framework-panel.php:1767
-#: ../framework/functions/theme-functions.php:645
+#: ../framework/admin/framework-builder.php:371
+#: ../framework/admin/framework-panel.php:1484
+#: ../framework/admin/framework-panel.php:1560
+#: ../framework/admin/framework-panel.php:1636
+#: ../framework/admin/framework-panel.php:1708
+#: ../framework/admin/framework-panel.php:1780
+#: ../framework/functions/theme-functions.php:644
 msgid "Supports: Text, HTML and Shortcodes."
 msgstr "يدعم: النصوص، أكواد HTML، الأكواد المختصرة"
 
 #: ../framework/admin/framework-admin.php:130
-#: ../framework/admin/framework-builder.php:382
+#: ../framework/admin/framework-builder.php:375
 msgid "News in Picture"
 msgstr "أخبار في صور"
 
 #: ../framework/admin/framework-admin.php:131
-#: ../framework/admin/framework-builder.php:410
+#: ../framework/admin/framework-builder.php:403
 msgid "Videos Lightbox"
 msgstr "تفعيل Lightbox للفيديوهات"
 
 #: ../framework/admin/framework-admin.php:132
-#: ../framework/admin/framework-builder.php:398
+#: ../framework/admin/framework-builder.php:391
 msgid "Videos"
 msgstr "فيديوهات"
 
 #: ../framework/admin/framework-admin.php:133
-#: ../framework/admin/framework-builder.php:413
+#: ../framework/admin/framework-builder.php:406
 msgid "Videos Lightbox option working with YouTube and Vimeo videos only."
 msgstr "خيار Lightbox يعمل مع فيديوهات  YouTube و Vimeo فقط."
 
 #: ../framework/admin/framework-admin.php:134
-#: ../framework/admin/framework-builder.php:243
+#: ../framework/admin/framework-builder.php:236
 msgid "Latest Posts"
 msgstr "أخر التدوينات"
 
 #: ../framework/admin/framework-admin.php:135
-#: ../framework/admin/framework-builder.php:243
+#: ../framework/admin/framework-builder.php:236
 #: ../framework/admin/framework-category.php:52
 msgid "Random Posts"
 msgstr "تدوينات عشوائية"
@@ -452,25 +447,25 @@ msgstr "ملاحظة"
 
 #: ../framework/admin/framework-admin.php:149
 #: ../framework/admin/framework-options.php:187
-#: ../framework/admin/framework-panel.php:1250
-#: ../framework/functions/mega-menus.php:390
+#: ../framework/admin/framework-panel.php:1263
+#: ../framework/functions/mega-menus.php:389
 msgid "Right"
 msgstr "يمين"
 
 #: ../framework/admin/framework-admin.php:150
 #: ../framework/admin/framework-options.php:186
-#: ../framework/admin/framework-panel.php:1251
-#: ../framework/functions/mega-menus.php:391
+#: ../framework/admin/framework-panel.php:1264
+#: ../framework/functions/mega-menus.php:390
 msgid "Left"
 msgstr "يسار"
 
 #: ../framework/admin/framework-admin.php:151
-#: ../framework/admin/framework-builder.php:610
+#: ../framework/admin/framework-builder.php:603
 #: ../framework/admin/framework-category.php:163
 #: ../framework/admin/framework-options.php:188
 #: ../framework/admin/framework-options.php:195
-#: ../framework/functions/mega-menus.php:389
-#: ../framework/functions/mega-menus.php:395
+#: ../framework/functions/mega-menus.php:388
+#: ../framework/functions/mega-menus.php:393
 msgid "Center"
 msgstr "وسط"
 
@@ -559,7 +554,7 @@ msgid "Icon (use full Font Awesome name):"
 msgstr "الأيقونة ( إستخدم الإسم الكامل font awesome ):"
 
 #: ../framework/admin/framework-admin.php:173
-#: ../framework/functions/mega-menus.php:638
+#: ../framework/functions/mega-menus.php:661
 msgid "Open link in a new window/tab"
 msgstr "فتح الرابط في تبويب/نافذة جديدة"
 
@@ -605,12 +600,12 @@ msgid "Slide 3 | Your Content"
 msgstr "سلايد 3 | المحتوى"
 
 #: ../framework/admin/framework-admin.php:184
-#: ../framework/admin/framework-panel.php:338
+#: ../framework/admin/framework-panel.php:351
 msgid "Vertical"
 msgstr "عمودي"
 
 #: ../framework/admin/framework-admin.php:185
-#: ../framework/admin/framework-panel.php:339
+#: ../framework/admin/framework-panel.php:352
 msgid "Horizontal"
 msgstr "أفقي"
 
@@ -635,7 +630,7 @@ msgid "Content Slideshow"
 msgstr "سلايدر المحتويات"
 
 #: ../framework/admin/framework-admin.php:192
-#: ../framework/admin/framework-panel.php:2099
+#: ../framework/admin/framework-panel.php:2112
 msgid "Author Bio"
 msgstr "نبذة عن الكاتب"
 
@@ -666,7 +661,6 @@ msgid "Sorting:"
 msgstr "الترتيب:"
 
 #: ../framework/admin/framework-admin.php:199
-#: ../framework/functions/translation.php:75
 #: ../framework/widgets/widget-tabbed.php:36
 #: ../framework/widgets/widget-tabbed.php:150
 msgid "Recent"
@@ -697,7 +691,7 @@ msgid "Google Maps"
 msgstr "خرائط جوجل"
 
 #: ../framework/admin/framework-admin.php:205
-#: ../framework/admin/framework-metaboxes.php:191
+#: ../framework/admin/framework-metaboxes.php:186
 msgid "Google Maps URL"
 msgstr "رابط حريطة جوجل:"
 
@@ -720,12 +714,12 @@ msgid "Audio"
 msgstr "ملف صوتي"
 
 #: ../framework/admin/framework-admin.php:210
-#: ../framework/admin/framework-metaboxes.php:170
+#: ../framework/admin/framework-metaboxes.php:165
 msgid "MP3 file URL"
 msgstr "رابط ملف MP3"
 
 #: ../framework/admin/framework-admin.php:211
-#: ../framework/admin/framework-metaboxes.php:175
+#: ../framework/admin/framework-metaboxes.php:170
 msgid "M4A file URL"
 msgstr "رابط ملف M4A"
 
@@ -786,12 +780,12 @@ msgid "Share Buttons"
 msgstr "أزرار المشاركة"
 
 #: ../framework/admin/framework-admin.php:226
-#: ../framework/admin/framework-panel.php:1171
+#: ../framework/admin/framework-panel.php:1184
 msgid "Facebook Like Button"
 msgstr "زر Facebook Like"
 
 #: ../framework/admin/framework-admin.php:227
-#: ../framework/admin/framework-panel.php:1161
+#: ../framework/admin/framework-panel.php:1174
 msgid "Tweet Button"
 msgstr "زر Tweet"
 
@@ -804,12 +798,12 @@ msgid "Stumble Button"
 msgstr "زر Stumble"
 
 #: ../framework/admin/framework-admin.php:230
-#: ../framework/admin/framework-panel.php:1176
+#: ../framework/admin/framework-panel.php:1189
 msgid "Google+ Button"
 msgstr "زر +Google"
 
 #: ../framework/admin/framework-admin.php:231
-#: ../framework/admin/framework-panel.php:1192
+#: ../framework/admin/framework-panel.php:1205
 msgid "Pinterest Button"
 msgstr "زر Pinterest"
 
@@ -818,7 +812,7 @@ msgid "Twitter Follow Button"
 msgstr "زر متابعة تويتر"
 
 #: ../framework/admin/framework-admin.php:233
-#: ../framework/functions/theme-functions.php:658
+#: ../framework/functions/theme-functions.php:657
 msgid "Twitter Username"
 msgstr "إسم مستخم حساب تويتر"
 
@@ -952,342 +946,340 @@ msgstr "أضف المحتوى هنا"
 msgid "Full Width Image"
 msgstr "صورة بالعرض الكامل"
 
-#: ../framework/admin/framework-builder.php:162
-#: ../framework/admin/framework-builder.php:178
+#: ../framework/admin/framework-builder.php:155
+#: ../framework/admin/framework-builder.php:171
 msgid "Page Builder"
 msgstr "مُبنى الصفحات"
 
-#: ../framework/admin/framework-builder.php:179
+#: ../framework/admin/framework-builder.php:172
 msgid "[-] Collapse All"
 msgstr "[-] طي الكل"
 
-#: ../framework/admin/framework-builder.php:180
+#: ../framework/admin/framework-builder.php:173
 msgid "[+] Expand All"
 msgstr "[+] فتح الكل"
 
-#: ../framework/admin/framework-builder.php:200
+#: ../framework/admin/framework-builder.php:193
 msgid "Category Block | Layout 1"
 msgstr "بلوك تصنيف | النمط 3"
 
-#: ../framework/admin/framework-builder.php:201
+#: ../framework/admin/framework-builder.php:194
 msgid "Category Block | Layout 2"
 msgstr "بلوك تصنيف | النمط 2"
 
-#: ../framework/admin/framework-builder.php:202
+#: ../framework/admin/framework-builder.php:195
 msgid "Category Block | Layout 3"
 msgstr "بلوك تصنيف | النمط 1"
 
-#: ../framework/admin/framework-builder.php:204
+#: ../framework/admin/framework-builder.php:197
 msgid "News in Picture Block | Default Layout"
 msgstr "أخبار في صورة | النمط الإفتراضي"
 
-#: ../framework/admin/framework-builder.php:205
+#: ../framework/admin/framework-builder.php:198
 msgid "News in Picture Block | Grid Layout"
 msgstr "أخبار في صورة | النمط الشبكي"
 
-#: ../framework/admin/framework-builder.php:206
+#: ../framework/admin/framework-builder.php:199
 msgid "Videos Block"
 msgstr "بلوك فيديوهات"
 
-#: ../framework/admin/framework-builder.php:207
+#: ../framework/admin/framework-builder.php:200
 msgid "Recent Posts | Default Layout"
 msgstr "أخر التدوينات | النمط الإفتراضي"
 
-#: ../framework/admin/framework-builder.php:208
+#: ../framework/admin/framework-builder.php:201
 msgid "Recent Posts | Big Thumbnail Layout"
 msgstr "أخر التدوينات | نمط الصورة الكبيرة"
 
-#: ../framework/admin/framework-builder.php:209
+#: ../framework/admin/framework-builder.php:202
 msgid "Recent Posts | Blog Layout"
 msgstr "أخر التدوينات | نمط التدوينة"
 
-#: ../framework/admin/framework-builder.php:210
+#: ../framework/admin/framework-builder.php:203
 msgid "Recent Posts | Post Content Layout"
 msgstr "أخر التدوينات | نمط محتوى التدوينة"
 
-#: ../framework/admin/framework-builder.php:211
+#: ../framework/admin/framework-builder.php:204
 msgid "Recent Posts | Masonry Layout"
 msgstr "أخر التدوينات | نمط الأعمدة المتداخلة"
 
-#: ../framework/admin/framework-builder.php:212
+#: ../framework/admin/framework-builder.php:205
 msgid "Recent Posts | Timeline Layout"
 msgstr "أخر التدوينات | نمط المخطط الزمني"
 
-#: ../framework/admin/framework-builder.php:213
+#: ../framework/admin/framework-builder.php:206
 msgid "Categories Tabs"
 msgstr "تابات التصنيفات"
 
-#: ../framework/admin/framework-builder.php:214
+#: ../framework/admin/framework-builder.php:207
 msgid "Text or HTML Code"
 msgstr "نصوص أو أكواد HTML"
 
-#: ../framework/admin/framework-builder.php:330
+#: ../framework/admin/framework-builder.php:323
 msgid "Products Categories:"
 msgstr "تصنيفات المنتجات:"
 
-#: ../framework/admin/framework-builder.php:344
+#: ../framework/admin/framework-builder.php:337
 #: ../framework/admin/framework-category.php:37
 #: ../framework/admin/framework-metaboxes.php:48
 #: ../framework/admin/framework-metaboxes.php:128
-#: ../framework/admin/framework-panel.php:1877
-#: ../framework/admin/framework-panel.php:2329
-#: ../framework/admin/framework-panel.php:2344
-#: ../framework/admin/framework-panel.php:2471
-#: ../framework/admin/framework-panel.php:2486
+#: ../framework/admin/framework-panel.php:1890
+#: ../framework/admin/framework-panel.php:2337
+#: ../framework/admin/framework-panel.php:2352
+#: ../framework/admin/framework-panel.php:2479
+#: ../framework/admin/framework-panel.php:2494
 msgid "Default"
 msgstr "الإفتراضي"
 
-#: ../framework/admin/framework-builder.php:355
+#: ../framework/admin/framework-builder.php:348
 msgid "Scrolling Block:"
 msgstr "بلوك متحرك"
 
-#: ../framework/admin/framework-builder.php:442
+#: ../framework/admin/framework-builder.php:435
 msgid "Blocks Settings"
 msgstr "إعدادات البلوكات"
 
-#: ../framework/admin/framework-builder.php:445
+#: ../framework/admin/framework-builder.php:438
 msgid "First News Excerpt Length"
 msgstr "طول نص أول خبر"
 
-#: ../framework/admin/framework-builder.php:451
-#: ../framework/admin/framework-panel.php:1943
+#: ../framework/admin/framework-builder.php:444
+#: ../framework/admin/framework-panel.php:1956
 msgid "Review Score"
 msgstr "نقاط التقييم"
 
-#: ../framework/admin/framework-builder.php:456
-#: ../framework/admin/framework-panel.php:1095
-#: ../framework/admin/framework-panel.php:1948
+#: ../framework/admin/framework-builder.php:449
+#: ../framework/admin/framework-panel.php:1108
+#: ../framework/admin/framework-panel.php:1961
 msgid "Author Meta"
 msgstr "اسم الكاتب"
 
-#: ../framework/admin/framework-builder.php:459
-#: ../framework/admin/framework-builder.php:470
-#: ../framework/admin/framework-builder.php:476
-#: ../framework/admin/framework-builder.php:482
+#: ../framework/admin/framework-builder.php:452
+#: ../framework/admin/framework-builder.php:463
+#: ../framework/admin/framework-builder.php:469
+#: ../framework/admin/framework-builder.php:475
 msgid ""
 "This option not applied on Scrolling blocks and Recent posts Default Style ."
 msgstr ""
 "هذا الخيار لن يتم تطبيقه على البلوك المتحرك أو النمط الإفتراضي لأخر "
 "التدوينات."
 
-#: ../framework/admin/framework-builder.php:462
-#: ../framework/admin/framework-panel.php:1100
-#: ../framework/admin/framework-panel.php:1953
+#: ../framework/admin/framework-builder.php:455
+#: ../framework/admin/framework-panel.php:1113
+#: ../framework/admin/framework-panel.php:1966
 msgid "Date Meta"
 msgstr "تاريخ التدوينة"
 
-#: ../framework/admin/framework-builder.php:467
-#: ../framework/admin/framework-panel.php:1105
-#: ../framework/admin/framework-panel.php:1958
+#: ../framework/admin/framework-builder.php:460
+#: ../framework/admin/framework-panel.php:1118
+#: ../framework/admin/framework-panel.php:1971
 msgid "Categories Meta"
 msgstr "معلومات التصنيفات"
 
-#: ../framework/admin/framework-builder.php:473
-#: ../framework/admin/framework-panel.php:1110
-#: ../framework/admin/framework-panel.php:1963
+#: ../framework/admin/framework-builder.php:466
+#: ../framework/admin/framework-panel.php:1123
+#: ../framework/admin/framework-panel.php:1976
 msgid "Comments Meta"
 msgstr "عدد التعليقات"
 
-#: ../framework/admin/framework-builder.php:479
-#: ../framework/admin/framework-panel.php:1120
-#: ../framework/admin/framework-panel.php:1968
+#: ../framework/admin/framework-builder.php:472
+#: ../framework/admin/framework-panel.php:1133
+#: ../framework/admin/framework-panel.php:1981
 msgid "Views Meta"
 msgstr "عدد الزيارات"
 
-#: ../framework/admin/framework-builder.php:487
+#: ../framework/admin/framework-builder.php:480
 msgid "Grid Featured Posts"
 msgstr "السلايدر الشبكي"
 
-#: ../framework/admin/framework-builder.php:490
-#: ../framework/admin/framework-builder.php:592
-#: ../framework/admin/framework-panel.php:561
+#: ../framework/admin/framework-builder.php:483
+#: ../framework/admin/framework-builder.php:585
+#: ../framework/admin/framework-panel.php:574
 msgid "Enable"
 msgstr "تفعيل"
 
-#: ../framework/admin/framework-builder.php:495
+#: ../framework/admin/framework-builder.php:488
 msgid "Animate Automatically"
 msgstr "تحريك تلقائي"
 
-#: ../framework/admin/framework-builder.php:501
-#: ../framework/admin/framework-builder.php:620
-#: ../framework/admin/framework-builder.php:651
+#: ../framework/admin/framework-builder.php:494
+#: ../framework/admin/framework-builder.php:613
+#: ../framework/admin/framework-builder.php:644
 #: ../framework/admin/framework-category.php:174
 #: ../framework/admin/framework-category.php:208
 msgid "Slideshow Speed"
 msgstr "سرعة السلايدر"
 
-#: ../framework/admin/framework-builder.php:510
-#: ../framework/admin/framework-builder.php:629
-#: ../framework/admin/framework-builder.php:660
+#: ../framework/admin/framework-builder.php:503
+#: ../framework/admin/framework-builder.php:622
+#: ../framework/admin/framework-builder.php:653
 #: ../framework/admin/framework-category.php:184
 #: ../framework/admin/framework-category.php:218
-#: ../framework/admin/framework-panel.php:580
+#: ../framework/admin/framework-panel.php:593
 msgid "Animation Speed"
 msgstr "سرعة الحركة"
 
-#: ../framework/admin/framework-builder.php:519
-#: ../framework/admin/framework-builder.php:705
+#: ../framework/admin/framework-builder.php:512
+#: ../framework/admin/framework-builder.php:698
 #: ../framework/admin/framework-category.php:140
-#: ../framework/admin/framework-panel.php:607
-#: ../framework/admin/framework-panel.php:1217
-#: ../framework/admin/framework-panel.php:1254
+#: ../framework/admin/framework-panel.php:620
+#: ../framework/admin/framework-panel.php:1230
+#: ../framework/admin/framework-panel.php:1267
 msgid "Number of posts to show"
 msgstr "عدد التدوينات المراد إظهارها"
 
-#: ../framework/admin/framework-builder.php:530
-#: ../framework/admin/framework-builder.php:711
-#: ../framework/admin/framework-panel.php:1227
-#: ../framework/admin/framework-panel.php:1259
+#: ../framework/admin/framework-builder.php:523
+#: ../framework/admin/framework-builder.php:704
+#: ../framework/admin/framework-panel.php:1240
+#: ../framework/admin/framework-panel.php:1272
 msgid "Query Type"
 msgstr "نوع الاستعلام"
 
-#: ../framework/admin/framework-builder.php:533
-#: ../framework/admin/framework-builder.php:555
-#: ../framework/admin/framework-builder.php:714
-#: ../framework/admin/framework-builder.php:737
+#: ../framework/admin/framework-builder.php:526
+#: ../framework/admin/framework-builder.php:548
+#: ../framework/admin/framework-builder.php:707
+#: ../framework/admin/framework-builder.php:730
 msgid "Category"
 msgstr "تصنيف"
 
-#: ../framework/admin/framework-builder.php:534
-#: ../framework/admin/framework-builder.php:715
+#: ../framework/admin/framework-builder.php:527
+#: ../framework/admin/framework-builder.php:708
 msgid "Tag"
 msgstr "وسم"
 
-#: ../framework/admin/framework-builder.php:535
-#: ../framework/admin/framework-builder.php:716
+#: ../framework/admin/framework-builder.php:528
+#: ../framework/admin/framework-builder.php:709
 msgid "Selective Posts"
 msgstr "تدوينات مختارة"
 
-#: ../framework/admin/framework-builder.php:536
-#: ../framework/admin/framework-builder.php:717
+#: ../framework/admin/framework-builder.php:529
+#: ../framework/admin/framework-builder.php:710
 msgid "Selective Pages"
 msgstr "صفحات مختارة"
 
-#: ../framework/admin/framework-builder.php:537
-#: ../framework/admin/framework-builder.php:580
-#: ../framework/admin/framework-builder.php:718
-#: ../framework/admin/framework-builder.php:762
-#: ../framework/admin/framework-metaboxes.php:185
+#: ../framework/admin/framework-builder.php:530
+#: ../framework/admin/framework-builder.php:573
+#: ../framework/admin/framework-builder.php:711
+#: ../framework/admin/framework-builder.php:755
+#: ../framework/admin/framework-metaboxes.php:180
 msgid "Custom Slider"
 msgstr "سلايدر خاص"
 
-#: ../framework/admin/framework-builder.php:540
-#: ../framework/admin/framework-builder.php:721
-#: ../framework/admin/framework-panel.php:602
-#: ../framework/functions/translation.php:52
+#: ../framework/admin/framework-builder.php:533
+#: ../framework/admin/framework-builder.php:714
+#: ../framework/admin/framework-panel.php:615
 #: ../framework/widgets/widget-tabbed.php:42
 #: ../framework/widgets/widget-tabbed.php:156 ../template-sitemap.php:46
 msgid "Tags"
 msgstr "الوسوم"
 
-#: ../framework/admin/framework-builder.php:541
-#: ../framework/admin/framework-builder.php:722
-#: ../framework/admin/framework-panel.php:613
+#: ../framework/admin/framework-builder.php:534
+#: ../framework/admin/framework-builder.php:715
+#: ../framework/admin/framework-panel.php:626
 msgid "Enter a tag name, or names separated by comma."
 msgstr "ادخل اسم وسم أو اسماء متعدده بينهم فاصله (,)"
 
-#: ../framework/admin/framework-builder.php:556
-#: ../framework/admin/framework-builder.php:738
-#: ../framework/admin/framework-panel.php:621
+#: ../framework/admin/framework-builder.php:549
+#: ../framework/admin/framework-builder.php:731
+#: ../framework/admin/framework-panel.php:634
 msgid "Hold CTRL while selecting to select multiple categories."
 msgstr "اضغط على CTRL أثناء الاختيار لتتمكن من اختيار تصنيفات متعدده."
 
-#: ../framework/admin/framework-builder.php:568
-#: ../framework/admin/framework-builder.php:750
+#: ../framework/admin/framework-builder.php:561
+#: ../framework/admin/framework-builder.php:743
 msgid "Selective Posts IDs"
 msgstr "ID التدوينات المختارة"
 
-#: ../framework/admin/framework-builder.php:569
-#: ../framework/admin/framework-builder.php:751
+#: ../framework/admin/framework-builder.php:562
+#: ../framework/admin/framework-builder.php:744
 msgid "Enter a post ID, or IDs separated by comma."
 msgstr "أدخل ID التدوينات مفصولة بفاصلة."
 
-#: ../framework/admin/framework-builder.php:574
-#: ../framework/admin/framework-builder.php:756
+#: ../framework/admin/framework-builder.php:567
+#: ../framework/admin/framework-builder.php:749
 msgid "Selective Pages IDs"
 msgstr "ID الصفحات المختارة"
 
-#: ../framework/admin/framework-builder.php:575
-#: ../framework/admin/framework-builder.php:757
+#: ../framework/admin/framework-builder.php:568
+#: ../framework/admin/framework-builder.php:750
 msgid "Enter a page ID, or IDs separated by comma."
 msgstr "أدخل ID الصفحات  مفصولة بفاصلة."
 
-#: ../framework/admin/framework-builder.php:581
-#: ../framework/admin/framework-builder.php:763
+#: ../framework/admin/framework-builder.php:574
+#: ../framework/admin/framework-builder.php:756
 msgid "Choose your custom slider"
 msgstr "إختر السلايدر الخاص"
 
-#: ../framework/admin/framework-builder.php:589
+#: ../framework/admin/framework-builder.php:582
 msgid "Slider Settings"
 msgstr "إعدادات السلايدر"
 
-#: ../framework/admin/framework-builder.php:597
+#: ../framework/admin/framework-builder.php:590
 #: ../framework/admin/framework-category.php:147
 msgid "Slider Type"
 msgstr "نوع السلايدر"
 
-#: ../framework/admin/framework-builder.php:600
+#: ../framework/admin/framework-builder.php:593
 #: ../framework/admin/framework-category.php:151
 msgid "FlexSlider"
 msgstr "FlexSlider"
 
-#: ../framework/admin/framework-builder.php:601
+#: ../framework/admin/framework-builder.php:594
 #: ../framework/admin/framework-category.php:152
 msgid "Elastic Slideshow"
 msgstr "Elastic Slideshow"
 
-#: ../framework/admin/framework-builder.php:606
-#: ../framework/admin/framework-builder.php:642
+#: ../framework/admin/framework-builder.php:599
+#: ../framework/admin/framework-builder.php:635
 #: ../framework/admin/framework-category.php:158
 #: ../framework/admin/framework-category.php:198
-#: ../framework/admin/framework-panel.php:571
+#: ../framework/admin/framework-panel.php:584
 msgid "Animation Effect"
 msgstr "نوع تأثير الحركة"
 
-#: ../framework/admin/framework-builder.php:611
+#: ../framework/admin/framework-builder.php:604
 #: ../framework/admin/framework-category.php:164
 msgid "Sides"
 msgstr "جانبي"
 
-#: ../framework/admin/framework-builder.php:614
+#: ../framework/admin/framework-builder.php:607
 #: ../framework/admin/framework-category.php:167
-#: ../framework/widgets/widget-soundcloud.php:56
 msgid "Autoplay"
 msgstr "تحريك تلقائي"
 
-#: ../framework/admin/framework-builder.php:646
+#: ../framework/admin/framework-builder.php:639
 #: ../framework/admin/framework-category.php:203
-#: ../framework/admin/framework-panel.php:575
+#: ../framework/admin/framework-panel.php:588
 msgid "Fade"
 msgstr "تلاشي"
 
-#: ../framework/admin/framework-builder.php:647
+#: ../framework/admin/framework-builder.php:640
 #: ../framework/admin/framework-category.php:204
 msgid "Slide Vertical"
 msgstr "تبديل رأسي"
 
-#: ../framework/admin/framework-builder.php:648
+#: ../framework/admin/framework-builder.php:641
 #: ../framework/admin/framework-category.php:205
 msgid "Slide Horizontal"
 msgstr "تبديل أفقي"
 
-#: ../framework/admin/framework-builder.php:671
+#: ../framework/admin/framework-builder.php:664
 #: ../framework/admin/framework-category.php:230
 msgid "Show Slides Caption"
 msgstr "عرض وصف السلايد"
 
-#: ../framework/admin/framework-builder.php:676
+#: ../framework/admin/framework-builder.php:669
 #: ../framework/admin/framework-category.php:236
 msgid "Slides Caption Length"
 msgstr "طول وصف السلايد"
 
-#: ../framework/admin/framework-builder.php:683
+#: ../framework/admin/framework-builder.php:676
 msgid "Slider Position"
 msgstr "موضع السلايدر"
 
 #: ../framework/admin/framework-category.php:40
 #: ../framework/admin/framework-metaboxes.php:49
-#: ../framework/admin/framework-panel.php:1879 ../framework/widgets.php:21
+#: ../framework/admin/framework-panel.php:1892 ../framework/widgets.php:21
 msgid "Shop - For WooCommerce Pages"
 msgstr "المتجر - لصفحات ووكوميرس"
 
@@ -1326,7 +1318,7 @@ msgid "Logo Setting"
 msgstr "إعدادات اللوجو"
 
 #: ../framework/admin/framework-category.php:260
-#: ../framework/admin/framework-panel.php:393
+#: ../framework/admin/framework-panel.php:406
 msgid "Custom Image Logo"
 msgstr "رفع لوجو خاص"
 
@@ -1339,12 +1331,12 @@ msgid "Custom Logo Image"
 msgstr "صورة اللوجو"
 
 #: ../framework/admin/framework-category.php:272
-#: ../framework/admin/framework-panel.php:404
+#: ../framework/admin/framework-panel.php:417
 msgid "Logo Image (Retina Version @2x)"
 msgstr "صوره اللوجو (نسخة الريتنا @2x)"
 
 #: ../framework/admin/framework-category.php:276
-#: ../framework/admin/framework-panel.php:407
+#: ../framework/admin/framework-panel.php:420
 msgid ""
 "Please choose an image file for the retina version of the logo. It should be "
 "2x the size of main logo."
@@ -1353,12 +1345,12 @@ msgstr ""
 "الأصلية."
 
 #: ../framework/admin/framework-category.php:279
-#: ../framework/admin/framework-panel.php:410
+#: ../framework/admin/framework-panel.php:423
 msgid "Standard Logo Width for Retina Logo"
 msgstr "العرض الطبيعي لصورة اللوجو"
 
 #: ../framework/admin/framework-category.php:283
-#: ../framework/admin/framework-panel.php:413
+#: ../framework/admin/framework-panel.php:426
 msgid ""
 "If retina logo is uploaded, please enter the standard logo (1x) version "
 "width, do not enter the retina logo width."
@@ -1367,12 +1359,12 @@ msgstr ""
 "عرض اللوجو نسخة الريتنا."
 
 #: ../framework/admin/framework-category.php:286
-#: ../framework/admin/framework-panel.php:416
+#: ../framework/admin/framework-panel.php:429
 msgid "Standard Logo Height for Retina Logo"
 msgstr "الإرتفاع الطبيعي لصورة اللوجو"
 
 #: ../framework/admin/framework-category.php:290
-#: ../framework/admin/framework-panel.php:419
+#: ../framework/admin/framework-panel.php:432
 msgid ""
 "If retina logo is uploaded, please enter the standard logo (1x) version "
 "height, do not enter the retina logo height."
@@ -1381,12 +1373,12 @@ msgstr ""
 "إرتفاع اللوجو نسخة الريتنا."
 
 #: ../framework/admin/framework-category.php:294
-#: ../framework/admin/framework-panel.php:422
+#: ../framework/admin/framework-panel.php:435
 msgid "Logo Margin Top"
 msgstr "هامش اللوجو العلوي"
 
 #: ../framework/admin/framework-category.php:303
-#: ../framework/admin/framework-panel.php:431
+#: ../framework/admin/framework-panel.php:444
 msgid "Logo Margin Bottom"
 msgstr "الهامش السفلي للوجو"
 
@@ -1399,16 +1391,16 @@ msgid "Main Color"
 msgstr "اللون الرئيسي"
 
 #: ../framework/admin/framework-category.php:323
-#: ../framework/admin/framework-metaboxes.php:244
-#: ../framework/admin/framework-panel.php:2356
-#: ../framework/admin/framework-panel.php:2381
-#: ../framework/admin/framework-panel.php:2497
+#: ../framework/admin/framework-metaboxes.php:239
+#: ../framework/admin/framework-panel.php:2364
+#: ../framework/admin/framework-panel.php:2389
+#: ../framework/admin/framework-panel.php:2505
 msgid "Background"
 msgstr "الخلفية"
 
 #: ../framework/admin/framework-category.php:329
-#: ../framework/admin/framework-metaboxes.php:249
-#: ../framework/admin/framework-panel.php:2306
+#: ../framework/admin/framework-metaboxes.php:244
+#: ../framework/admin/framework-panel.php:2314
 msgid "Full Screen Background"
 msgstr "خلفية بحجم الشاشة بالكامل"
 
@@ -1426,8 +1418,7 @@ msgstr "مزيد من الخيارات"
 
 #: ../framework/admin/framework-metaboxes.php:70
 #: ../framework/admin/framework-metaboxes.php:72
-#: ../framework/admin/framework-panel.php:601
-#: ../framework/functions/translation.php:58 ../template-sitemap.php:41
+#: ../framework/admin/framework-panel.php:614 ../template-sitemap.php:41
 msgid "Categories"
 msgstr "التصنيفات"
 
@@ -1489,7 +1480,7 @@ msgid "Self Hosted Video"
 msgstr "فيديو مستضاف على موقعك"
 
 #: ../framework/admin/framework-metaboxes.php:155
-#: ../framework/admin/framework-panel.php:856
+#: ../framework/admin/framework-panel.php:869
 msgid "SoundCloud URL"
 msgstr "رابط SoundCloud"
 
@@ -1497,68 +1488,63 @@ msgstr "رابط SoundCloud"
 msgid "Auto Play"
 msgstr "تشغيل تلقائي"
 
-#: ../framework/admin/framework-metaboxes.php:165
-#: ../framework/widgets/widget-soundcloud.php:60
-msgid "Visual Style"
-msgstr "النمط المرئي"
-
-#: ../framework/admin/framework-metaboxes.php:180
+#: ../framework/admin/framework-metaboxes.php:175
 msgid "OGA file URL"
 msgstr "رابط ملف OGA"
 
-#: ../framework/admin/framework-metaboxes.php:200
+#: ../framework/admin/framework-metaboxes.php:195
 msgid "Sidebar Options"
 msgstr "خيارات العمود الجانبي"
 
-#: ../framework/admin/framework-metaboxes.php:225
+#: ../framework/admin/framework-metaboxes.php:220
 msgid "Choose Sidebar"
 msgstr "اختر العمود الجانبي"
 
-#: ../framework/admin/framework-metaboxes.php:235
+#: ../framework/admin/framework-metaboxes.php:230
 msgid "Custom Styles"
 msgstr "نمط خاص"
 
-#: ../framework/admin/framework-metaboxes.php:239
+#: ../framework/admin/framework-metaboxes.php:234
 msgid "Custom color"
 msgstr "لون خاص"
 
-#: ../framework/admin/framework-metaboxes.php:258
+#: ../framework/admin/framework-metaboxes.php:253
 msgid "Ads Options"
 msgstr "خيارات الاعلانات"
 
-#: ../framework/admin/framework-metaboxes.php:262
+#: ../framework/admin/framework-metaboxes.php:257
 msgid "Hide Above Banner"
 msgstr "إخفاء البانر العلوي"
 
-#: ../framework/admin/framework-metaboxes.php:267
+#: ../framework/admin/framework-metaboxes.php:262
 msgid "Custom Above Banner"
 msgstr "بانر علوي خاص"
 
-#: ../framework/admin/framework-metaboxes.php:272
+#: ../framework/admin/framework-metaboxes.php:267
 msgid "Hide Below Banner"
 msgstr "إخفاء البانر السفلي"
 
-#: ../framework/admin/framework-metaboxes.php:277
+#: ../framework/admin/framework-metaboxes.php:272
 msgid "Custom Below Banner"
 msgstr "بانر سفلي خاص"
 
-#: ../framework/admin/framework-metaboxes.php:292
+#: ../framework/admin/framework-metaboxes.php:287
 msgid "Hide Post Meta"
 msgstr "إخفاء معلومات التدوينة"
 
-#: ../framework/admin/framework-metaboxes.php:300
+#: ../framework/admin/framework-metaboxes.php:295
 msgid "Hide Author Information"
 msgstr "إخفاء معلومات الكاتب"
 
-#: ../framework/admin/framework-metaboxes.php:308
+#: ../framework/admin/framework-metaboxes.php:303
 msgid "Hide Share Buttons"
 msgstr "إخفاء أزرار النشر على الشبكات الاجتماعية"
 
-#: ../framework/admin/framework-metaboxes.php:316
+#: ../framework/admin/framework-metaboxes.php:311
 msgid "Hide Related Posts"
 msgstr "إخفاء التدوينات المتعلقة"
 
-#: ../framework/admin/framework-metaboxes.php:324
+#: ../framework/admin/framework-metaboxes.php:319
 msgid "Hide Fly Check Also Box"
 msgstr "إخفاء صندوق \"شاهد أيضًا\""
 
@@ -1576,27 +1562,27 @@ msgstr "اختر من الوسوم الأكثر استخدامًا"
 
 #: ../framework/admin/framework-options.php:115
 #: ../framework/admin/framework-options.php:164
-#: ../framework/functions/theme-functions.php:621
+#: ../framework/functions/theme-functions.php:620
 msgid "Upload"
 msgstr "رفع"
 
 #: ../framework/admin/framework-options.php:172
-#: ../framework/functions/mega-menus.php:402
+#: ../framework/functions/mega-menus.php:399
 msgid "repeat"
 msgstr "تكرار"
 
 #: ../framework/admin/framework-options.php:173
-#: ../framework/functions/mega-menus.php:401
+#: ../framework/functions/mega-menus.php:398
 msgid "no-repeat"
 msgstr "بدون-تكرار"
 
 #: ../framework/admin/framework-options.php:174
-#: ../framework/functions/mega-menus.php:403
+#: ../framework/functions/mega-menus.php:400
 msgid "repeat-x"
 msgstr "تكرار-أفقي"
 
 #: ../framework/admin/framework-options.php:175
-#: ../framework/functions/mega-menus.php:404
+#: ../framework/functions/mega-menus.php:401
 msgid "repeat-y"
 msgstr "تكرار-رأسي"
 
@@ -1609,12 +1595,12 @@ msgid "Scroll"
 msgstr "تمرير"
 
 #: ../framework/admin/framework-options.php:193
-#: ../framework/functions/mega-menus.php:396
+#: ../framework/functions/mega-menus.php:394
 msgid "Top"
 msgstr "أعلى"
 
 #: ../framework/admin/framework-options.php:194
-#: ../framework/functions/mega-menus.php:397
+#: ../framework/functions/mega-menus.php:395
 msgid "Bottom"
 msgstr "أسفل"
 
@@ -1638,196 +1624,196 @@ msgstr "مائل"
 msgid "Oblique"
 msgstr "منحرف"
 
-#: ../framework/admin/framework-panel.php:67
+#: ../framework/admin/framework-panel.php:80
 msgid "Theme Settings"
 msgstr "إعدادات القالب"
 
-#: ../framework/admin/framework-panel.php:68
+#: ../framework/admin/framework-panel.php:81
 #: ../framework/admin/inc/importer/tie-importer.php:191
 #: ../framework/admin/inc/importer/tie-importer.php:204
 msgid "Import Demo Data"
 msgstr "استيراد بيانات الdemo"
 
-#: ../framework/admin/framework-panel.php:69
+#: ../framework/admin/framework-panel.php:82
 msgid "Documentation"
 msgstr "توثيق القالب"
 
-#: ../framework/admin/framework-panel.php:70
+#: ../framework/admin/framework-panel.php:83
 msgid "Support"
 msgstr "الدعم الفني"
 
-#: ../framework/admin/framework-panel.php:175
+#: ../framework/admin/framework-panel.php:188
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
 
-#: ../framework/admin/framework-panel.php:187
-#: ../framework/admin/framework-panel.php:209
-#: ../framework/admin/framework-panel.php:1929
+#: ../framework/admin/framework-panel.php:200
+#: ../framework/admin/framework-panel.php:222
+#: ../framework/admin/framework-panel.php:1942
 msgid "General Settings"
 msgstr "الإعدادات العامة"
 
-#: ../framework/admin/framework-panel.php:188
-#: ../framework/admin/framework-panel.php:384
+#: ../framework/admin/framework-panel.php:201
+#: ../framework/admin/framework-panel.php:397
 msgid "Header Settings"
 msgstr "إعدادات الهيدر"
 
-#: ../framework/admin/framework-panel.php:189
-#: ../framework/admin/framework-panel.php:1925
+#: ../framework/admin/framework-panel.php:202
+#: ../framework/admin/framework-panel.php:1938
 msgid "Archives Settings"
 msgstr "إعدادات صفحات الأرشيف"
 
-#: ../framework/admin/framework-panel.php:190
-#: ../framework/admin/framework-panel.php:1052
-#: ../framework/admin/framework-panel.php:1055
+#: ../framework/admin/framework-panel.php:203
+#: ../framework/admin/framework-panel.php:1065
+#: ../framework/admin/framework-panel.php:1068
 msgid "Posts Settings"
 msgstr "إعدادات التدوينات"
 
-#: ../framework/admin/framework-panel.php:191
-#: ../framework/admin/framework-panel.php:1793
+#: ../framework/admin/framework-panel.php:204
+#: ../framework/admin/framework-panel.php:1806
 msgid "Sidebars"
 msgstr "العمود الجانبي - سايدبار"
 
-#: ../framework/admin/framework-panel.php:192
-#: ../framework/admin/framework-panel.php:1283
+#: ../framework/admin/framework-panel.php:205
+#: ../framework/admin/framework-panel.php:1296
 msgid "Footer Settings"
 msgstr "إعدادات الفوتر"
 
-#: ../framework/admin/framework-panel.php:193
+#: ../framework/admin/framework-panel.php:206
 msgid "Ads Settings"
 msgstr "الإعلانات"
 
-#: ../framework/admin/framework-panel.php:194
-#: ../framework/admin/framework-panel.php:2183
+#: ../framework/admin/framework-panel.php:207
+#: ../framework/admin/framework-panel.php:2196
 msgid "Styling"
 msgstr "إعدادات المظهر"
 
-#: ../framework/admin/framework-panel.php:195
-#: ../framework/admin/framework-panel.php:2543
+#: ../framework/admin/framework-panel.php:208
+#: ../framework/admin/framework-panel.php:2551
 msgid "Typography"
 msgstr "الخطوط"
 
-#: ../framework/admin/framework-panel.php:196
-#: ../framework/admin/framework-panel.php:2686
+#: ../framework/admin/framework-panel.php:209
+#: ../framework/admin/framework-panel.php:2694
 msgid "Translations"
 msgstr "ترجمة النصوص"
 
-#: ../framework/admin/framework-panel.php:197
-#: ../framework/admin/framework-panel.php:667
-#: ../framework/admin/framework-panel.php:687
-#: ../framework/functions/theme-functions.php:649
+#: ../framework/admin/framework-panel.php:210
+#: ../framework/admin/framework-panel.php:680
+#: ../framework/admin/framework-panel.php:700
+#: ../framework/functions/theme-functions.php:648
 msgid "Social Networking"
 msgstr "الشبكات الإجتماعية"
 
-#: ../framework/admin/framework-panel.php:198
+#: ../framework/admin/framework-panel.php:211
 msgid "Advanced"
 msgstr "إعدادات متقدمة"
 
-#: ../framework/admin/framework-panel.php:199
+#: ../framework/admin/framework-panel.php:212
 msgid "Rate"
 msgstr "تقييم"
 
-#: ../framework/admin/framework-panel.php:200
+#: ../framework/admin/framework-panel.php:213
 msgid "More Themes"
 msgstr "المزيد من القوالب"
 
-#: ../framework/admin/framework-panel.php:212
+#: ../framework/admin/framework-panel.php:225
 msgid "bbPress Settings"
 msgstr "bbPress إعدادات"
 
-#: ../framework/admin/framework-panel.php:215
+#: ../framework/admin/framework-panel.php:228
 msgid "bbPress Full width"
 msgstr "العرض الكامل لـbbPress"
 
-#: ../framework/admin/framework-panel.php:223
+#: ../framework/admin/framework-panel.php:236
 msgid "Theme Layout"
 msgstr "نظام القالب"
 
-#: ../framework/admin/framework-panel.php:247
-#: ../framework/admin/framework-panel.php:250
+#: ../framework/admin/framework-panel.php:260
+#: ../framework/admin/framework-panel.php:263
 msgid "Custom Favicon"
 msgstr "Favicon الموقع"
 
-#: ../framework/admin/framework-panel.php:256
-#: ../framework/admin/framework-panel.php:259
+#: ../framework/admin/framework-panel.php:269
+#: ../framework/admin/framework-panel.php:272
 msgid "Custom Gravatar"
 msgstr "صورة خاصه للمستخدمين ( Gravatar )"
 
-#: ../framework/admin/framework-panel.php:265
+#: ../framework/admin/framework-panel.php:278
 msgid "Apple Icons"
 msgstr "أيقونات Apple"
 
-#: ../framework/admin/framework-panel.php:268
+#: ../framework/admin/framework-panel.php:281
 msgid "Apple iPhone Icon"
 msgstr "أيقونة Apple iPhone"
 
-#: ../framework/admin/framework-panel.php:271
+#: ../framework/admin/framework-panel.php:284
 msgid "Icon for Apple iPhone (57px x 57px)"
 msgstr "أيقونة لApple iPhone (حجم 75px x 75px)"
 
-#: ../framework/admin/framework-panel.php:274
+#: ../framework/admin/framework-panel.php:287
 msgid "Apple iPhone Retina Icon"
 msgstr "أيقونة Apple iPhone ريتنا"
 
-#: ../framework/admin/framework-panel.php:277
+#: ../framework/admin/framework-panel.php:290
 msgid "Icon for Apple iPhone Retina Version (120px x 120px)"
 msgstr "أيقونة لApple iPhone ريتنا (120px x 120px)"
 
-#: ../framework/admin/framework-panel.php:280
+#: ../framework/admin/framework-panel.php:293
 msgid "Apple iPad Icon"
 msgstr "أيقونة Apple iPad"
 
-#: ../framework/admin/framework-panel.php:283
+#: ../framework/admin/framework-panel.php:296
 msgid "Icon for Apple iPhone (72px x 72px)"
 msgstr "أيقونة لApple iPhone (حجم 72px x 72px)"
 
-#: ../framework/admin/framework-panel.php:286
+#: ../framework/admin/framework-panel.php:299
 msgid "Apple iPad Retina Icon"
 msgstr "أيقونة Apple iPad ريتنا"
 
-#: ../framework/admin/framework-panel.php:289
+#: ../framework/admin/framework-panel.php:302
 msgid "Icon for Apple iPad Retina Version (144px x 144px)"
 msgstr "أيقونة Apple iPad ريتنا (144px x 144px)"
 
-#: ../framework/admin/framework-panel.php:295
+#: ../framework/admin/framework-panel.php:308
 msgid "Time format"
 msgstr "نمط التاريخ"
 
-#: ../framework/admin/framework-panel.php:298
+#: ../framework/admin/framework-panel.php:311
 msgid "Time format for blog posts"
 msgstr "نمط الوقت للتدوينات"
 
-#: ../framework/admin/framework-panel.php:301
+#: ../framework/admin/framework-panel.php:314
 msgid "Traditional"
 msgstr "عادي"
 
-#: ../framework/admin/framework-panel.php:302
+#: ../framework/admin/framework-panel.php:315
 msgid "Time Ago Format"
 msgstr "منذ / مضت"
 
-#: ../framework/admin/framework-panel.php:303
+#: ../framework/admin/framework-panel.php:316
 msgid "Disable all"
 msgstr "تعطيل"
 
-#: ../framework/admin/framework-panel.php:308
+#: ../framework/admin/framework-panel.php:321
 msgid "Lightbox Settings"
 msgstr "إعدادات Lightbox"
 
-#: ../framework/admin/framework-panel.php:311
+#: ../framework/admin/framework-panel.php:324
 msgid "Enable Lightbox Automatically"
 msgstr "تفعيل Lightbox تلقائيًا"
 
-#: ../framework/admin/framework-panel.php:312
+#: ../framework/admin/framework-panel.php:325
 msgid ""
 "Enable Lightbox automatically for all images linked to an image file in the "
 "post content area"
 msgstr ""
 "تفعيل Lightbox تلقائيًا لكل الصور المرتبطه بملف صورة في منطقة محتوى التدوينة"
 
-#: ../framework/admin/framework-panel.php:317
+#: ../framework/admin/framework-panel.php:330
 msgid "Enable Lightbox for WordPress Galleries"
 msgstr "تفعيل Lightbox لمعارض صور الWordPress"
 
-#: ../framework/admin/framework-panel.php:318
+#: ../framework/admin/framework-panel.php:331
 msgid ""
 "Enable Lightbox automatically for all images added via [gallery] shortcode "
 "in the content area"
@@ -1835,35 +1821,35 @@ msgstr ""
 "تفعيل الLightbox تلقائيًا لكل الصور المضافة عن طريق الكود المختصر [gallery] "
 "في منطقة محتوى التدوينة"
 
-#: ../framework/admin/framework-panel.php:323
+#: ../framework/admin/framework-panel.php:336
 msgid "Lightbox Skin"
 msgstr "نمط Lightbox"
 
-#: ../framework/admin/framework-panel.php:335
+#: ../framework/admin/framework-panel.php:348
 msgid "Lightbox Thumbnail Position"
 msgstr "موضع المصغرات"
 
-#: ../framework/admin/framework-panel.php:342
+#: ../framework/admin/framework-panel.php:355
 msgid "Show Lightbox Arrows"
 msgstr "عرض أسهم الإنتقال"
 
-#: ../framework/admin/framework-panel.php:351
+#: ../framework/admin/framework-panel.php:364
 msgid "Breadcrumbs Settings"
 msgstr "إعدادت شريط التصفح"
 
-#: ../framework/admin/framework-panel.php:354
+#: ../framework/admin/framework-panel.php:367
 msgid "Breadcrumbs"
 msgstr "تفعيل شريط التصفح"
 
-#: ../framework/admin/framework-panel.php:359
+#: ../framework/admin/framework-panel.php:372
 msgid "Breadcrumbs Delimiter"
 msgstr "الفاصل"
 
-#: ../framework/admin/framework-panel.php:366
+#: ../framework/admin/framework-panel.php:379
 msgid "Header Code"
 msgstr "كود الهيدر"
 
-#: ../framework/admin/framework-panel.php:368
+#: ../framework/admin/framework-panel.php:381
 msgid ""
 "The following code will add to the &lt;head&gt; tag. Useful if you need to "
 "add additional codes such as CSS or JS."
@@ -1871,11 +1857,11 @@ msgstr ""
 "الكود التالي سيتم إضافته لوسم &lt;head&gt; . يصلح لإضافة أي أكواد CSS او JS "
 "إضافية."
 
-#: ../framework/admin/framework-panel.php:374
+#: ../framework/admin/framework-panel.php:387
 msgid "Footer Code"
 msgstr "كود الفوتر"
 
-#: ../framework/admin/framework-panel.php:376
+#: ../framework/admin/framework-panel.php:389
 msgid ""
 "The following code will add to the footer before the closing  &lt;/body&gt; "
 "tag. Useful if you need to add Javascript or tracking code."
@@ -1883,23 +1869,23 @@ msgstr ""
 "الكود التالي سيتم إضافته لمنطقة الفوتر قبل غلق وسم &lt;/body&gt; . يصلح "
 "لإضافة أي كود جافاسكربت أو كود تتبع."
 
-#: ../framework/admin/framework-panel.php:387
+#: ../framework/admin/framework-panel.php:400
 msgid "Logo"
 msgstr "لوجو الموقع"
 
-#: ../framework/admin/framework-panel.php:390
+#: ../framework/admin/framework-panel.php:403
 msgid "Logo Settings"
 msgstr "إعدادات اللوجو"
 
-#: ../framework/admin/framework-panel.php:394
+#: ../framework/admin/framework-panel.php:407
 msgid "Display Site Title"
 msgstr "عرض إسم الموقع"
 
-#: ../framework/admin/framework-panel.php:397
+#: ../framework/admin/framework-panel.php:410
 msgid "Logo Image"
 msgstr "صورة اللوجو"
 
-#: ../framework/admin/framework-panel.php:399
+#: ../framework/admin/framework-panel.php:412
 msgid ""
 "Upload a logo image, or enter URL to an image if it is already uploaded. the "
 "theme default logo gets applied if the input field is left blank."
@@ -1907,563 +1893,559 @@ msgstr ""
 "قم برفع صورة اللوجو، أو ادخل رابط الصورة إذا كان تم رفعها من قبل، سيتم وضع "
 "صورة اللوجو الإفتراضية للقالب إذا لم تستخدم أي صورة."
 
-#: ../framework/admin/framework-panel.php:401
+#: ../framework/admin/framework-panel.php:414
 msgid "Recommended size (MAX) : 190px x 60px"
 msgstr "الحجم الذي ينصح به (على الأكثر): 190px x 60px"
 
-#: ../framework/admin/framework-panel.php:425
+#: ../framework/admin/framework-panel.php:438
 msgid "Input number to set the top space of the logo."
 msgstr "ادخل قيمة الهامش العلوي للوجو"
 
-#: ../framework/admin/framework-panel.php:434
+#: ../framework/admin/framework-panel.php:447
 msgid "Input number to set the bottom space of the logo."
 msgstr "ادخل قيمة الهامش السفلي للوجو"
 
-#: ../framework/admin/framework-panel.php:440
+#: ../framework/admin/framework-panel.php:453
 msgid "Full Width Logo"
 msgstr "لوجو ذو عرض كامل"
 
-#: ../framework/admin/framework-panel.php:443
+#: ../framework/admin/framework-panel.php:456
 msgid "Recommended logo width : 1045px"
 msgstr "عرض اللوجو المقترح: 1045 بيكسل"
 
-#: ../framework/admin/framework-panel.php:446
+#: ../framework/admin/framework-panel.php:459
 msgid "Center the Logo"
 msgstr "توسيط اللوجو"
 
-#: ../framework/admin/framework-panel.php:455
+#: ../framework/admin/framework-panel.php:468
 msgid "Header Top area Settings"
 msgstr "اعدادات منطقة الهيدر العلوية"
 
-#: ../framework/admin/framework-panel.php:458
-msgid "Top menu"
-msgstr "تفعيل القائمة العلوية"
+#: ../framework/admin/framework-panel.php:471
+msgid "Hide Top menu"
+msgstr "إخفاء القائمة العلوية"
 
-#: ../framework/admin/framework-panel.php:463
+#: ../framework/admin/framework-panel.php:476
 msgid "Today's Date"
 msgstr "تاريخ اليوم"
 
-#: ../framework/admin/framework-panel.php:468
+#: ../framework/admin/framework-panel.php:481
 msgid "Today's Date Format"
 msgstr "صيغة تاريخ اليوم"
 
-#: ../framework/admin/framework-panel.php:471
+#: ../framework/admin/framework-panel.php:484
 msgid "Documentation on date and time formatting"
 msgstr "مساعده حول كيفية تنسيق الوقت والتاريخ"
 
-#: ../framework/admin/framework-panel.php:479
+#: ../framework/admin/framework-panel.php:492
 msgid "Live Search"
 msgstr "بحث أجاكس"
 
-#: ../framework/admin/framework-panel.php:484
-#: ../framework/admin/framework-panel.php:538
-#: ../framework/admin/framework-panel.php:1295
+#: ../framework/admin/framework-panel.php:497
+#: ../framework/admin/framework-panel.php:551
+#: ../framework/admin/framework-panel.php:1308
 #: ../framework/widgets/widget-social.php:11
 msgid "Social Icons"
 msgstr "الشبكات الإجتماعية"
 
-#: ../framework/admin/framework-panel.php:492
+#: ../framework/admin/framework-panel.php:505
 msgid "Main Nav Settings"
 msgstr "اعدادات القائمة الرئيسية"
 
-#: ../framework/admin/framework-panel.php:495
-msgid "Main Nav"
-msgstr "تفعيل القائمة الرئيسية"
+#: ../framework/admin/framework-panel.php:508
+msgid "Hide Main Nav"
+msgstr "إخفاء القائمة الرئيسية"
 
-#: ../framework/admin/framework-panel.php:500
+#: ../framework/admin/framework-panel.php:513
 msgid "Random Article Button"
 msgstr "تفعيل أيقونة مقال عشوائي"
 
-#: ../framework/admin/framework-panel.php:506
+#: ../framework/admin/framework-panel.php:519
 msgid "Shopping Cart"
 msgstr "عربة التسوق"
 
-#: ../framework/admin/framework-panel.php:511
+#: ../framework/admin/framework-panel.php:524
 msgid "Stick The Navigation menu"
 msgstr "تثبيت القائمة الرئيسية"
 
-#: ../framework/admin/framework-panel.php:516
+#: ../framework/admin/framework-panel.php:529
 msgid "Logo in the sticky Navigation menu"
 msgstr "اللوجو في القائمة الرئيسية الثابتة"
 
-#: ../framework/admin/framework-panel.php:525
+#: ../framework/admin/framework-panel.php:538
 msgid "Responsive Mobile Menu Settings"
 msgstr "إعدادات قائمة الجوال"
 
-#: ../framework/admin/framework-panel.php:528
+#: ../framework/admin/framework-panel.php:541
 msgid "Enable the Mobile Menu"
 msgstr "تفعيل قائمة الجوال"
 
-#: ../framework/admin/framework-panel.php:543
+#: ../framework/admin/framework-panel.php:556
 msgid "Show the Top Menu items in the Mobile Menu below the Main Menu items ?"
 msgstr ""
 "إظهار عناصر القائمة العلوية في ثامة الجوال تحت عناصر القائمى الرئيسية ؟"
 
-#: ../framework/admin/framework-panel.php:548
-msgid "Enable Mobile Menu Items Icons"
-msgstr "تفعيل الأيقونات في قائمة الجوال"
+#: ../framework/admin/framework-panel.php:561
+msgid "Hide the Mobile Menu Items Icons"
+msgstr "إخفاء الأيقونات في ثائمة الجوال"
 
-#: ../framework/admin/framework-panel.php:558
-#: ../framework/functions/translation.php:102
+#: ../framework/admin/framework-panel.php:571
 #: ../framework/parts/breaking-news.php:21
 msgid "Breaking News"
 msgstr "أخبار عاجلة"
 
-#: ../framework/admin/framework-panel.php:566
+#: ../framework/admin/framework-panel.php:579
 msgid "Show in Homepage Only"
 msgstr "الظهور في الصفحة الرئيسية فقط"
 
-#: ../framework/admin/framework-panel.php:576
+#: ../framework/admin/framework-panel.php:589
 msgid "Slide"
 msgstr "تبديل"
 
-#: ../framework/admin/framework-panel.php:577
+#: ../framework/admin/framework-panel.php:590
 msgid "Ticker"
 msgstr "كتابة"
 
-#: ../framework/admin/framework-panel.php:589
+#: ../framework/admin/framework-panel.php:602
 msgid "Time between the fades"
 msgstr "الوقت بين تلاشي الslides"
 
-#: ../framework/admin/framework-panel.php:598
+#: ../framework/admin/framework-panel.php:611
 msgid "Breaking News Query Type"
 msgstr "نوع استعلام الأخبار العاجلة"
 
-#: ../framework/admin/framework-panel.php:603
+#: ../framework/admin/framework-panel.php:616
 msgid "Custom Text"
 msgstr "نص خاص"
 
-#: ../framework/admin/framework-panel.php:612
+#: ../framework/admin/framework-panel.php:625
 msgid "Breaking News Tags"
 msgstr "وسوم الاخبار السريعة"
 
-#: ../framework/admin/framework-panel.php:620
+#: ../framework/admin/framework-panel.php:633
 msgid "Breaking News Categories"
 msgstr "تصنيفات الأخبار العاجله"
 
-#: ../framework/admin/framework-panel.php:633
+#: ../framework/admin/framework-panel.php:646
 msgid "Breaking News Custom Text"
 msgstr "نص خاص للأخبار العاجلة"
 
-#: ../framework/admin/framework-panel.php:636
+#: ../framework/admin/framework-panel.php:649
 #: ../framework/widgets/widget-text-html.php:61
 msgid "Text"
 msgstr "نص"
 
-#: ../framework/admin/framework-panel.php:638
+#: ../framework/admin/framework-panel.php:651
 msgid "Link"
 msgstr "رابط"
 
-#: ../framework/admin/framework-panel.php:670
-#: ../framework/admin/framework-panel.php:679
+#: ../framework/admin/framework-panel.php:683
+#: ../framework/admin/framework-panel.php:692
 msgid "Custom Feed URL"
 msgstr "رابط خلاصات خاص"
 
-#: ../framework/admin/framework-panel.php:674
-#: ../framework/admin/framework-panel.php:2018
-#: ../framework/admin/framework-panel.php:2061
-#: ../framework/admin/framework-panel.php:2104
-msgid "RSS Icon"
-msgstr "ايقونة RSS"
+#: ../framework/admin/framework-panel.php:687
+msgid "Hide RSS Icon"
+msgstr "إخفاء أيقونة RSS"
 
-#: ../framework/admin/framework-panel.php:690
-#: ../framework/functions/theme-functions.php:664
+#: ../framework/admin/framework-panel.php:703
+#: ../framework/functions/theme-functions.php:663
 msgid "Facebook URL"
 msgstr "رابط Facebook"
 
-#: ../framework/admin/framework-panel.php:695
+#: ../framework/admin/framework-panel.php:708
 msgid "Twitter URL"
 msgstr "رابط Twitter"
 
-#: ../framework/admin/framework-panel.php:700
-#: ../framework/functions/theme-functions.php:652
+#: ../framework/admin/framework-panel.php:713
+#: ../framework/functions/theme-functions.php:651
 msgid "Google+ URL"
 msgstr "رابط +Google"
 
-#: ../framework/admin/framework-panel.php:706
+#: ../framework/admin/framework-panel.php:719
 msgid "Dribbble URL"
 msgstr "رابط Dribbble"
 
-#: ../framework/admin/framework-panel.php:712
-#: ../framework/functions/theme-functions.php:670
+#: ../framework/admin/framework-panel.php:725
+#: ../framework/functions/theme-functions.php:669
 msgid "LinkedIn URL"
 msgstr "رابط LinkedIn"
 
-#: ../framework/admin/framework-panel.php:718
+#: ../framework/admin/framework-panel.php:731
 msgid "Evernote URL"
 msgstr "رابط Evernote"
 
-#: ../framework/admin/framework-panel.php:724
+#: ../framework/admin/framework-panel.php:737
 msgid "Dropbox URL"
 msgstr "رابط Dropbox"
 
-#: ../framework/admin/framework-panel.php:730
-#: ../framework/functions/theme-functions.php:676
+#: ../framework/admin/framework-panel.php:743
+#: ../framework/functions/theme-functions.php:675
 msgid "Flickr URL"
 msgstr "رابط Flickr"
 
-#: ../framework/admin/framework-panel.php:736
+#: ../framework/admin/framework-panel.php:749
 msgid "Picasa Web URL"
 msgstr "رابط Picasa Web"
 
-#: ../framework/admin/framework-panel.php:742
+#: ../framework/admin/framework-panel.php:755
 msgid "DeviantArt URL"
 msgstr "رابط DeviantArt"
 
-#: ../framework/admin/framework-panel.php:748
-#: ../framework/functions/theme-functions.php:682
+#: ../framework/admin/framework-panel.php:761
+#: ../framework/functions/theme-functions.php:681
 msgid "YouTube URL"
 msgstr "رابط YouTube"
 
-#: ../framework/admin/framework-panel.php:754
+#: ../framework/admin/framework-panel.php:767
 msgid "Grooveshark URL"
 msgstr "رابط Grooveshark"
 
-#: ../framework/admin/framework-panel.php:760
+#: ../framework/admin/framework-panel.php:773
 msgid "Vimeo URL"
 msgstr "رابط Vimeo"
 
-#: ../framework/admin/framework-panel.php:766
+#: ../framework/admin/framework-panel.php:779
 msgid "ShareThis URL"
 msgstr "رابط ShareThis"
 
-#: ../framework/admin/framework-panel.php:772
+#: ../framework/admin/framework-panel.php:785
 msgid "500px URL"
 msgstr "رابط 500px"
 
-#: ../framework/admin/framework-panel.php:778
+#: ../framework/admin/framework-panel.php:791
 msgid "Skype URL"
 msgstr "رابط Skype"
 
-#: ../framework/admin/framework-panel.php:784
+#: ../framework/admin/framework-panel.php:797
 msgid "Digg URL"
 msgstr "رابط Digg"
 
-#: ../framework/admin/framework-panel.php:790
+#: ../framework/admin/framework-panel.php:803
 msgid "Reddit URL"
 msgstr "رابط Reddit"
 
-#: ../framework/admin/framework-panel.php:796
+#: ../framework/admin/framework-panel.php:809
 msgid "Delicious URL"
 msgstr "رابط Delicious"
 
-#: ../framework/admin/framework-panel.php:802
+#: ../framework/admin/framework-panel.php:815
 msgid "StumbleUpon  URL"
 msgstr "رابط StumbleUpon"
 
-#: ../framework/admin/framework-panel.php:808
+#: ../framework/admin/framework-panel.php:821
 msgid "Tumblr URL"
 msgstr "رابط Tumblr"
 
-#: ../framework/admin/framework-panel.php:814
+#: ../framework/admin/framework-panel.php:827
 msgid "Blogger URL"
 msgstr "رابط Blogger"
 
-#: ../framework/admin/framework-panel.php:820
+#: ../framework/admin/framework-panel.php:833
 msgid "WordPress URL"
 msgstr "رابط WordPress"
 
-#: ../framework/admin/framework-panel.php:826
+#: ../framework/admin/framework-panel.php:839
 msgid "Yelp URL"
 msgstr "رابط Yelp"
 
-#: ../framework/admin/framework-panel.php:832
+#: ../framework/admin/framework-panel.php:845
 msgid "Last.fm URL"
 msgstr "رابط Last.fm"
 
-#: ../framework/admin/framework-panel.php:838
+#: ../framework/admin/framework-panel.php:851
 msgid "Apple URL"
 msgstr "رابط Apple"
 
-#: ../framework/admin/framework-panel.php:844
+#: ../framework/admin/framework-panel.php:857
 msgid "FourSquare URL"
 msgstr "رابط FourSquare"
 
-#: ../framework/admin/framework-panel.php:850
+#: ../framework/admin/framework-panel.php:863
 msgid "Github URL"
 msgstr "رابط Github"
 
-#: ../framework/admin/framework-panel.php:862
+#: ../framework/admin/framework-panel.php:875
 msgid "XING URL"
 msgstr "رابط XING"
 
-#: ../framework/admin/framework-panel.php:868
+#: ../framework/admin/framework-panel.php:881
 msgid "Google Play URL"
 msgstr "رابط Google Play"
 
-#: ../framework/admin/framework-panel.php:874
-#: ../framework/functions/theme-functions.php:688
+#: ../framework/admin/framework-panel.php:887
+#: ../framework/functions/theme-functions.php:687
 msgid "Pinterest URL"
 msgstr "رابط Pinterest"
 
-#: ../framework/admin/framework-panel.php:880
-#: ../framework/functions/theme-functions.php:700
+#: ../framework/admin/framework-panel.php:893
+#: ../framework/functions/theme-functions.php:699
 msgid "Instagram URL"
 msgstr "رابط Instagram"
 
-#: ../framework/admin/framework-panel.php:886
+#: ../framework/admin/framework-panel.php:899
 msgid "Spotify URL"
 msgstr "رابط Spotify"
 
-#: ../framework/admin/framework-panel.php:892
+#: ../framework/admin/framework-panel.php:905
 msgid "PayPal URL"
 msgstr "رابط PayPal"
 
-#: ../framework/admin/framework-panel.php:898
+#: ../framework/admin/framework-panel.php:911
 msgid "Forrst URL"
 msgstr "رابط Forrst"
 
-#: ../framework/admin/framework-panel.php:904
-#: ../framework/functions/theme-functions.php:694
+#: ../framework/admin/framework-panel.php:917
+#: ../framework/functions/theme-functions.php:693
 msgid "Behance URL"
 msgstr "رابط Behance"
 
-#: ../framework/admin/framework-panel.php:910
+#: ../framework/admin/framework-panel.php:923
 msgid "Viadeo URL"
 msgstr "رابط Viadeo"
 
-#: ../framework/admin/framework-panel.php:916
+#: ../framework/admin/framework-panel.php:929
 msgid "VK.com URL"
 msgstr "رابط VK.com"
-
-#: ../framework/admin/framework-panel.php:924
-#: ../framework/admin/framework-panel.php:949
-#: ../framework/admin/framework-panel.php:974
-#: ../framework/admin/framework-panel.php:999
-#: ../framework/admin/framework-panel.php:1024
-msgid "Custom Social Network"
-msgstr "أضف شبكات إجتماعية خاصة"
-
-#: ../framework/admin/framework-panel.php:932
-#: ../framework/admin/framework-panel.php:957
-#: ../framework/admin/framework-panel.php:982
-#: ../framework/admin/framework-panel.php:1007
-#: ../framework/admin/framework-panel.php:1032
-msgid "Icon (use full Font Awesome name)"
-msgstr "الأيقونة ( إستخدم الإسم الكامل font awesome )"
 
 #: ../framework/admin/framework-panel.php:937
 #: ../framework/admin/framework-panel.php:962
 #: ../framework/admin/framework-panel.php:987
 #: ../framework/admin/framework-panel.php:1012
 #: ../framework/admin/framework-panel.php:1037
-#: ../framework/functions/mega-menus.php:618
+msgid "Custom Social Network"
+msgstr "أضف شبكات إجتماعية خاصة"
+
+#: ../framework/admin/framework-panel.php:945
+#: ../framework/admin/framework-panel.php:970
+#: ../framework/admin/framework-panel.php:995
+#: ../framework/admin/framework-panel.php:1020
+#: ../framework/admin/framework-panel.php:1045
+msgid "Icon (use full Font Awesome name)"
+msgstr "الأيقونة ( إستخدم الإسم الكامل font awesome )"
+
+#: ../framework/admin/framework-panel.php:950
+#: ../framework/admin/framework-panel.php:975
+#: ../framework/admin/framework-panel.php:1000
+#: ../framework/admin/framework-panel.php:1025
+#: ../framework/admin/framework-panel.php:1050
+#: ../framework/functions/mega-menus.php:641
 msgid "URL"
 msgstr "الرابط"
 
-#: ../framework/admin/framework-panel.php:942
-#: ../framework/admin/framework-panel.php:967
-#: ../framework/admin/framework-panel.php:992
-#: ../framework/admin/framework-panel.php:1017
-#: ../framework/admin/framework-panel.php:1042
+#: ../framework/admin/framework-panel.php:955
+#: ../framework/admin/framework-panel.php:980
+#: ../framework/admin/framework-panel.php:1005
+#: ../framework/admin/framework-panel.php:1030
+#: ../framework/admin/framework-panel.php:1055
 msgid "Color"
 msgstr "اللون"
 
-#: ../framework/admin/framework-panel.php:1059
+#: ../framework/admin/framework-panel.php:1072
 msgid "Show Featured Image By Default"
 msgstr "إظهار الصورة البارزة إفتراضيًا"
 
-#: ../framework/admin/framework-panel.php:1064
+#: ../framework/admin/framework-panel.php:1077
 msgid "Post Author Box"
 msgstr "تفعيل عن الكاتب"
 
-#: ../framework/admin/framework-panel.php:1069
+#: ../framework/admin/framework-panel.php:1082
 msgid "Next/Prev Articles"
 msgstr "تفعيل المقال السابق/التالي"
 
-#: ../framework/admin/framework-panel.php:1074
+#: ../framework/admin/framework-panel.php:1087
 msgid "OG Meta"
 msgstr "معلومات OpenGraph"
 
-#: ../framework/admin/framework-panel.php:1079
+#: ../framework/admin/framework-panel.php:1092
 msgid "Reading Position Indicator"
 msgstr "مؤشر التقدم في القراءة"
 
-#: ../framework/admin/framework-panel.php:1087
+#: ../framework/admin/framework-panel.php:1100
 msgid "Post Meta Settings"
 msgstr "اعدادات معلومات التدوينة"
 
-#: ../framework/admin/framework-panel.php:1090
-#: ../framework/admin/framework-panel.php:2652
+#: ../framework/admin/framework-panel.php:1103
+#: ../framework/admin/framework-panel.php:2660
 msgid "Post Meta"
 msgstr "معلومات التدوينة"
 
-#: ../framework/admin/framework-panel.php:1115
+#: ../framework/admin/framework-panel.php:1128
 msgid "Tags Meta"
 msgstr "معلومات الوسوم"
 
-#: ../framework/admin/framework-panel.php:1131
+#: ../framework/admin/framework-panel.php:1144
 msgid "Share Post Settings"
 msgstr "اعدادات نشر التدوينة"
 
-#: ../framework/admin/framework-panel.php:1134
+#: ../framework/admin/framework-panel.php:1147
 msgid "Bottom Share Post Buttons"
 msgstr "أزرار نشر التدوينة السفلية"
 
-#: ../framework/admin/framework-panel.php:1139
+#: ../framework/admin/framework-panel.php:1152
 msgid "Top Share Post Buttons"
 msgstr "أزرار نشر التدوينة العلوية"
 
-#: ../framework/admin/framework-panel.php:1144
+#: ../framework/admin/framework-panel.php:1157
 msgid "Share Buttons for Pages"
 msgstr "تفعيل أزرار المشاركة للصفحات"
 
-#: ../framework/admin/framework-panel.php:1149
+#: ../framework/admin/framework-panel.php:1162
 msgid "Share Buttons type"
 msgstr "نمط أزرار المشاركة"
 
-#: ../framework/admin/framework-panel.php:1152
+#: ../framework/admin/framework-panel.php:1165
 msgid "Buttons with counters"
 msgstr "أزرار مع عدد مرات المشاركة"
 
-#: ../framework/admin/framework-panel.php:1153
+#: ../framework/admin/framework-panel.php:1166
 msgid "Flat Buttons"
 msgstr "أزرار مسطحة"
 
-#: ../framework/admin/framework-panel.php:1156
+#: ../framework/admin/framework-panel.php:1169
 msgid "Use the post's Short Link"
 msgstr "استخدم الرابط المختصر للتدوينة"
 
-#: ../framework/admin/framework-panel.php:1166
+#: ../framework/admin/framework-panel.php:1179
 msgid "Twitter Username <small>(optional)</small>"
 msgstr "اسم مستخدم تويتر <small>(اختياري)</small>"
 
-#: ../framework/admin/framework-panel.php:1181
+#: ../framework/admin/framework-panel.php:1194
 msgid "LinkedIn Button"
 msgstr "زر LinkedIn"
 
-#: ../framework/admin/framework-panel.php:1186
+#: ../framework/admin/framework-panel.php:1199
 msgid "StumbleUpon Button"
 msgstr "زر StumbleUpon"
 
-#: ../framework/admin/framework-panel.php:1202
+#: ../framework/admin/framework-panel.php:1215
 msgid "Related Posts Settings"
 msgstr "اعدادات التدوينات المرتبطة"
 
-#: ../framework/admin/framework-panel.php:1205
+#: ../framework/admin/framework-panel.php:1218
 msgid "Related Posts"
 msgstr "التدوينات المرتبطة"
 
-#: ../framework/admin/framework-panel.php:1210
+#: ../framework/admin/framework-panel.php:1223
 msgid "Related Posts Position"
 msgstr "مكان التدوينات المرتبطة"
 
-#: ../framework/admin/framework-panel.php:1213
+#: ../framework/admin/framework-panel.php:1226
 msgid "In the post content area"
 msgstr "في منطقة محتوى التدوينة"
 
-#: ../framework/admin/framework-panel.php:1214
+#: ../framework/admin/framework-panel.php:1227
 msgid "Below the post area"
 msgstr "منطقة أسفل التدوينة"
 
-#: ../framework/admin/framework-panel.php:1222
+#: ../framework/admin/framework-panel.php:1235
 msgid "Number of posts to show in Full width pages"
 msgstr "عدد التدوينات المراد إظهارها في الصفحات ذات العرض الكامل"
 
-#: ../framework/admin/framework-panel.php:1230
-#: ../framework/admin/framework-panel.php:1262
+#: ../framework/admin/framework-panel.php:1243
+#: ../framework/admin/framework-panel.php:1275
 msgid "Posts in the same Categories"
 msgstr "تدوينات في نفس التصنيفات"
 
-#: ../framework/admin/framework-panel.php:1231
-#: ../framework/admin/framework-panel.php:1263
+#: ../framework/admin/framework-panel.php:1244
+#: ../framework/admin/framework-panel.php:1276
 msgid "Posts in the same Tags"
 msgstr "تدوينات بنفس الوسوم"
 
-#: ../framework/admin/framework-panel.php:1232
-#: ../framework/admin/framework-panel.php:1264
+#: ../framework/admin/framework-panel.php:1245
+#: ../framework/admin/framework-panel.php:1277
 msgid "Posts by the same Author"
 msgstr "تدوينات لنفس الكاتب"
 
-#: ../framework/admin/framework-panel.php:1239
+#: ../framework/admin/framework-panel.php:1252
 msgid "Fly Check Also Box"
 msgstr "صندوق \"شاهد أيضًا\""
 
-#: ../framework/admin/framework-panel.php:1242
+#: ../framework/admin/framework-panel.php:1255
 msgid "Check Also Box"
 msgstr "صندوق \"شاهد أيضًا\""
 
-#: ../framework/admin/framework-panel.php:1247
+#: ../framework/admin/framework-panel.php:1260
 msgid "Check Also Box Position"
 msgstr "مكان صندوق \"شاهد أيضًا\""
 
-#: ../framework/admin/framework-panel.php:1271
+#: ../framework/admin/framework-panel.php:1284
 msgid "jQuery Comments Settings"
 msgstr "اعدادات jQuery للتعليقات"
 
-#: ../framework/admin/framework-panel.php:1274
+#: ../framework/admin/framework-panel.php:1287
 msgid "Adding Comment Validation"
 msgstr "تفعيل خاصية التحقق من التعليقات"
 
-#: ../framework/admin/framework-panel.php:1287
+#: ../framework/admin/framework-panel.php:1300
 msgid "Footer Elements"
 msgstr "عناصر الفوتر"
 
-#: ../framework/admin/framework-panel.php:1290
+#: ../framework/admin/framework-panel.php:1303
 msgid "Go To Top Button"
 msgstr "زر الذهاب إلى الأعلى"
 
-#: ../framework/admin/framework-panel.php:1303
+#: ../framework/admin/framework-panel.php:1316
 msgid "Footer Widgets layout"
 msgstr "نظام عرض المربعات الجانبية للفوتر"
 
-#: ../framework/admin/framework-panel.php:1306
+#: ../framework/admin/framework-panel.php:1319
 msgid "Footer Widgets"
 msgstr "مربعات جانبية للفوتر"
 
-#: ../framework/admin/framework-panel.php:1353
+#: ../framework/admin/framework-panel.php:1366
 msgid "Footer Text One"
 msgstr "نص الفوتر 1"
 
-#: ../framework/admin/framework-panel.php:1356
-#: ../framework/admin/framework-panel.php:1370
+#: ../framework/admin/framework-panel.php:1369
+#: ../framework/admin/framework-panel.php:1383
 msgid "Variables"
 msgstr "متغيرات"
 
-#: ../framework/admin/framework-panel.php:1357
-#: ../framework/admin/framework-panel.php:1371
+#: ../framework/admin/framework-panel.php:1370
+#: ../framework/admin/framework-panel.php:1384
 msgid ""
 "These tags can be included in the textarea above and will be replaced when a "
 "page is displayed."
 msgstr ""
 "هذه الوسوم يمكن استخدامها في منطقة الكتابة بالاعلى وسوف تبدل عند زيارة موقعك."
 
-#: ../framework/admin/framework-panel.php:1359
-#: ../framework/admin/framework-panel.php:1373
+#: ../framework/admin/framework-panel.php:1372
+#: ../framework/admin/framework-panel.php:1386
 msgid "Replaced with the current year."
 msgstr "تبدل بالسنة الحالية."
 
-#: ../framework/admin/framework-panel.php:1360
-#: ../framework/admin/framework-panel.php:1374
+#: ../framework/admin/framework-panel.php:1373
+#: ../framework/admin/framework-panel.php:1387
 msgid "Replaced with The site's name."
 msgstr "تبدل باسم الموقع."
 
-#: ../framework/admin/framework-panel.php:1361
-#: ../framework/admin/framework-panel.php:1375
+#: ../framework/admin/framework-panel.php:1374
+#: ../framework/admin/framework-panel.php:1388
 msgid "Replaced with The site's URL."
 msgstr "تبدل برابط للموقع."
 
-#: ../framework/admin/framework-panel.php:1367
+#: ../framework/admin/framework-panel.php:1380
 msgid "Footer Text Two"
 msgstr "نص الفوتر 2"
 
-#: ../framework/admin/framework-panel.php:1384
+#: ../framework/admin/framework-panel.php:1397
 msgid "Banners Settings"
 msgstr "اعدادات البانرات"
 
-#: ../framework/admin/framework-panel.php:1386
+#: ../framework/admin/framework-panel.php:1399
 msgid "Background Image ADS"
 msgstr "اعلانات صورة الخلفية"
 
-#: ../framework/admin/framework-panel.php:1389
+#: ../framework/admin/framework-panel.php:1402
 msgid "Enable Background Image ADS"
 msgstr "تفعيل اعلانات صورة الخلفية"
 
-#: ../framework/admin/framework-panel.php:1394
+#: ../framework/admin/framework-panel.php:1407
 msgid "Background Image ADS Link"
 msgstr "رابط اعلانات صورة الخلفية"
 
-#: ../framework/admin/framework-panel.php:1399
+#: ../framework/admin/framework-panel.php:1412
 msgid ""
 "Go to Styling tab and set Background Type to Custom Background then upload "
 "your custom image and enable Full Screen Background option."
@@ -2471,303 +2453,309 @@ msgstr ""
 "إذهب إلى إعدادات المظهر و قم بتعيين نوع الخلفية إلى خلفية خاصة وقم برفع "
 "الصورة وقم بتفعيل خيار خلفية بحجم الشاشة بالكامل."
 
-#: ../framework/admin/framework-panel.php:1403
+#: ../framework/admin/framework-panel.php:1416
 msgid "Top Banner Area"
 msgstr "منطقة البانر العلوي"
 
-#: ../framework/admin/framework-panel.php:1406
+#: ../framework/admin/framework-panel.php:1419
 msgid "Top Banner"
 msgstr "بانر علوي"
 
-#: ../framework/admin/framework-panel.php:1411
-#: ../framework/admin/framework-panel.php:1487
-#: ../framework/admin/framework-panel.php:1563
-#: ../framework/admin/framework-panel.php:1640
-#: ../framework/admin/framework-panel.php:1712
+#: ../framework/admin/framework-panel.php:1424
+#: ../framework/admin/framework-panel.php:1500
+#: ../framework/admin/framework-panel.php:1576
+#: ../framework/admin/framework-panel.php:1653
+#: ../framework/admin/framework-panel.php:1725
 msgid "Image Ad"
 msgstr "اعلان صورة"
 
-#: ../framework/admin/framework-panel.php:1415
+#: ../framework/admin/framework-panel.php:1428
 msgid "Top Banner Image"
 msgstr "صورة للاعلان العلوي"
 
-#: ../framework/admin/framework-panel.php:1420
+#: ../framework/admin/framework-panel.php:1433
 msgid "Top Banner Link"
 msgstr "رابط الاعلان العلوي"
 
-#: ../framework/admin/framework-panel.php:1425
-#: ../framework/admin/framework-panel.php:1501
-#: ../framework/admin/framework-panel.php:1577
-#: ../framework/admin/framework-panel.php:1654
-#: ../framework/admin/framework-panel.php:1726
+#: ../framework/admin/framework-panel.php:1438
+#: ../framework/admin/framework-panel.php:1514
+#: ../framework/admin/framework-panel.php:1590
+#: ../framework/admin/framework-panel.php:1667
+#: ../framework/admin/framework-panel.php:1739
 msgid "Alternative Text For The image"
 msgstr "نص بديل للصورة"
 
-#: ../framework/admin/framework-panel.php:1430
-#: ../framework/admin/framework-panel.php:1506
-#: ../framework/admin/framework-panel.php:1582
-#: ../framework/admin/framework-panel.php:1659
-#: ../framework/admin/framework-panel.php:1731
+#: ../framework/admin/framework-panel.php:1443
+#: ../framework/admin/framework-panel.php:1519
+#: ../framework/admin/framework-panel.php:1595
+#: ../framework/admin/framework-panel.php:1672
+#: ../framework/admin/framework-panel.php:1744
 msgid "Open The Link In a new Tab"
 msgstr "فتح الرابط في تبويب جديد"
 
-#: ../framework/admin/framework-panel.php:1435
-#: ../framework/admin/framework-panel.php:1511
-#: ../framework/admin/framework-panel.php:1587
-#: ../framework/admin/framework-panel.php:1664
-#: ../framework/admin/framework-panel.php:1736
+#: ../framework/admin/framework-panel.php:1448
+#: ../framework/admin/framework-panel.php:1524
+#: ../framework/admin/framework-panel.php:1600
+#: ../framework/admin/framework-panel.php:1677
+#: ../framework/admin/framework-panel.php:1749
 msgid "Nofollow"
 msgstr "بدون تتبع"
 
-#: ../framework/admin/framework-panel.php:1440
-#: ../framework/admin/framework-panel.php:1516
-#: ../framework/admin/framework-panel.php:1592
-#: ../framework/admin/framework-panel.php:1669
-#: ../framework/admin/framework-panel.php:1741
+#: ../framework/admin/framework-panel.php:1453
+#: ../framework/admin/framework-panel.php:1529
+#: ../framework/admin/framework-panel.php:1605
+#: ../framework/admin/framework-panel.php:1682
+#: ../framework/admin/framework-panel.php:1754
 msgid "Responsive Google AdSense"
 msgstr "اعلانات جوجل أدسنس التجاوبية"
 
-#: ../framework/admin/framework-panel.php:1444
-#: ../framework/admin/framework-panel.php:1520
-#: ../framework/admin/framework-panel.php:1596
-#: ../framework/admin/framework-panel.php:1673
-#: ../framework/admin/framework-panel.php:1745
+#: ../framework/admin/framework-panel.php:1457
+#: ../framework/admin/framework-panel.php:1533
+#: ../framework/admin/framework-panel.php:1609
+#: ../framework/admin/framework-panel.php:1686
+#: ../framework/admin/framework-panel.php:1758
 msgid "Publisher ID"
 msgstr "رقم الناشر التعريفي"
 
-#: ../framework/admin/framework-panel.php:1449
-#: ../framework/admin/framework-panel.php:1525
-#: ../framework/admin/framework-panel.php:1601
+#: ../framework/admin/framework-panel.php:1462
+#: ../framework/admin/framework-panel.php:1538
+#: ../framework/admin/framework-panel.php:1614
 msgid "728x90 (Leaderboard) - ad ID"
 msgstr "الرقم التعريفي لاعلان (ليدربورد) 728x90"
 
-#: ../framework/admin/framework-panel.php:1454
-#: ../framework/admin/framework-panel.php:1530
-#: ../framework/admin/framework-panel.php:1606
-#: ../framework/admin/framework-panel.php:1678
-#: ../framework/admin/framework-panel.php:1750
+#: ../framework/admin/framework-panel.php:1467
+#: ../framework/admin/framework-panel.php:1543
+#: ../framework/admin/framework-panel.php:1619
+#: ../framework/admin/framework-panel.php:1691
+#: ../framework/admin/framework-panel.php:1763
 msgid "468x60 (Banner) - ad ID"
 msgstr "الرقم التعريفي لاعلان (بانر) 468x60"
 
-#: ../framework/admin/framework-panel.php:1459
-#: ../framework/admin/framework-panel.php:1535
-#: ../framework/admin/framework-panel.php:1611
-#: ../framework/admin/framework-panel.php:1683
-#: ../framework/admin/framework-panel.php:1755
+#: ../framework/admin/framework-panel.php:1472
+#: ../framework/admin/framework-panel.php:1548
+#: ../framework/admin/framework-panel.php:1624
+#: ../framework/admin/framework-panel.php:1696
+#: ../framework/admin/framework-panel.php:1768
 msgid "300x250 (Medium Rectangle) - ad ID"
 msgstr "الرقم التعريفي لاعلان (مستطيل متوسط) 300x250"
 
-#: ../framework/admin/framework-panel.php:1465
-#: ../framework/admin/framework-panel.php:1541
-#: ../framework/admin/framework-panel.php:1617
-#: ../framework/admin/framework-panel.php:1689
-#: ../framework/admin/framework-panel.php:1761
+#: ../framework/admin/framework-panel.php:1478
+#: ../framework/admin/framework-panel.php:1554
+#: ../framework/admin/framework-panel.php:1630
+#: ../framework/admin/framework-panel.php:1702
+#: ../framework/admin/framework-panel.php:1774
 msgid "Custom Code"
 msgstr "كود خاص"
 
-#: ../framework/admin/framework-panel.php:1469
-#: ../framework/admin/framework-panel.php:1545
-#: ../framework/admin/framework-panel.php:1621
-#: ../framework/admin/framework-panel.php:1693
-#: ../framework/admin/framework-panel.php:1765
+#: ../framework/admin/framework-panel.php:1482
+#: ../framework/admin/framework-panel.php:1558
+#: ../framework/admin/framework-panel.php:1634
+#: ../framework/admin/framework-panel.php:1706
+#: ../framework/admin/framework-panel.php:1778
 msgid "Custom Ad Code"
 msgstr "كود إعلان خاص"
 
-#: ../framework/admin/framework-panel.php:1479
+#: ../framework/admin/framework-panel.php:1492
 msgid "Bottom Banner Area"
 msgstr "منطقة البانر السفلي"
 
-#: ../framework/admin/framework-panel.php:1482
+#: ../framework/admin/framework-panel.php:1495
 msgid "Bottom Banner"
 msgstr "البانر السفلي"
 
-#: ../framework/admin/framework-panel.php:1491
-#: ../framework/admin/framework-panel.php:1567
+#: ../framework/admin/framework-panel.php:1504
+#: ../framework/admin/framework-panel.php:1580
 msgid "Bottom Banner Image"
 msgstr "صورة البانر السفلي"
 
-#: ../framework/admin/framework-panel.php:1496
-#: ../framework/admin/framework-panel.php:1572
+#: ../framework/admin/framework-panel.php:1509
+#: ../framework/admin/framework-panel.php:1585
 msgid "Bottom Banner Link"
 msgstr "رابط البانر السفلي"
 
-#: ../framework/admin/framework-panel.php:1555
+#: ../framework/admin/framework-panel.php:1568
 msgid "Below Header Banner Area"
 msgstr "منطقة البانر أسفل الهيدر"
 
-#: ../framework/admin/framework-panel.php:1558
+#: ../framework/admin/framework-panel.php:1571
 msgid "Below Header Banner"
 msgstr "بانر أسفل الهيدر"
 
-#: ../framework/admin/framework-panel.php:1632
+#: ../framework/admin/framework-panel.php:1645
 msgid "Above Article Banner Area"
 msgstr "منطقة البانر أعلى المقال"
 
-#: ../framework/admin/framework-panel.php:1635
+#: ../framework/admin/framework-panel.php:1648
 msgid "Above Article Banner"
 msgstr "بانر أعلى المقال"
 
-#: ../framework/admin/framework-panel.php:1644
+#: ../framework/admin/framework-panel.php:1657
 msgid "Above Article Banner Image"
 msgstr "صورة البانر أعلى المقال"
 
-#: ../framework/admin/framework-panel.php:1649
+#: ../framework/admin/framework-panel.php:1662
 msgid "Above Article Banner Link"
 msgstr "رابط البانر أعلى المقال"
 
-#: ../framework/admin/framework-panel.php:1704
+#: ../framework/admin/framework-panel.php:1717
 msgid "Below Article Banner Area"
 msgstr "منطقة البانر أسفل المقال"
 
-#: ../framework/admin/framework-panel.php:1707
+#: ../framework/admin/framework-panel.php:1720
 msgid "Below Article Banner"
 msgstr "بانر أسفل المقال"
 
-#: ../framework/admin/framework-panel.php:1716
+#: ../framework/admin/framework-panel.php:1729
 msgid "Below Article Banner Image"
 msgstr "صورة للبانر أسفل المقال"
 
-#: ../framework/admin/framework-panel.php:1721
+#: ../framework/admin/framework-panel.php:1734
 msgid "Below Article Banner Link"
 msgstr "رابط للبانر أسفل المقال"
 
-#: ../framework/admin/framework-panel.php:1775
+#: ../framework/admin/framework-panel.php:1788
 msgid "Shortcode ADS"
 msgstr "أكواد مختصرة للاعلانات"
 
-#: ../framework/admin/framework-panel.php:1778
+#: ../framework/admin/framework-panel.php:1791
 msgid "[ads1] Shortcode Banner"
 msgstr "كود مختصر للإعلانات  [ads2]"
 
-#: ../framework/admin/framework-panel.php:1783
+#: ../framework/admin/framework-panel.php:1796
 msgid "[ads2] Shortcode Banner"
 msgstr "كود مختصر للإعلانات  [ads1]"
 
-#: ../framework/admin/framework-panel.php:1796
+#: ../framework/admin/framework-panel.php:1809
 msgid "Default Sidebar Position"
 msgstr "المكان الإفتراضي للعمود الجانبي"
 
-#: ../framework/admin/framework-panel.php:1815
+#: ../framework/admin/framework-panel.php:1828
 msgid "Sticky Sidebars"
 msgstr "أعمدة جانبية ثابتة"
 
-#: ../framework/admin/framework-panel.php:1818
+#: ../framework/admin/framework-panel.php:1831
 msgid "Sticky Sidebar"
 msgstr "عمود جانبي ثابت"
 
-#: ../framework/admin/framework-panel.php:1823
+#: ../framework/admin/framework-panel.php:1836
 msgid "Disable on the homepage"
 msgstr "تعطيل في الصفحة الرئيسية"
 
-#: ../framework/admin/framework-panel.php:1828
+#: ../framework/admin/framework-panel.php:1841
 msgid "Disable on category pages"
 msgstr "تعطيل في صفحات التصنيفات"
 
-#: ../framework/admin/framework-panel.php:1833
+#: ../framework/admin/framework-panel.php:1846
 msgid "Disable on tag pages"
 msgstr "تعطيل في صفحات الوسوم"
 
-#: ../framework/admin/framework-panel.php:1838
+#: ../framework/admin/framework-panel.php:1851
 msgid "Disable on pages"
 msgstr "تعطيل في الصفحات"
 
-#: ../framework/admin/framework-panel.php:1843
+#: ../framework/admin/framework-panel.php:1856
 msgid "Disable on posts"
 msgstr "تعطيل في التدوينات"
 
-#: ../framework/admin/framework-panel.php:1852
+#: ../framework/admin/framework-panel.php:1865
 msgid "Add Sidebar"
 msgstr "إضافة عمود جانبي"
 
-#: ../framework/admin/framework-panel.php:1854
+#: ../framework/admin/framework-panel.php:1867
 msgid "Sidebar Name"
 msgstr "اسم العمود الجانبي"
 
-#: ../framework/admin/framework-panel.php:1857
+#: ../framework/admin/framework-panel.php:1870
 msgid "Add"
 msgstr "أضف"
 
-#: ../framework/admin/framework-panel.php:1874
+#: ../framework/admin/framework-panel.php:1887
 msgid "Custom Sidebars"
 msgstr "أعمدة جانبية خاصة"
 
-#: ../framework/admin/framework-panel.php:1889
+#: ../framework/admin/framework-panel.php:1902
 msgid "Home Sidebar"
 msgstr "العمود الجانبي للصفحة الرئيسية"
 
-#: ../framework/admin/framework-panel.php:1895
+#: ../framework/admin/framework-panel.php:1908
 msgid "Single Page Sidebar"
 msgstr "العمود الجانبيى لصفحة منفردة"
 
-#: ../framework/admin/framework-panel.php:1901
+#: ../framework/admin/framework-panel.php:1914
 msgid "Single Article Sidebar"
 msgstr "العمود الجانبي لتدوينة منفردة"
 
-#: ../framework/admin/framework-panel.php:1907
+#: ../framework/admin/framework-panel.php:1920
 msgid "Archives Sidebar"
 msgstr "العمود الجانبي للأرشيف"
 
-#: ../framework/admin/framework-panel.php:1914
+#: ../framework/admin/framework-panel.php:1927
 msgid "bbPress Sidebar"
 msgstr "العمود الجانبي لbbPress"
 
-#: ../framework/admin/framework-panel.php:1938
+#: ../framework/admin/framework-panel.php:1951
 msgid "Excerpt Length"
 msgstr "طول المقتطف"
 
-#: ../framework/admin/framework-panel.php:1975
+#: ../framework/admin/framework-panel.php:1988
 msgid "Default layout settings"
 msgstr "النمط  الإفتراضي"
 
-#: ../framework/admin/framework-panel.php:1981
+#: ../framework/admin/framework-panel.php:1994
 msgid "Choose the default layout"
 msgstr "إختر نمط العرض الإفتراضي"
 
-#: ../framework/admin/framework-panel.php:2004
+#: ../framework/admin/framework-panel.php:2017
 msgid "These settings will applies on all pages with blog List template."
 msgstr "هذه الإعدادات سوف تنطبق على كل الصفحات بنظام عرض \"مدونة\""
 
-#: ../framework/admin/framework-panel.php:2010
+#: ../framework/admin/framework-panel.php:2023
 msgid "Category Page Settings"
 msgstr "اعدادات صفحة التصنيفات"
 
-#: ../framework/admin/framework-panel.php:2013
+#: ../framework/admin/framework-panel.php:2026
 msgid "Category Description"
 msgstr "وصف التصنيفات"
 
-#: ../framework/admin/framework-panel.php:2025
+#: ../framework/admin/framework-panel.php:2031
+#: ../framework/admin/framework-panel.php:2074
+#: ../framework/admin/framework-panel.php:2117
+msgid "RSS Icon"
+msgstr "ايقونة RSS"
+
+#: ../framework/admin/framework-panel.php:2038
 msgid "Choose Default Categories page layout"
 msgstr "اختر نظام عرض صفحة التصنيفات الافتراضي"
 
-#: ../framework/admin/framework-panel.php:2053
+#: ../framework/admin/framework-panel.php:2066
 msgid "Tag Page Settings"
 msgstr "اعدادات صفحة الوسوم"
 
-#: ../framework/admin/framework-panel.php:2056
+#: ../framework/admin/framework-panel.php:2069
 msgid "Tag Description"
 msgstr "وصف الوسوم"
 
-#: ../framework/admin/framework-panel.php:2069
+#: ../framework/admin/framework-panel.php:2082
 msgid "Choose Tags page layout"
 msgstr "اختر نظام عرض صفحة الوسوم"
 
-#: ../framework/admin/framework-panel.php:2096
+#: ../framework/admin/framework-panel.php:2109
 msgid "Author Page Settings"
 msgstr "اعدادات صفحة الكاتب"
 
-#: ../framework/admin/framework-panel.php:2111
+#: ../framework/admin/framework-panel.php:2124
 msgid "Choose Author page layout"
 msgstr "اختر نظام عرض صفحة الكاتب"
 
-#: ../framework/admin/framework-panel.php:2138
+#: ../framework/admin/framework-panel.php:2151
 msgid "Search Page Settings"
 msgstr "اعدادات صفحة البحث"
 
-#: ../framework/admin/framework-panel.php:2141
+#: ../framework/admin/framework-panel.php:2154
 msgid "Search in Category IDs"
 msgstr "البحث في الأرقام التعريفية للتصنيفات"
 
-#: ../framework/admin/framework-panel.php:2143
+#: ../framework/admin/framework-panel.php:2156
 msgid ""
 "Use minus sign (-) to exclude categories. Example: (1,4,-7) = search only in "
 "Category 1 & 4, and exclude Category 7."
@@ -2775,384 +2763,380 @@ msgstr ""
 "استخدم علامة (-) لاستبعاد التصنيفات. مثال: (1,4,-7) = البحث فقط في تصنيف 1 و "
 "4 و استبعاد 7."
 
-#: ../framework/admin/framework-panel.php:2147
+#: ../framework/admin/framework-panel.php:2160
 msgid "Exclude Pages in results"
 msgstr "استبعاد الصفحات في نتائج البحث"
 
-#: ../framework/admin/framework-panel.php:2154
+#: ../framework/admin/framework-panel.php:2167
 msgid "Choose Search results page layout"
 msgstr "اختر نظام عرض صفحة نتائج البحث"
 
-#: ../framework/admin/framework-panel.php:2185
+#: ../framework/admin/framework-panel.php:2198
 msgid "Theme Color and Settings"
 msgstr "لون القالب والاعدادات"
 
-#: ../framework/admin/framework-panel.php:2188
+#: ../framework/admin/framework-panel.php:2201
 msgid "Choose Theme Color"
 msgstr "اختر لون القالب"
 
-#: ../framework/admin/framework-panel.php:2231
+#: ../framework/admin/framework-panel.php:2244
 msgid "Custom Theme Color"
 msgstr "لون خاص للقالب"
 
-#: ../framework/admin/framework-panel.php:2236
+#: ../framework/admin/framework-panel.php:2249
 msgid "Dark Skin"
 msgstr "الشكل الداكن"
 
-#: ../framework/admin/framework-panel.php:2241
+#: ../framework/admin/framework-panel.php:2254
 msgid "Modern Colored Scrollbar"
 msgstr "شريط تمرير حديث وملون"
 
-#: ../framework/admin/framework-panel.php:2244
+#: ../framework/admin/framework-panel.php:2257
 msgid "For Chrome and Safari only."
 msgstr "خاص بمتصفح كروم وسافاري فقط."
 
-#: ../framework/admin/framework-panel.php:2247
+#: ../framework/admin/framework-panel.php:2260
 msgid "Apply Categories Colors on News blocks"
 msgstr "تفعيل ألوان التصنيفات على مربعات الأخبار"
 
-#: ../framework/admin/framework-panel.php:2252
+#: ../framework/admin/framework-panel.php:2265
 msgid "Lazy Load For Images"
 msgstr "خاصية LazyLoad لتحميل الصور"
 
-#: ../framework/admin/framework-panel.php:2257
-msgid "Smoth Scroll"
-msgstr "تفعيل التمرير السلس"
-
-#: ../framework/admin/framework-panel.php:2264
-#: ../framework/admin/framework-panel.php:2267
+#: ../framework/admin/framework-panel.php:2272
+#: ../framework/admin/framework-panel.php:2275
 msgid "Background Type"
 msgstr "نوع الخلفية"
 
-#: ../framework/admin/framework-panel.php:2270
+#: ../framework/admin/framework-panel.php:2278
 msgid "Pattern"
 msgstr "نمط"
 
-#: ../framework/admin/framework-panel.php:2271
-#: ../framework/admin/framework-panel.php:2298
-#: ../framework/admin/framework-panel.php:2301
+#: ../framework/admin/framework-panel.php:2279
+#: ../framework/admin/framework-panel.php:2306
+#: ../framework/admin/framework-panel.php:2309
 msgid "Custom Background"
 msgstr "خلفية خاصة"
 
-#: ../framework/admin/framework-panel.php:2276
+#: ../framework/admin/framework-panel.php:2284
 msgid "Choose Pattern"
 msgstr "اختر نمط"
 
-#: ../framework/admin/framework-panel.php:2280
+#: ../framework/admin/framework-panel.php:2288
 msgid "Background Color"
 msgstr "لون الخلفية"
 
-#: ../framework/admin/framework-panel.php:2313
+#: ../framework/admin/framework-panel.php:2321
 msgid "Body Styling"
 msgstr "شكل الBody"
 
-#: ../framework/admin/framework-panel.php:2317
+#: ../framework/admin/framework-panel.php:2325
 msgid "Highlighted Text Color"
 msgstr "لون النص عند اختياره بالفأرة"
 
-#: ../framework/admin/framework-panel.php:2322
-#: ../framework/admin/framework-panel.php:2361
-#: ../framework/admin/framework-panel.php:2407
-#: ../framework/admin/framework-panel.php:2507
+#: ../framework/admin/framework-panel.php:2330
+#: ../framework/admin/framework-panel.php:2369
+#: ../framework/admin/framework-panel.php:2415
+#: ../framework/admin/framework-panel.php:2515
 msgid "Links Color"
 msgstr "لون الروابط"
 
-#: ../framework/admin/framework-panel.php:2326
+#: ../framework/admin/framework-panel.php:2334
 msgid "Links Decoration"
 msgstr "شكل الروابط"
 
-#: ../framework/admin/framework-panel.php:2330
-#: ../framework/admin/framework-panel.php:2345
-#: ../framework/admin/framework-panel.php:2472
-#: ../framework/admin/framework-panel.php:2487
+#: ../framework/admin/framework-panel.php:2338
+#: ../framework/admin/framework-panel.php:2353
+#: ../framework/admin/framework-panel.php:2480
+#: ../framework/admin/framework-panel.php:2495
 msgid "none"
 msgstr "لا شيء"
 
-#: ../framework/admin/framework-panel.php:2331
-#: ../framework/admin/framework-panel.php:2346
-#: ../framework/admin/framework-panel.php:2473
-#: ../framework/admin/framework-panel.php:2488
+#: ../framework/admin/framework-panel.php:2339
+#: ../framework/admin/framework-panel.php:2354
+#: ../framework/admin/framework-panel.php:2481
+#: ../framework/admin/framework-panel.php:2496
 msgid "underline"
 msgstr "تحت الخط"
 
-#: ../framework/admin/framework-panel.php:2332
-#: ../framework/admin/framework-panel.php:2347
-#: ../framework/admin/framework-panel.php:2474
-#: ../framework/admin/framework-panel.php:2489
+#: ../framework/admin/framework-panel.php:2340
+#: ../framework/admin/framework-panel.php:2355
+#: ../framework/admin/framework-panel.php:2482
+#: ../framework/admin/framework-panel.php:2497
 msgid "overline"
 msgstr "فوق الخط"
 
-#: ../framework/admin/framework-panel.php:2333
-#: ../framework/admin/framework-panel.php:2348
-#: ../framework/admin/framework-panel.php:2475
-#: ../framework/admin/framework-panel.php:2490
+#: ../framework/admin/framework-panel.php:2341
+#: ../framework/admin/framework-panel.php:2356
+#: ../framework/admin/framework-panel.php:2483
+#: ../framework/admin/framework-panel.php:2498
 msgid "line-through"
 msgstr "خلال-الخط"
 
-#: ../framework/admin/framework-panel.php:2336
-#: ../framework/admin/framework-panel.php:2366
-#: ../framework/admin/framework-panel.php:2412
-#: ../framework/admin/framework-panel.php:2512
+#: ../framework/admin/framework-panel.php:2344
+#: ../framework/admin/framework-panel.php:2374
+#: ../framework/admin/framework-panel.php:2420
+#: ../framework/admin/framework-panel.php:2520
 msgid "Links Color on mouse over"
 msgstr "لون الروابط عند المرور بمؤشر الفأرة"
 
-#: ../framework/admin/framework-panel.php:2341
+#: ../framework/admin/framework-panel.php:2349
 msgid "Links Decoration on mouse over"
 msgstr "شكل الروابط عند المرور بمؤشر الفأرة"
 
-#: ../framework/admin/framework-panel.php:2353
+#: ../framework/admin/framework-panel.php:2361
 msgid "Top Navigation Styling"
 msgstr "شكل القائمة العلوية"
 
-#: ../framework/admin/framework-panel.php:2371
+#: ../framework/admin/framework-panel.php:2379
 msgid "Today's Date text color"
 msgstr "لون نص تاريخ اليوم"
 
-#: ../framework/admin/framework-panel.php:2378
+#: ../framework/admin/framework-panel.php:2386
 msgid "Header Background"
 msgstr "خلفية الهيدر"
 
-#: ../framework/admin/framework-panel.php:2389
+#: ../framework/admin/framework-panel.php:2397
 msgid "Main Navigation Styling"
 msgstr "شكل القائمة الرئيسية"
 
-#: ../framework/admin/framework-panel.php:2392
+#: ../framework/admin/framework-panel.php:2400
 msgid "Main Navigation Background"
 msgstr "خلفية القائمة الرئيسية"
 
-#: ../framework/admin/framework-panel.php:2397
+#: ../framework/admin/framework-panel.php:2405
 msgid "Main Navigation inner bottom border color"
 msgstr "لون الإطار السفلي الداخلي للقائمة الرئيسية"
 
-#: ../framework/admin/framework-panel.php:2402
+#: ../framework/admin/framework-panel.php:2410
 msgid "Sub Menu Background"
 msgstr "خلفية القائمة الفرعية"
 
-#: ../framework/admin/framework-panel.php:2417
+#: ../framework/admin/framework-panel.php:2425
 msgid "Current Item Link Color"
 msgstr "لون رابط العنصر الحالي"
 
-#: ../framework/admin/framework-panel.php:2422
+#: ../framework/admin/framework-panel.php:2430
 msgid "Separator Line1 color"
 msgstr "لون الخط الفاصل2"
 
-#: ../framework/admin/framework-panel.php:2427
+#: ../framework/admin/framework-panel.php:2435
 msgid "Separator Line2 color"
 msgstr "لون الخط الفاصل1"
 
-#: ../framework/admin/framework-panel.php:2435
+#: ../framework/admin/framework-panel.php:2443
 msgid "Breaking News Styling"
 msgstr "شكل نص شريط الأخبار"
 
-#: ../framework/admin/framework-panel.php:2438
+#: ../framework/admin/framework-panel.php:2446
 msgid "Breaking News Text Background"
 msgstr "خلفية نص شريط الأخبار"
 
-#: ../framework/admin/framework-panel.php:2445
+#: ../framework/admin/framework-panel.php:2453
 msgid "Content Styling"
 msgstr "شكل المحتوى الرئيسي"
 
-#: ../framework/admin/framework-panel.php:2448
+#: ../framework/admin/framework-panel.php:2456
 msgid "Main Content Background"
 msgstr "خلفية المحتوى الرئيسي"
 
-#: ../framework/admin/framework-panel.php:2453
+#: ../framework/admin/framework-panel.php:2461
 msgid "Blocks / Widgets Background"
 msgstr "خلفية المربعات / المربعات الجانبية"
 
-#: ../framework/admin/framework-panel.php:2460
+#: ../framework/admin/framework-panel.php:2468
 msgid "Post Styling"
 msgstr "شكل التدوينة"
 
-#: ../framework/admin/framework-panel.php:2463
+#: ../framework/admin/framework-panel.php:2471
 msgid "Post Links Color"
 msgstr "لون الروابط في التدوينة"
 
-#: ../framework/admin/framework-panel.php:2468
+#: ../framework/admin/framework-panel.php:2476
 msgid "Post Links Decoration"
 msgstr "شكل الروابط في التدوينة"
 
-#: ../framework/admin/framework-panel.php:2478
+#: ../framework/admin/framework-panel.php:2486
 msgid "Post Links Color on mouse over"
 msgstr "لون الروابط في التدوينة عند المرور بمؤشر الفأرة"
 
-#: ../framework/admin/framework-panel.php:2483
+#: ../framework/admin/framework-panel.php:2491
 msgid "Post Links Decoration on mouse over"
 msgstr "شكل الروابط في التدوينة عند المرور بمؤشر الفأرة"
 
-#: ../framework/admin/framework-panel.php:2494
+#: ../framework/admin/framework-panel.php:2502
 msgid "Footer Background"
 msgstr "خلفية الفوتر"
 
-#: ../framework/admin/framework-panel.php:2502
+#: ../framework/admin/framework-panel.php:2510
 msgid "Footer Widget Title color"
 msgstr "لون عنوان المربع الجانبي في الفوتر"
 
-#: ../framework/admin/framework-panel.php:2519
+#: ../framework/admin/framework-panel.php:2527
 msgid "Custom CSS"
 msgstr "أكواد CSS خاصة"
 
-#: ../framework/admin/framework-panel.php:2521
+#: ../framework/admin/framework-panel.php:2529
 msgid "Global CSS :"
 msgstr "اكواد CSS العامة"
 
-#: ../framework/admin/framework-panel.php:2525
+#: ../framework/admin/framework-panel.php:2533
 msgid "Tablets:"
 msgstr "الأجهزة اللوحية:"
 
-#: ../framework/admin/framework-panel.php:2525
+#: ../framework/admin/framework-panel.php:2533
 msgid "768 - 985px"
 msgstr "768 - 985px"
 
-#: ../framework/admin/framework-panel.php:2529
+#: ../framework/admin/framework-panel.php:2537
 msgid "Wide Phones:"
 msgstr "الجوالات العريضة:"
 
-#: ../framework/admin/framework-panel.php:2529
+#: ../framework/admin/framework-panel.php:2537
 msgid "480 - 767px"
 msgstr "480 - 767px"
 
-#: ../framework/admin/framework-panel.php:2533
+#: ../framework/admin/framework-panel.php:2541
 msgid "Phones:"
 msgstr "الجوالات:"
 
-#: ../framework/admin/framework-panel.php:2533
+#: ../framework/admin/framework-panel.php:2541
 msgid "320 - 479px"
 msgstr "320 - 479px"
 
-#: ../framework/admin/framework-panel.php:2546
+#: ../framework/admin/framework-panel.php:2554
 msgid "Character sets"
 msgstr "مجموعات الأحرف"
 
-#: ../framework/admin/framework-panel.php:2547
+#: ../framework/admin/framework-panel.php:2555
 msgid "Tip:"
 msgstr "نصيحه:"
 
-#: ../framework/admin/framework-panel.php:2547
+#: ../framework/admin/framework-panel.php:2555
 msgid ""
 "If you choose only the languages that you need, you'll help prevent slowness "
 "on your webpage."
 msgstr "إذا اخترت فقط اللغة التي تحتاجها، سيساعد ذلك في منع بطء صفحات موقعك."
 
-#: ../framework/admin/framework-panel.php:2550
+#: ../framework/admin/framework-panel.php:2558
 msgid "Latin Extended"
 msgstr "اللاتينية الموسعة"
 
-#: ../framework/admin/framework-panel.php:2555
+#: ../framework/admin/framework-panel.php:2563
 msgid "Cyrillic"
 msgstr "السيريلية"
 
-#: ../framework/admin/framework-panel.php:2560
+#: ../framework/admin/framework-panel.php:2568
 msgid "Cyrillic Extended"
 msgstr "السيريلية الموسعة"
 
-#: ../framework/admin/framework-panel.php:2565
+#: ../framework/admin/framework-panel.php:2573
 msgid "Greek"
 msgstr "اليونانية"
 
-#: ../framework/admin/framework-panel.php:2570
+#: ../framework/admin/framework-panel.php:2578
 msgid "Greek Extended"
 msgstr "اليونانية الموسعة"
 
-#: ../framework/admin/framework-panel.php:2575
+#: ../framework/admin/framework-panel.php:2583
 msgid "Khmer"
 msgstr "الكمبودية"
 
-#: ../framework/admin/framework-panel.php:2580
+#: ../framework/admin/framework-panel.php:2588
 msgid "Vietnamese"
 msgstr "الفيتنامية"
 
-#: ../framework/admin/framework-panel.php:2587
+#: ../framework/admin/framework-panel.php:2595
 msgid "Live typography preview"
 msgstr "مثال حي لخصائص الخط"
 
-#: ../framework/admin/framework-panel.php:2595
+#: ../framework/admin/framework-panel.php:2603
 msgid "Grumpy wizards make toxic brew for the evil Queen and Jack."
 msgstr "لا خير في حسن الجسوم وطولها إن لم يزن حسن الجسوم عقول"
 
-#: ../framework/admin/framework-panel.php:2599
+#: ../framework/admin/framework-panel.php:2607
 msgid "Main Typography"
 msgstr "خصائص الخطوط الرئيسية"
 
-#: ../framework/admin/framework-panel.php:2602
+#: ../framework/admin/framework-panel.php:2610
 msgid "General Typography"
 msgstr "خصائص الخطوط العامة"
 
-#: ../framework/admin/framework-panel.php:2607
+#: ../framework/admin/framework-panel.php:2615
 msgid "Site Title In Header"
 msgstr "اسم الموقع في الهيدر"
 
-#: ../framework/admin/framework-panel.php:2612
+#: ../framework/admin/framework-panel.php:2620
 msgid "Tagline In Header"
 msgstr "الشعار في الهيدر"
 
-#: ../framework/admin/framework-panel.php:2617
+#: ../framework/admin/framework-panel.php:2625
 msgid "Top Menu"
 msgstr "القائمة العلوية"
 
-#: ../framework/admin/framework-panel.php:2622
+#: ../framework/admin/framework-panel.php:2630
 msgid "Main Navigation"
 msgstr "القائمة الرئيسية"
 
-#: ../framework/admin/framework-panel.php:2627
+#: ../framework/admin/framework-panel.php:2635
 msgid "Slider Post Title"
 msgstr "عنوان تدوينة السلايدر"
 
-#: ../framework/admin/framework-panel.php:2632
+#: ../framework/admin/framework-panel.php:2640
 msgid "Page Title"
 msgstr "عنوان صفحة"
 
-#: ../framework/admin/framework-panel.php:2637
+#: ../framework/admin/framework-panel.php:2645
 msgid "Single Post Title"
 msgstr "عنوان تدوينة مفردة"
 
-#: ../framework/admin/framework-panel.php:2642
+#: ../framework/admin/framework-panel.php:2650
 msgid "Post Title in Homepage Blocks and Post Titles in Blog Layout"
 msgstr ""
 "عنوان التدوينة في مربعات الصفحة الرئيسية وعناوين التدوينات في نظام عرض مدونة"
 
-#: ../framework/admin/framework-panel.php:2647
+#: ../framework/admin/framework-panel.php:2655
 msgid "Small Post Title in Homepage Blocks"
 msgstr "عنوان التدوينة الصغير في مربعات الصفحة الرئيسية"
 
-#: ../framework/admin/framework-panel.php:2657
+#: ../framework/admin/framework-panel.php:2665
 msgid "Post Entry"
 msgstr "محتوى التدوينة"
 
-#: ../framework/admin/framework-panel.php:2662
+#: ../framework/admin/framework-panel.php:2670
 msgid "Blockquotes"
 msgstr "الاقتباسات"
 
-#: ../framework/admin/framework-panel.php:2667
+#: ../framework/admin/framework-panel.php:2675
 msgid "Blocks Titles"
 msgstr "عناوين المربعات"
 
-#: ../framework/admin/framework-panel.php:2672
+#: ../framework/admin/framework-panel.php:2680
 msgid "Widgets Titles"
 msgstr "عناوين المربعات الجانبية"
 
-#: ../framework/admin/framework-panel.php:2677
+#: ../framework/admin/framework-panel.php:2685
 msgid "Footer Widgets Titles"
 msgstr "عناوين المربعات الجانبية لمنطقة الفوتر"
 
-#: ../framework/admin/framework-panel.php:2710
-#: ../framework/admin/framework-panel.php:2713
+#: ../framework/admin/framework-panel.php:2718
+#: ../framework/admin/framework-panel.php:2721
 msgid "Advanced Settings"
 msgstr "اعدادات متقدمة"
 
-#: ../framework/admin/framework-panel.php:2716
+#: ../framework/admin/framework-panel.php:2724
 msgid "Disable Arqam Lite"
 msgstr "تعطيل إضافة Arqam Lite"
 
-#: ../framework/admin/framework-panel.php:2721
+#: ../framework/admin/framework-panel.php:2729
 msgid "Notify on theme updates"
 msgstr "التنبيه عند صدور إصدار جديد للقالب"
 
-#: ../framework/admin/framework-panel.php:2726
+#: ../framework/admin/framework-panel.php:2734
 msgid "Disable the Responsiveness"
 msgstr "تعطيل خصائص القالب التجاوبية"
 
-#: ../framework/admin/framework-panel.php:2730
+#: ../framework/admin/framework-panel.php:2738
 msgid ""
 "This option works only on Tablets and Phones .. to disable the "
 "responsiveness action on the desktop .. edit style.css file and remove all "
@@ -3162,28 +3146,28 @@ msgstr ""
 "أجهزة الكومبيوتر ... قم بتحرير ملف Style.css وقم بحذف Media Queries من نهاية "
 "الملف."
 
-#: ../framework/admin/framework-panel.php:2735
-#: ../framework/admin/framework-panel.php:2738
+#: ../framework/admin/framework-panel.php:2743
+#: ../framework/admin/framework-panel.php:2746
 msgid "WordPress Login page Logo"
 msgstr "اللوجو الخاص بصفحة دخول الووردبريس"
 
-#: ../framework/admin/framework-panel.php:2743
+#: ../framework/admin/framework-panel.php:2751
 msgid "WordPress Login page Logo URL"
 msgstr "رابط اللوجو الخاص بصفحة دخول الووردبريس"
 
-#: ../framework/admin/framework-panel.php:2760
+#: ../framework/admin/framework-panel.php:2768
 msgid "Export"
 msgstr "تصدير"
 
-#: ../framework/admin/framework-panel.php:2766
+#: ../framework/admin/framework-panel.php:2774
 msgid "Import"
 msgstr "استيراد"
 
-#: ../framework/admin/framework-panel.php:2783
+#: ../framework/admin/framework-panel.php:2791
 msgid "All settings will be rest .. Are you sure ?"
 msgstr "جميع الاعدادات سوف تعود للوضع الإفتراضي.. هل أنت متأكد؟"
 
-#: ../framework/admin/framework-panel.php:2783
+#: ../framework/admin/framework-panel.php:2791
 msgid "Reset All Settings"
 msgstr "إعادة تعيين الإعدادات"
 
@@ -3596,7 +3580,6 @@ msgstr "سجل التغييرات"
 #: ../framework/blocks/block-recent.php:220
 #: ../framework/blocks/block-recent.php:257
 #: ../framework/blocks/block-tabs.php:50
-#: ../framework/functions/translation.php:61
 #: ../framework/loops/loop-content.php:14
 #: ../framework/loops/loop-default.php:27
 #: ../framework/loops/loop-masonry.php:29
@@ -3606,7 +3589,6 @@ msgstr "أكمل القراءة &raquo;"
 
 #: ../framework/blocks/block-woocommerce.php:70
 #: ../framework/blocks/block-woocommerce.php:119
-#: ../framework/functions/translation.php:62
 msgid "No products found"
 msgstr "لم يتم العثور على أي منتجات"
 
@@ -3643,45 +3625,45 @@ msgstr "متابعون"
 msgid "Subscribers"
 msgstr "متابعون"
 
-#: ../framework/functions/arqam-lite.php:760
+#: ../framework/functions/arqam-lite.php:754
 msgid "Style :"
 msgstr "النمط :"
 
-#: ../framework/functions/arqam-lite.php:762
+#: ../framework/functions/arqam-lite.php:756
 msgid "Gray Icons"
 msgstr "أيقونات رمادية"
 
-#: ../framework/functions/arqam-lite.php:763
+#: ../framework/functions/arqam-lite.php:757
 msgid "Colored Icons"
 msgstr "أيقونات ملونة"
 
-#: ../framework/functions/arqam-lite.php:764
+#: ../framework/functions/arqam-lite.php:758
 msgid "Colored border Icons"
 msgstr "أيقونات إطارها ملون"
 
-#: ../framework/functions/arqam-lite.php:875
-#: ../framework/functions/arqam-lite.php:882
+#: ../framework/functions/arqam-lite.php:870
+#: ../framework/functions/arqam-lite.php:877
 msgid "FaceBook App info"
 msgstr "معلومات Facebook App"
 
-#: ../framework/functions/arqam-lite.php:887
+#: ../framework/functions/arqam-lite.php:882
 msgid "App ID"
 msgstr "App ID"
 
-#: ../framework/functions/arqam-lite.php:891
+#: ../framework/functions/arqam-lite.php:886
 msgid "App Secret"
 msgstr "App Secret"
 
-#: ../framework/functions/arqam-lite.php:896
-#: ../framework/functions/arqam-lite.php:991
-#: ../framework/functions/arqam-lite.php:1042
-#: ../framework/functions/arqam-lite.php:1071
-#: ../framework/functions/arqam-lite.php:1096
-#: ../framework/functions/arqam-lite.php:1132
-#: ../framework/functions/arqam-lite.php:1153
-#: ../framework/functions/arqam-lite.php:1174
-#: ../framework/functions/arqam-lite.php:1198
-#: ../framework/functions/arqam-lite.php:1222
+#: ../framework/functions/arqam-lite.php:892
+#: ../framework/functions/arqam-lite.php:989
+#: ../framework/functions/arqam-lite.php:1044
+#: ../framework/functions/arqam-lite.php:1073
+#: ../framework/functions/arqam-lite.php:1099
+#: ../framework/functions/arqam-lite.php:1131
+#: ../framework/functions/arqam-lite.php:1152
+#: ../framework/functions/arqam-lite.php:1173
+#: ../framework/functions/arqam-lite.php:1197
+#: ../framework/functions/arqam-lite.php:1221
 #: ../framework/functions/arqam-lite.php:1242
 #: ../framework/functions/arqam-lite.php:1263
 #: ../framework/functions/arqam-lite.php:1290
@@ -3689,253 +3671,237 @@ msgstr "App Secret"
 msgid "Need Help?"
 msgstr "تحتاج لمساعده؟"
 
-#: ../framework/functions/arqam-lite.php:896
-#, php-format
-msgid ""
-"Enter Your App ID and App Secret, <a href=\"%s\" target=\"_blank\">Click "
-"Here</a> For More Details."
-msgstr ""
-"أدخل App ID و App Secret لجلب بيانات API اللازمه <a href=\"%s\" target="
-"\"_blank\">إضغط هنا</a> لمزيد من المعلومات ."
+#: ../framework/functions/arqam-lite.php:892
+msgid "Enter Your App ID and App Secret ,"
+msgstr "ادخل الApp ID والApp Secret،"
 
-#: ../framework/functions/arqam-lite.php:905
+#: ../framework/functions/arqam-lite.php:892
+#: ../framework/functions/arqam-lite.php:990
+#: ../framework/functions/arqam-lite.php:1044
+#: ../framework/functions/arqam-lite.php:1073
+#: ../framework/functions/arqam-lite.php:1099
+#: ../framework/functions/arqam-lite.php:1197
+#: ../framework/functions/arqam-lite.php:1221
+#: ../framework/functions/arqam-lite.php:1290
+#: ../framework/functions/arqam-lite.php:1349
+msgid "Click Here"
+msgstr "اضغط هنا"
+
+#: ../framework/functions/arqam-lite.php:892
+#: ../framework/functions/arqam-lite.php:990
+#: ../framework/functions/arqam-lite.php:1044
+#: ../framework/functions/arqam-lite.php:1073
+#: ../framework/functions/arqam-lite.php:1099
+#: ../framework/functions/arqam-lite.php:1197
+#: ../framework/functions/arqam-lite.php:1221
+#: ../framework/functions/arqam-lite.php:1290
+#: ../framework/functions/arqam-lite.php:1349
+msgid "For More Details."
+msgstr "لمزيد من التفاصيل."
+
+#: ../framework/functions/arqam-lite.php:901
 #: ../framework/functions/arqam-lite.php:1000
 msgid "Submit"
 msgstr "حفظ"
 
-#: ../framework/functions/arqam-lite.php:964
-#: ../framework/functions/arqam-lite.php:971
+#: ../framework/functions/arqam-lite.php:961
+#: ../framework/functions/arqam-lite.php:968
 msgid "Instagram App info"
 msgstr "معلومات Instagram App"
 
-#: ../framework/functions/arqam-lite.php:976
+#: ../framework/functions/arqam-lite.php:973
 msgid "Client ID"
 msgstr "Client ID"
 
-#: ../framework/functions/arqam-lite.php:980
+#: ../framework/functions/arqam-lite.php:977
 msgid "Client Secret"
 msgstr "Client Secret"
 
-#: ../framework/functions/arqam-lite.php:984
+#: ../framework/functions/arqam-lite.php:981
 msgid "Follow The Team"
 msgstr "قم بمتابعة الفريق."
 
-#: ../framework/functions/arqam-lite.php:986
+#: ../framework/functions/arqam-lite.php:983
 msgid "Follow @tielabs and @imo3aser on instagram."
 msgstr "قم بمتابعة @tielabs و @imo3aser على instagram."
 
-#: ../framework/functions/arqam-lite.php:991
-#, php-format
-msgid ""
-"Enter Your App Client ID and App Client Secret, <a href=\"%s\" target="
-"\"_blank\">Click Here</a> For More Details."
-msgstr ""
-"أدخل App ID و App Secret لجلب بيانات API اللازمه <a href=\"%s\" target="
-"\"_blank\">إضغط هنا</a> لمزيد من المعلومات ."
+#: ../framework/functions/arqam-lite.php:990
+msgid "Enter Your App Client ID and App Client Secret ,"
+msgstr "ادخل App Client ID و App Client Secret الخاص بك،"
 
 #: ../framework/functions/arqam-lite.php:1012
 msgid "Settings saved."
 msgstr "تم حفظ الاعدادات"
 
-#: ../framework/functions/arqam-lite.php:1014
+#: ../framework/functions/arqam-lite.php:1015
 msgid "Arqam Lite Settings"
 msgstr "اعدادات Arqam Lite"
 
-#: ../framework/functions/arqam-lite.php:1014
-#: ../framework/functions/arqam-lite.php:1362
-msgid "Need More?"
-msgstr "تبحث عن المزيد؟"
-
-#: ../framework/functions/arqam-lite.php:1021
+#: ../framework/functions/arqam-lite.php:1022
 msgid "FaceBook"
 msgstr "FaceBook"
 
-#: ../framework/functions/arqam-lite.php:1026
+#: ../framework/functions/arqam-lite.php:1027
 msgid "Page ID/Name"
 msgstr "الاسم/الرقم التعريفي للصفحه"
 
-#: ../framework/functions/arqam-lite.php:1030
-#: ../framework/functions/arqam-lite.php:1058
-#: ../framework/functions/arqam-lite.php:1091
-#: ../framework/functions/arqam-lite.php:1115
-#: ../framework/functions/arqam-lite.php:1148
-#: ../framework/functions/arqam-lite.php:1169
-#: ../framework/functions/arqam-lite.php:1189
-#: ../framework/functions/arqam-lite.php:1213
-#: ../framework/functions/arqam-lite.php:1237
+#: ../framework/functions/arqam-lite.php:1031
+#: ../framework/functions/arqam-lite.php:1060
+#: ../framework/functions/arqam-lite.php:1094
+#: ../framework/functions/arqam-lite.php:1114
+#: ../framework/functions/arqam-lite.php:1147
+#: ../framework/functions/arqam-lite.php:1168
+#: ../framework/functions/arqam-lite.php:1188
+#: ../framework/functions/arqam-lite.php:1212
+#: ../framework/functions/arqam-lite.php:1236
 #: ../framework/functions/arqam-lite.php:1257
 #: ../framework/functions/arqam-lite.php:1278
 #: ../framework/functions/arqam-lite.php:1324
 msgid "Text Below The Number"
 msgstr "النص أسفل الرقم"
 
-#: ../framework/functions/arqam-lite.php:1034
+#: ../framework/functions/arqam-lite.php:1035
 #: ../framework/functions/arqam-lite.php:1282
 msgid "Access Token Key"
 msgstr "Access Token Key"
 
-#: ../framework/functions/arqam-lite.php:1037
+#: ../framework/functions/arqam-lite.php:1038
 #: ../framework/functions/arqam-lite.php:1285
 msgid "Get Access Token"
 msgstr "Get Access Token"
 
-#: ../framework/functions/arqam-lite.php:1042
-#, php-format
+#: ../framework/functions/arqam-lite.php:1044
 msgid ""
 "Enter Your Facebook Page Name or ID and click on Get Access Token to get "
-"your App Access Token, <a href=\"%s\" target=\"_blank\">Click Here</a> For "
-"More Details."
+"your App Access Token, "
 msgstr ""
-"أدخل إسم أو ID صفحه FaceBook الخاصه بك ثم إضغط على زر Get Access Token لجلب "
-"بيانات API اللازمه <a href=\"%s\" target=\"_blank\">إضغط هنا</a> لمزيد من "
-"المعلومات ."
+"ادخل اسم صفحة الFaceBook أو الرقم التعريفي واضغط على Get Access Token للحصول "
+"على الApp Access Token الخاص بك،"
 
-#: ../framework/functions/arqam-lite.php:1049 ../framework/parts/share.php:23
+#: ../framework/functions/arqam-lite.php:1051 ../framework/parts/share.php:20
 #: ../framework/widgets/widget-twitter.php:12
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../framework/functions/arqam-lite.php:1054
-#: ../framework/functions/arqam-lite.php:1165
-#: ../framework/functions/arqam-lite.php:1185
-#: ../framework/functions/arqam-lite.php:1209
-#: ../framework/functions/arqam-lite.php:1233
+#: ../framework/functions/arqam-lite.php:1056
+#: ../framework/functions/arqam-lite.php:1164
+#: ../framework/functions/arqam-lite.php:1184
+#: ../framework/functions/arqam-lite.php:1208
+#: ../framework/functions/arqam-lite.php:1232
 #: ../framework/functions/arqam-lite.php:1253
 #: ../framework/functions/arqam-lite.php:1274
 msgid "UserName"
 msgstr "اسم المستخدم"
 
-#: ../framework/functions/arqam-lite.php:1062
+#: ../framework/functions/arqam-lite.php:1064
 msgid "Consumer key"
 msgstr "Consumer key"
 
-#: ../framework/functions/arqam-lite.php:1066
+#: ../framework/functions/arqam-lite.php:1068
 msgid "Consumer secret"
 msgstr "Consumer secret"
 
-#: ../framework/functions/arqam-lite.php:1071
-#, php-format
+#: ../framework/functions/arqam-lite.php:1073
 msgid ""
 "Enter Your Twitter Account Username , your APP Consumer key and Consumer "
-"secret, <a href=\"%s\" target=\"_blank\">Click Here</a> For More Details."
+"secret ,"
 msgstr ""
-"أدخل معرف Twitter الخاص بك و Consumer key و Consumer secret, <a href=\"%s\" "
-"target=\"_blank\">إضغط هنا</a> لمزيد من المعلومات ."
+"ادخل اسم مستخدم Twitter الخاص بك و الApp Consumer Key و Consumer Secret، "
 
-#: ../framework/functions/arqam-lite.php:1078
+#: ../framework/functions/arqam-lite.php:1081
 msgid "Google+"
 msgstr "Google+"
 
-#: ../framework/functions/arqam-lite.php:1083
+#: ../framework/functions/arqam-lite.php:1086
 msgid "Google+ ID"
 msgstr "الرقم التعريفي لجوجل+"
 
-#: ../framework/functions/arqam-lite.php:1087
+#: ../framework/functions/arqam-lite.php:1090
 msgid "Google API Key"
 msgstr "مفتاح Google API"
 
-#: ../framework/functions/arqam-lite.php:1096
-#, php-format
-msgid ""
-"Enter Your Google+ page or profile ID and Google API Key, <a href=\"%s\" "
-"target=\"_blank\">Click Here</a> For More Details."
+#: ../framework/functions/arqam-lite.php:1099
+msgid "Enter Your Google+ page or profile ID and Google API Key ,"
 msgstr ""
-"أدخل إسم أو ID صفحه Google ‪+‬ الخاصه بك و Google API Key  <a href=\"%s\" "
-"target=\"_blank\">إضغط هنا</a> لمزيد من المعلومات ."
+"ادخل عنوان صفحة جوجل+ أو الرقم التعريفي لملفك الشخصي و مفتاح Google API ،"
 
-#: ../framework/functions/arqam-lite.php:1102
+#: ../framework/functions/arqam-lite.php:1105
 msgid "YouTube"
 msgstr "YouTube"
 
-#: ../framework/functions/arqam-lite.php:1107
+#: ../framework/functions/arqam-lite.php:1110
 msgid "Username or Channel ID"
 msgstr "اسم مستخدم أو الرقم التعريفي للقناة"
 
-#: ../framework/functions/arqam-lite.php:1111
-msgid "Youtube API Key"
-msgstr "‏Youtube API Key"
-
-#: ../framework/functions/arqam-lite.php:1119
+#: ../framework/functions/arqam-lite.php:1118
 #: ../framework/functions/arqam-lite.php:1328
 msgid "Type"
 msgstr "النوع"
 
-#: ../framework/functions/arqam-lite.php:1132
-#, php-format
+#: ../framework/functions/arqam-lite.php:1131
 msgid ""
-"Enter Your Youtube username or Channel ID, API Key and choose User or "
-"Channel from Type menu, <a href=\"%s\" target=\"_blank\">Click Here</a> For "
-"More Details."
+"Enter Your YouTube username or Channel ID and choose User or Channel from "
+"Type menu ,"
 msgstr ""
-"أدخل إسم مستخدم آو قناه Youtube الخاصه بك و API Key  <a href=\"%s\" target="
-"\"_blank\">إضغط هنا</a> لمزيد من المعلومات ."
+"ادخل اسم مستخدم الYouTube او الرقم التعريفي للقناة الخاصة بك، ثم اختر "
+"\"مستخدم\" أو \"قناة\" من قائمة النوع ،"
 
-#: ../framework/functions/arqam-lite.php:1139
+#: ../framework/functions/arqam-lite.php:1138
 msgid "Vimeo"
 msgstr "Vimeo"
 
-#: ../framework/functions/arqam-lite.php:1144
+#: ../framework/functions/arqam-lite.php:1143
 msgid "Channel Name"
 msgstr "اسم القناة"
 
-#: ../framework/functions/arqam-lite.php:1153
-msgid "Enter Your Vimeo Channel Name."
+#: ../framework/functions/arqam-lite.php:1152
+msgid "Enter Your Vimeo Channel Name ,"
 msgstr "ادخل اسم قناة Vimeo ،"
 
-#: ../framework/functions/arqam-lite.php:1160
+#: ../framework/functions/arqam-lite.php:1159
 msgid "Dribbble"
 msgstr "Dribbble"
 
-#: ../framework/functions/arqam-lite.php:1174
-msgid "Enter Your Dribbble Account Username."
+#: ../framework/functions/arqam-lite.php:1173
+msgid "Enter Your Dribbble Account Username ."
 msgstr "ادخل اسم مستخدم Dribble الخاص بك ."
 
-#: ../framework/functions/arqam-lite.php:1180
+#: ../framework/functions/arqam-lite.php:1179
 #: ../framework/widgets/widget-soundcloud.php:11
 msgid "SoundCloud"
 msgstr "SoundCloud"
 
-#: ../framework/functions/arqam-lite.php:1193
-#: ../framework/functions/arqam-lite.php:1217
+#: ../framework/functions/arqam-lite.php:1192
+#: ../framework/functions/arqam-lite.php:1216
 msgid "API Key"
 msgstr "مفتاح API"
 
-#: ../framework/functions/arqam-lite.php:1198
-#, php-format
-msgid ""
-"Enter Your SoundCloud Account Username and the API Key, <a href=\"%s\" "
-"target=\"_blank\">Click Here</a> For More Details."
-msgstr ""
-"أدخل إسم مستخدم SoundCloud و API Key  <a href=\"%s\" target=\"_blank\">إضغط "
-"هنا</a> لمزيد من المعلومات ."
+#: ../framework/functions/arqam-lite.php:1197
+msgid "Enter Your SoundCloud Account Username and the API Key,"
+msgstr "ادخل اسم مستخدم SoundCloud الخاص بك والAPI ،"
 
-#: ../framework/functions/arqam-lite.php:1204
+#: ../framework/functions/arqam-lite.php:1203
 msgid "Behance"
 msgstr "Behance"
 
-#: ../framework/functions/arqam-lite.php:1222
-#, php-format
-msgid ""
-"Enter Your Behance Account Username and the API Key, <a href=\"%s\" target="
-"\"_blank\">Click Here</a> For More Details."
-msgstr ""
-"أدخل إسم مستخدم Behance و API Key  <a href=\"%s\" target=\"_blank\">إضغط "
-"هنا</a> لمزيد من المعلومات ."
+#: ../framework/functions/arqam-lite.php:1221
+msgid "Enter Your Behance Account Username and the API Key,"
+msgstr "ادخل اسم مستخدم Behance الخاص بك و الAPI ،"
 
-#: ../framework/functions/arqam-lite.php:1228
-msgid "Github"
-msgstr "‏Github"
+#: ../framework/functions/arqam-lite.php:1227
+msgid "Forrst"
+msgstr "Forrst"
 
 #: ../framework/functions/arqam-lite.php:1242
-msgid "Enter Your Github Account Username."
-msgstr "أدخل إسم مستخدم Github الخاص بك."
+msgid "Enter Your Forrst Account Username ."
+msgstr "ادخل اسم مستخدم Forrst الخاص بك ."
 
 #: ../framework/functions/arqam-lite.php:1248
 msgid "Delicious"
 msgstr "Delicious"
 
 #: ../framework/functions/arqam-lite.php:1263
-msgid "Enter Your Delicious Account Username."
+msgid "Enter Your Delicious Account Username ."
 msgstr "ادخل اسم مستخدم Delicious الخاص بك ."
 
 #: ../framework/functions/arqam-lite.php:1269
@@ -3943,15 +3909,12 @@ msgid "Instagram"
 msgstr "Instagram"
 
 #: ../framework/functions/arqam-lite.php:1290
-#, php-format
 msgid ""
 "Enter Your Instagram Username and click on Get Access Token to get your App "
-"Access Token, <a href=\"%s\" target=\"_blank\">Click Here</a> For More "
-"Details."
+"Access Token,"
 msgstr ""
-"أدخل إسم مستخدم Instagram الخاص بك ثم إضغط على زر Get Access Token لجلب "
-"بيانات API اللازمه <a href=\"%s\" target=\"_blank\">إضغط هنا</a> لمزيد من "
-"المعلومات ."
+"ادخل اسم مستخدم Instagram الخاص بك واضغط على \"Get Access Token\" للحصول على "
+"الAccess Token الخاصه بك،"
 
 #: ../framework/functions/arqam-lite.php:1296
 msgid "RSS"
@@ -3970,13 +3933,16 @@ msgid "Number of Subscribers"
 msgstr "عدد المتابعون"
 
 #: ../framework/functions/arqam-lite.php:1349
-#, php-format
 msgid ""
 "Enter Your Feed URl and the Feedpress Json file URL or Number of Subscribers "
-"manually  <a href=\"%s\" target=\"_blank\">Click Here</a> For More Details."
+"manually ,"
 msgstr ""
-"أدخل رابط خلاصات و ملف Json ل Feedpress أو أدخل رقم المتابعون يدوياً <a href="
-"\"%s\" target=\"_blank\">إضغط هنا</a> لمزيد من المعلومات ."
+"ادخل رابط الFeed الخاص بك و رابط ملف الFeedpress Json او ادخل عدد المشتركين "
+"يدويًا،"
+
+#: ../framework/functions/arqam-lite.php:1362
+msgid "Need More ?"
+msgstr "هل تبحث عن المزيد ؟"
 
 #: ../framework/functions/arqam-lite.php:1364
 msgid ""
@@ -3999,55 +3965,49 @@ msgstr "المزيد من خيارات التصميم."
 msgid "More Social Networks:"
 msgstr "المزيد من الشبكات الإجتماعية:"
 
-#: ../framework/functions/arqam-lite.php:1390
+#: ../framework/functions/arqam-lite.php:1384
 msgid "Members Number"
 msgstr "عدد الأعضاء"
 
-#: ../framework/functions/arqam-lite.php:1391
+#: ../framework/functions/arqam-lite.php:1385
 msgid "Posts Number"
 msgstr "عدد التدوينات"
 
-#: ../framework/functions/arqam-lite.php:1392
+#: ../framework/functions/arqam-lite.php:1386
 msgid "Comments Number"
 msgstr "عدد التعليقات"
 
-#: ../framework/functions/arqam-lite.php:1405
+#: ../framework/functions/arqam-lite.php:1397
 msgid "Save Settings"
 msgstr "حفظ الإعدادات"
 
-#: ../framework/functions/arqam-lite.php:1410
+#: ../framework/functions/arqam-lite.php:1402
 msgid "Save"
 msgstr "حفظ"
 
 #: ../framework/functions/breadcrumbs.php:17
-#: ../framework/functions/translation.php:105
 msgid "Home"
 msgstr "الرئيسية"
 
-#: ../framework/functions/breadcrumbs.php:78
-#: ../framework/functions/translation.php:17 ../search.php:9
+#: ../framework/functions/breadcrumbs.php:78 ../search.php:9
 #, php-format
 msgid "Search Results for: %s"
 msgstr "نتائج البحث عن :  %s"
 
-#: ../framework/functions/breadcrumbs.php:112
-#: ../framework/functions/translation.php:29 ../tag.php:8
+#: ../framework/functions/breadcrumbs.php:112 ../tag.php:8
 #, php-format
 msgid "Tag Archives: %s"
 msgstr "أرشيف الوسم : %s"
 
 #: ../framework/functions/breadcrumbs.php:131
-#: ../framework/functions/translation.php:91
 msgid "page"
 msgstr "صفحه"
 
-#: ../framework/functions/common-scripts.php:77
-#: ../framework/functions/translation.php:19
+#: ../framework/functions/common-scripts.php:76
 msgid "No Results"
 msgstr "لا يوجد نتائج"
 
-#: ../framework/functions/common-scripts.php:78
-#: ../framework/functions/translation.php:18
+#: ../framework/functions/common-scripts.php:77
 msgid "Results Found"
 msgstr "نتائج تم العثور عليها"
 
@@ -4071,7 +4031,7 @@ msgstr "أحدث تدوينة + شاهد أيضًا"
 msgid "Mega Links"
 msgstr "روابط ميجا"
 
-#: ../framework/functions/mega-menus.php:371
+#: ../framework/functions/mega-menus.php:372
 msgid "Mega Links - Columns"
 msgstr "روابط ميجا - عواميد"
 
@@ -4079,103 +4039,100 @@ msgstr "روابط ميجا - عواميد"
 msgid "Mega Menu Background Image"
 msgstr "صوره خلفية للـMega Menu"
 
-#: ../framework/functions/mega-menus.php:410
+#: ../framework/functions/mega-menus.php:407
 msgid "Padding Right"
 msgstr "ازاحه لليمين"
 
-#: ../framework/functions/mega-menus.php:417
+#: ../framework/functions/mega-menus.php:414
 msgid "Padding left"
 msgstr "ازاحه لليسار"
 
-#: ../framework/functions/mega-menus.php:424
+#: ../framework/functions/mega-menus.php:421
 msgid "Min Height"
 msgstr "أقل ارتفاع"
 
-#: ../framework/functions/mega-menus.php:560
+#: ../framework/functions/mega-menus.php:583
 #, php-format
 msgid "%s (Invalid)"
 msgstr "%s (غير صالح)"
 
-#: ../framework/functions/mega-menus.php:564
+#: ../framework/functions/mega-menus.php:587
 #, php-format
 msgid "%s (Pending)"
 msgstr "%s (قيد الانتظار)"
 
-#: ../framework/functions/mega-menus.php:577
+#: ../framework/functions/mega-menus.php:600
 msgid "sub item"
 msgstr "عنصر الفرعي"
 
-#: ../framework/functions/mega-menus.php:609
+#: ../framework/functions/mega-menus.php:632
 msgid "Edit Menu Item"
 msgstr "تحرير عنصر القائمة"
 
-#: ../framework/functions/mega-menus.php:625
+#: ../framework/functions/mega-menus.php:648
 msgid "Navigation Label"
 msgstr "اسم العنصر في القائمة"
 
-#: ../framework/functions/mega-menus.php:631
+#: ../framework/functions/mega-menus.php:654
 msgid "Title Attribute"
 msgstr "سمة العنوان"
 
-#: ../framework/functions/mega-menus.php:643
+#: ../framework/functions/mega-menus.php:666
 msgid "CSS Classes (optional)"
 msgstr "CSS Classes (اختياري)"
 
-#: ../framework/functions/mega-menus.php:649
+#: ../framework/functions/mega-menus.php:672
 msgid "Link Relationship (XFN)"
 msgstr "علاقة الرابط (XFN)"
 
-#: ../framework/functions/mega-menus.php:655
+#: ../framework/functions/mega-menus.php:678
 msgid "Description"
 msgstr "الوصف"
 
-#: ../framework/functions/mega-menus.php:657
+#: ../framework/functions/mega-menus.php:680
 msgid ""
 "The description will be displayed in the menu if the current theme supports "
 "it."
 msgstr "سوف يظهر الوصف في القائمة إذا كان القالب يدعم ذلك."
 
-#: ../framework/functions/mega-menus.php:672
+#: ../framework/functions/mega-menus.php:695
 msgid "Move"
 msgstr "حرك"
 
-#: ../framework/functions/mega-menus.php:673
+#: ../framework/functions/mega-menus.php:696
 msgid "Up one"
 msgstr "إلى الأعلى مرة"
 
-#: ../framework/functions/mega-menus.php:674
+#: ../framework/functions/mega-menus.php:697
 msgid "Down one"
 msgstr "إلى الأسفل مرة"
 
-#: ../framework/functions/mega-menus.php:677
+#: ../framework/functions/mega-menus.php:700
 msgid "To the top"
 msgstr "إلى الأعلى"
 
-#: ../framework/functions/mega-menus.php:684
+#: ../framework/functions/mega-menus.php:707
 #, php-format
 msgid "Original: %s"
 msgstr "أصلي: %s"
 
-#: ../framework/functions/mega-menus.php:697
+#: ../framework/functions/mega-menus.php:720
 msgid "Remove"
 msgstr "حذف"
 
-#: ../framework/functions/mega-menus.php:698
+#: ../framework/functions/mega-menus.php:721
 msgid "Cancel"
 msgstr "الغاء"
 
 #: ../framework/functions/pagenavi.php:167
-#: ../framework/functions/translation.php:96
 msgid "Page %CURRENT_PAGE% of %TOTAL_PAGES%"
 msgstr "صفحة %CURRENT_PAGE% من %TOTAL_PAGES%"
 
 #: ../framework/functions/pagenavi.php:170
-#: ../framework/functions/translation.php:92
 msgid "&laquo; First"
 msgstr "&laquo; الأولى"
 
 #: ../framework/functions/pagenavi.php:171
-#: ../framework/functions/translation.php:93
 msgid "Last &raquo;"
 msgstr "الأخيرة &raquo;"
 
@@ -4188,7 +4145,6 @@ msgid "&laquo;"
 msgstr "&laquo;"
 
 #: ../framework/functions/search-live.php:103
-#: ../framework/functions/translation.php:20
 msgid "View All Results"
 msgstr "عرض كل النتائج"
 
@@ -4200,152 +4156,130 @@ msgstr "القائمة أعلى الهيدر"
 msgid "Primary Navigation"
 msgstr "القائمة الرئيسية"
 
-#: ../framework/functions/theme-functions.php:614
-#: ../framework/functions/theme-functions.php:617
+#: ../framework/functions/theme-functions.php:613
+#: ../framework/functions/theme-functions.php:616
 msgid "Cover Image"
 msgstr "صورة الكوفر"
 
-#: ../framework/functions/theme-functions.php:639
+#: ../framework/functions/theme-functions.php:638
 msgid "Custom Author widget"
 msgstr "محتوى خاص للكاتب"
 
-#: ../framework/functions/theme-functions.php:642
+#: ../framework/functions/theme-functions.php:641
 msgid "Custom Author widget content"
 msgstr "نص المحتوى الخاص للكاتب"
 
-#: ../framework/functions/theme-functions.php:740
+#: ../framework/functions/theme-functions.php:739
 msgid "No items."
 msgstr "لم يتم العثور على عناصر ."
 
-#: ../framework/functions/theme-functions.php:745
+#: ../framework/functions/theme-functions.php:744
 msgid "Posted "
 msgstr "نشرت"
 
-#: ../framework/functions/theme-functions.php:1180
-#: ../framework/functions/translation.php:77
+#: ../framework/functions/theme-functions.php:1174
 msgid "Welcome"
 msgstr "أهلا بك"
 
-#: ../framework/functions/theme-functions.php:1182
-#: ../framework/functions/translation.php:78
+#: ../framework/functions/theme-functions.php:1176
 msgid "Dashboard"
 msgstr "لوحة التحكم"
 
-#: ../framework/functions/theme-functions.php:1183
-#: ../framework/functions/translation.php:79
+#: ../framework/functions/theme-functions.php:1177
 msgid "Your Profile"
 msgstr "الملف الشخصي"
 
-#: ../framework/functions/theme-functions.php:1184
-#: ../framework/functions/translation.php:80
+#: ../framework/functions/theme-functions.php:1178
 msgid "Logout"
 msgstr "تسجيل الخروج"
 
-#: ../framework/functions/theme-functions.php:1192
-#: ../framework/functions/translation.php:81
+#: ../framework/functions/theme-functions.php:1186
 msgid "Username"
 msgstr "إسم المستخدم"
 
-#: ../framework/functions/theme-functions.php:1193
-#: ../framework/functions/translation.php:82
+#: ../framework/functions/theme-functions.php:1187
 msgid "Password"
 msgstr "كلمة المرور"
 
-#: ../framework/functions/theme-functions.php:1194
-#: ../framework/functions/translation.php:83
+#: ../framework/functions/theme-functions.php:1188
 msgid "Log in"
 msgstr "تسجيل الدخول"
 
-#: ../framework/functions/theme-functions.php:1195
-#: ../framework/functions/translation.php:84
+#: ../framework/functions/theme-functions.php:1189
 msgid "Remember Me"
 msgstr "تذكرني"
 
-#: ../framework/functions/theme-functions.php:1200
-#: ../framework/functions/translation.php:85
+#: ../framework/functions/theme-functions.php:1194
 msgid "Lost your password?"
 msgstr "نسيت كلمة المرور ؟"
 
-#: ../framework/functions/theme-functions.php:1284
-#: ../framework/functions/translation.php:103
+#: ../framework/functions/theme-functions.php:1280
+#: ../framework/functions/theme-functions.php:1287
+#: ../framework/functions/theme-functions.php:1293
+#: ../framework/functions/theme-functions.php:1299
 #: ../framework/widgets/widget-twitter.php:108
-#, php-format
-msgid "%s ago"
-msgstr "‏%s مضت"
+msgid "ago"
+msgstr "مضت"
 
-#: ../framework/functions/theme-functions.php:1450
-#: ../framework/functions/translation.php:95
+#: ../framework/functions/theme-functions.php:1462
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s في %2$s"
 
-#: ../framework/functions/theme-functions.php:1450
-#: ../framework/functions/theme-functions.php:1474
-#: ../framework/functions/translation.php:51 ../page.php:86 ../single.php:67
-#: ../template-authors.php:56 ../template-best-reviews.php:72
+#: ../framework/functions/theme-functions.php:1462
+#: ../framework/functions/theme-functions.php:1486 ../page.php:86
+#: ../single.php:67 ../template-authors.php:56 ../template-best-reviews.php:72
 #: ../template-login.php:34 ../template-restrict.php:42
 #: ../template-sitemap.php:64 ../template-tags.php:44
 #: ../template-timeline.php:80
 msgid "Edit"
 msgstr "تحرير"
 
-#: ../framework/functions/theme-functions.php:1455
-#: ../framework/functions/translation.php:44
+#: ../framework/functions/theme-functions.php:1467
 msgid "Your comment is awaiting moderation."
 msgstr "تعليقك في إنتظار مراجعه المدير."
 
-#: ../framework/functions/theme-functions.php:1474
-#: ../framework/functions/translation.php:45
+#: ../framework/functions/theme-functions.php:1486
 msgid "Pingback:"
 msgstr "تعقيبات:"
 
-#: ../framework/functions/theme-functions.php:1562
+#: ../framework/functions/theme-functions.php:1573
 msgid "Install Required Plugins"
 msgstr "تنصيب الإضافات المطلوبة"
 
-#: ../framework/functions/theme-functions.php:1563
+#: ../framework/functions/theme-functions.php:1574
 msgid "Install Plugins"
 msgstr "تنصيب الإضافات"
 
-#: ../framework/functions/theme-functions.php:1564
+#: ../framework/functions/theme-functions.php:1575
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "تنصيب إضافة: %s"
 
-#: ../framework/functions/theme-functions.php:1565
+#: ../framework/functions/theme-functions.php:1576
 msgid "Something went wrong with the plugin API."
 msgstr "حدث خطأ ما مع API الإضافة."
 
-#: ../framework/functions/theme-functions.php:1576
+#: ../framework/functions/theme-functions.php:1587
 msgid "Return to Required Plugins Installer"
 msgstr "العودة إلى صفحة تنصيب الإضافات."
 
-#: ../framework/functions/theme-functions.php:1577
+#: ../framework/functions/theme-functions.php:1588
 msgid "Plugin activated successfully."
 msgstr "تم تفعيل الإضافة بنجاح."
 
-#: ../framework/functions/theme-functions.php:1578
+#: ../framework/functions/theme-functions.php:1589
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr "تم تنصيب و تفعيل كل الإضافات بنجاح. %s"
 
-#: ../framework/functions/theme-functions.php:1772
+#: ../framework/functions/theme-functions.php:1783
 msgid "Review Overview"
 msgstr "عناصر المراجعه : "
 
-#: ../framework/functions/tie-views.php:82
-#: ../framework/functions/translation.php:60
-#: ../framework/parts/meta-post.php:18
+#: ../framework/functions/tie-views.php:76 ../framework/parts/meta-post.php:18
 msgid "Views"
 msgstr "زيارة"
-
-#: ../framework/functions/translation.php:21 ../search.php:28
-msgid ""
-"Sorry, but nothing matched your search criteria. Please try again with some "
-"different keywords."
-msgstr ""
-"المعذرة, ولكن لم يتم العثور على نتائج تطابق كلمة البحث ... حاول البحث "
-"بإستخدام كلمات مختلفة ."
 
 #: ../framework/functions/translation.php:24
 msgid "Archives"
@@ -4357,161 +4291,75 @@ msgstr "أرشيف"
 msgid "Comments"
 msgstr "تعليقات"
 
-#: ../framework/functions/translation.php:38
-#: ../framework/parts/meta-post.php:15
-msgid "1 Comment"
-msgstr "تعليق واحد"
-
-#: ../framework/functions/translation.php:39
-#: ../framework/parts/meta-post.php:15
-msgid "% Comments"
-msgstr "% تعليقات"
-
-#: ../framework/functions/translation.php:41
-#: ../framework/parts/meta-post.php:15
-msgid "Leave a comment"
-msgstr "اضف تعليق"
-
 #: ../framework/functions/translation.php:48
 msgid "Posts"
 msgstr "تدوينات"
-
-#: ../framework/functions/translation.php:50 ../page.php:84 ../single.php:65
-#: ../template-authors.php:32 ../template-best-reviews.php:31
-#: ../template-login.php:32 ../template-restrict.php:35
-#: ../template-sitemap.php:32 ../template-tags.php:32
-#: ../template-timeline.php:31
-msgid "Pages:"
-msgstr "صفحات:"
-
-#: ../framework/functions/translation.php:53 ../single.php:94
-msgid "About"
-msgstr "عن"
-
-#: ../framework/functions/translation.php:54 ../single.php:105
-msgid "Previous"
-msgstr "السابق"
-
-#: ../framework/functions/translation.php:55
-#: ../framework/shortcodes/shortcodes.php:402
-#: ../framework/shortcodes/shortcodes.php:410
-msgid "Prev"
-msgstr "السابق"
-
-#: ../framework/functions/translation.php:56
-#: ../framework/shortcodes/shortcodes.php:401
-#: ../framework/shortcodes/shortcodes.php:409 ../single.php:106
-msgid "Next"
-msgstr "التالي"
-
-#: ../framework/functions/translation.php:57 ../template-sitemap.php:36
-msgid "Pages"
-msgstr "الصفحات"
-
-#: ../framework/functions/translation.php:59 ../template-sitemap.php:58
-msgid "Authors"
-msgstr "الكُتاب"
-
-#: ../framework/functions/translation.php:63 ../framework/parts/share.php:13
-msgid "Share"
-msgstr "شاركها"
-
-#: ../framework/functions/translation.php:64
-#: ../framework/parts/related-posts.php:29
-msgid "Related Articles"
-msgstr "مقالات مشابهة"
-
-#: ../framework/functions/translation.php:65
-#: ../woocommerce/single-product/related.php:38
-msgid "Related Products"
-msgstr "منتجات ذات صلة"
-
-#: ../framework/functions/translation.php:66 ../template-restrict.php:38
-msgid "You must be logged in to view this page."
-msgstr "يجب أن تقوم بتسجيل الدخول لتتمكن من مشاهدة هذه الصفحة."
 
 #: ../framework/functions/translation.php:69
 msgid "Widgets"
 msgstr "ويدجات"
 
-#: ../framework/functions/translation.php:71
-#: ../framework/widgets/widget-author.php:98
-msgid "All Posts"
-msgstr "كل التدوينات"
-
-#: ../framework/functions/translation.php:72
-#: ../framework/widgets/widget-author.php:90
-#, php-format
-msgid "By %s"
-msgstr "بواسطة %s"
-
-#: ../framework/functions/translation.php:73
-#: ../framework/widgets/widget-author.php:23
-#, php-format
-msgid "About %s"
-msgstr "عن %s "
-
-#: ../framework/functions/translation.php:74
-#: ../framework/widgets/widget-tabbed.php:33
-#: ../framework/widgets/widget-tabbed.php:147
-msgid "Popular"
-msgstr "الأشهر"
-
-#: ../framework/functions/translation.php:76
-#: ../framework/widgets/widget-feedburner.php:30
-msgid "Subscribe"
-msgstr "إشترك"
-
-#: ../framework/functions/translation.php:86
-#: ../framework/widgets/widget-feedburner.php:27
-msgid "Enter your e-mail address"
-msgstr "أدخل بريدك الإلكتروني"
-
 #: ../framework/functions/translation.php:89
 msgid "Pagination"
 msgstr "ترقيم الصفحات"
-
-#: ../framework/functions/translation.php:94
-#, php-format
-msgid "Page %s"
-msgstr "صفحة %s"
 
 #: ../framework/functions/translation.php:100
 msgid "Misc"
 msgstr "متفرقات"
 
-#: ../framework/functions/translation.php:104
+#: ../framework/parts/meta-post.php:15
+msgid "Leave a comment"
+msgstr "اضف تعليق"
+
+#: ../framework/parts/meta-post.php:15
+msgid "1 Comment"
+msgstr "تعليق واحد"
+
+#: ../framework/parts/meta-post.php:15
+msgid "% Comments"
+msgstr "% تعليقات"
+
+#: ../framework/parts/related-posts.php:29
+msgid "Related Articles"
+msgstr "مقالات مشابهة"
+
+#: ../framework/parts/share.php:12
+msgid "Share"
+msgstr "شاركها"
+
+#: ../framework/parts/share.php:17 ../framework/widgets/widget-facebook.php:12
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../framework/parts/share.php:23
+msgid "Google +"
+msgstr "Google +"
+
+#: ../framework/parts/share.php:26
+msgid "Stumbleupon"
+msgstr "Stumbleupon"
+
+#: ../framework/parts/share.php:29
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: ../framework/parts/share.php:32
+msgid "Pinterest"
+msgstr "Pinterest"
+
 #: ../framework/shortcodes/shortcodes.php:100
 msgid "About the author"
 msgstr "عن الكاتب"
 
-#: ../framework/functions/translation.php:107 ../header.php:207
-msgid "Random Article"
-msgstr "مقال عشوائي"
+#: ../framework/shortcodes/shortcodes.php:401
+#: ../framework/shortcodes/shortcodes.php:409 ../single.php:106
+msgid "Next"
+msgstr "التالي"
 
-#: ../framework/functions/translation.php:108 ../header.php:212
-msgid "View your shopping cart"
-msgstr "إستعراض سلة التسوق"
-
-#: ../framework/parts/share.php:20 ../framework/widgets/widget-facebook.php:12
-msgid "Facebook"
-msgstr "Facebook"
-
-#: ../framework/parts/share.php:26
-msgid "Google +"
-msgstr "Google +"
-
-#: ../framework/parts/share.php:29
-msgid "Stumbleupon"
-msgstr "Stumbleupon"
-
-#: ../framework/parts/share.php:32
-msgid "LinkedIn"
-msgstr "LinkedIn"
-
-#: ../framework/parts/share.php:35
-msgid "Pinterest"
-msgstr "Pinterest"
+#: ../framework/shortcodes/shortcodes.php:402
+#: ../framework/shortcodes/shortcodes.php:410
+msgid "Prev"
+msgstr "السابق"
 
 #: ../framework/widgets.php:13
 msgid "Primary Widget Area"
@@ -4584,7 +4432,7 @@ msgstr "إعلانات"
 #: ../framework/widgets/widget-ads.php:902
 #: ../framework/widgets/widget-ads.php:1014
 #: ../framework/widgets/widget-ads.php:1126
-#: ../framework/widgets/widget-author-custom.php:65
+#: ../framework/widgets/widget-author-custom.php:64
 #: ../framework/widgets/widget-social.php:61
 #: ../framework/widgets/widget-text-html.php:70
 msgid "Content Only:"
@@ -4600,7 +4448,7 @@ msgstr "المحتوى فقط:"
 #: ../framework/widgets/widget-ads.php:904
 #: ../framework/widgets/widget-ads.php:1016
 #: ../framework/widgets/widget-ads.php:1128
-#: ../framework/widgets/widget-author-custom.php:67
+#: ../framework/widgets/widget-author-custom.php:66
 #: ../framework/widgets/widget-social.php:63
 msgid "Check this box to hide widget title and background."
 msgstr "قم بتفعيل هذا الاختيار لإخفاء عنوان المربع الجانبي والخلفية."
@@ -4746,13 +4594,13 @@ msgstr "اعلان 300*250"
 msgid "Custom Author Content"
 msgstr "محتوى خاص للكاتب"
 
-#: ../framework/widgets/widget-author-custom.php:57
+#: ../framework/widgets/widget-author-custom.php:56
 #: ../framework/widgets/widget-author.php:46
 #: ../framework/widgets/widget-author.php:123
 msgid "This Widget appears in single post only."
 msgstr "هذه القائمة الجانبية تظهر فقط في صفحة التدوينة المنفرده."
 
-#: ../framework/widgets/widget-author-custom.php:70
+#: ../framework/widgets/widget-author-custom.php:69
 #: ../framework/widgets/widget-text-html.php:75
 msgid "Center content:"
 msgstr "توسيط المحتوى:"
@@ -4760,6 +4608,11 @@ msgstr "توسيط المحتوى:"
 #: ../framework/widgets/widget-author.php:10
 msgid "Post Author"
 msgstr "كاتب التدوينة"
+
+#: ../framework/widgets/widget-author.php:23
+#, php-format
+msgid "About %s"
+msgstr "عن %s "
 
 #: ../framework/widgets/widget-author.php:49
 msgid "Author's avatar:"
@@ -4773,21 +4626,30 @@ msgstr "أيقونات الشبكات الإجتماعية :"
 msgid "Posts By Post's Author"
 msgstr "تدوينات بواسطة كاتب التدوينة الحالية"
 
+#: ../framework/widgets/widget-author.php:90
+#, php-format
+msgid "By %s"
+msgstr "بواسطة %s"
+
+#: ../framework/widgets/widget-author.php:98
+msgid "All Posts"
+msgstr "كل التدوينات"
+
 #: ../framework/widgets/widget-author.php:131
 msgid "Display (All) link:"
 msgstr "عرض رابط (الكل)"
 
 #: ../framework/widgets/widget-authors-posts.php:11
-#: ../framework/widgets/widget-authors-posts.php:44
+#: ../framework/widgets/widget-authors-posts.php:46
 msgid "Authors Posts"
 msgstr "أراء و تحليلات"
 
 #: ../framework/widgets/widget-category.php:11
-#: ../framework/widgets/widget-category.php:44
+#: ../framework/widgets/widget-category.php:46
 msgid "Category Posts"
 msgstr "تدوينات من تصنيف"
 
-#: ../framework/widgets/widget-category.php:73
+#: ../framework/widgets/widget-category.php:75
 msgid "Display Thumbnails :"
 msgstr "عرض الصور المصغرة :"
 
@@ -4838,6 +4700,14 @@ msgstr "الشكل الداكن ؟"
 #: ../framework/widgets/widget-feedburner.php:11
 msgid "Feedburner"
 msgstr "Feedburner"
+
+#: ../framework/widgets/widget-feedburner.php:27
+msgid "Enter your e-mail address"
+msgstr "أدخل بريدك الإلكتروني"
+
+#: ../framework/widgets/widget-feedburner.php:30
+msgid "Subscribe"
+msgstr "إشترك"
 
 #: ../framework/widgets/widget-feedburner.php:51
 msgid "FeedBurner Widget"
@@ -4951,9 +4821,18 @@ msgstr "فتح الروابط في تبويب جديد :"
 msgid "Gray icons without background"
 msgstr "أيقونات رمادية بدون خلفية"
 
-#: ../framework/widgets/widget-soundcloud.php:52
+#: ../framework/widgets/widget-soundcloud.php:50
 msgid "URL:"
 msgstr "الرابط :"
+
+#: ../framework/widgets/widget-soundcloud.php:54
+msgid "Autoplay:"
+msgstr "التشغيل التلقائي :"
+
+#: ../framework/widgets/widget-tabbed.php:33
+#: ../framework/widgets/widget-tabbed.php:147
+msgid "Popular"
+msgstr "الأشهر"
 
 #: ../framework/widgets/widget-tabbed.php:132
 #: ../framework/widgets/widget-text-html.php:72
@@ -4997,23 +4876,23 @@ msgstr "مخطط زمني"
 msgid "Category :"
 msgstr "تصنيف:"
 
-#: ../framework/widgets/widget-twitter.php:159
+#: ../framework/widgets/widget-twitter.php:158
 msgid "@Follow Me"
 msgstr "@إتبعني"
 
-#: ../framework/widgets/widget-twitter.php:169
+#: ../framework/widgets/widget-twitter.php:168
 msgid "Twitter Username:"
 msgstr "اسم مستخدم تويتر:"
 
-#: ../framework/widgets/widget-twitter.php:173
+#: ../framework/widgets/widget-twitter.php:172
 msgid "Consumer key:"
 msgstr "Consumer key:"
 
-#: ../framework/widgets/widget-twitter.php:176
+#: ../framework/widgets/widget-twitter.php:175
 msgid "Consumer secret:"
 msgstr "Consumer secret:"
 
-#: ../framework/widgets/widget-twitter.php:180
+#: ../framework/widgets/widget-twitter.php:179
 msgid "Number of Tweets to show:"
 msgstr "عدد التغريدات المراد إظهارها:"
 
@@ -5026,180 +4905,180 @@ msgid "Video URL"
 msgstr "رابط الفيديو"
 
 #: ../framework/widgets/widget-weather.php:15
-#: ../framework/widgets/widget-weather.php:272
+#: ../framework/widgets/widget-weather.php:268
 msgid "C"
 msgstr "س"
 
 #: ../framework/widgets/widget-weather.php:15
-#: ../framework/widgets/widget-weather.php:271
+#: ../framework/widgets/widget-weather.php:267
 msgid "F"
 msgstr "ف"
 
-#: ../framework/widgets/widget-weather.php:117
+#: ../framework/widgets/widget-weather.php:113
 msgid "N"
 msgstr "ش"
 
-#: ../framework/widgets/widget-weather.php:118
+#: ../framework/widgets/widget-weather.php:114
 msgid "NNE"
 msgstr "ش.ش.ق‎"
 
-#: ../framework/widgets/widget-weather.php:119
+#: ../framework/widgets/widget-weather.php:115
 msgid "NE"
 msgstr "ش.ق"
 
-#: ../framework/widgets/widget-weather.php:120
+#: ../framework/widgets/widget-weather.php:116
 msgid "ENE"
 msgstr "ق.ش.ق‎"
 
-#: ../framework/widgets/widget-weather.php:121
+#: ../framework/widgets/widget-weather.php:117
 msgid "E"
 msgstr "ق"
 
-#: ../framework/widgets/widget-weather.php:122
+#: ../framework/widgets/widget-weather.php:118
 msgid "ESE"
 msgstr "ق.ج.ق"
 
-#: ../framework/widgets/widget-weather.php:123
+#: ../framework/widgets/widget-weather.php:119
 msgid "SE"
 msgstr "ج.ش"
 
-#: ../framework/widgets/widget-weather.php:124
+#: ../framework/widgets/widget-weather.php:120
 msgid "SSE"
 msgstr "ج.ج.ش"
 
-#: ../framework/widgets/widget-weather.php:125
+#: ../framework/widgets/widget-weather.php:121
 msgid "S"
 msgstr "ج"
 
-#: ../framework/widgets/widget-weather.php:126
+#: ../framework/widgets/widget-weather.php:122
 msgid "SSW"
 msgstr "ج.ج.غ"
 
-#: ../framework/widgets/widget-weather.php:127
+#: ../framework/widgets/widget-weather.php:123
 msgid "SW"
 msgstr "ج.غ"
 
-#: ../framework/widgets/widget-weather.php:128
+#: ../framework/widgets/widget-weather.php:124
 msgid "WSW"
 msgstr "غ.ج.غ"
 
-#: ../framework/widgets/widget-weather.php:129
+#: ../framework/widgets/widget-weather.php:125
 msgid "W"
 msgstr "غ"
 
-#: ../framework/widgets/widget-weather.php:130
+#: ../framework/widgets/widget-weather.php:126
 msgid "WNW"
 msgstr "غ.ش.غ"
 
-#: ../framework/widgets/widget-weather.php:131
+#: ../framework/widgets/widget-weather.php:127
 msgid "NW"
 msgstr "ش.غ"
 
-#: ../framework/widgets/widget-weather.php:132
+#: ../framework/widgets/widget-weather.php:128
 msgid "NNW"
 msgstr "ش.ش.غ"
 
-#: ../framework/widgets/widget-weather.php:163
+#: ../framework/widgets/widget-weather.php:159
 msgid "km/h"
 msgstr "كيلومتر/ساعة"
 
-#: ../framework/widgets/widget-weather.php:163
+#: ../framework/widgets/widget-weather.php:159
 msgid "mph"
 msgstr "ميل/ساعة"
 
-#: ../framework/widgets/widget-weather.php:170
+#: ../framework/widgets/widget-weather.php:166
 msgid "humidity:"
 msgstr "الرطوبة:"
 
-#: ../framework/widgets/widget-weather.php:171
+#: ../framework/widgets/widget-weather.php:167
 msgid "wind:"
 msgstr "الرياح:"
 
-#: ../framework/widgets/widget-weather.php:172
+#: ../framework/widgets/widget-weather.php:168
 msgid "H"
 msgstr "العظمى"
 
-#: ../framework/widgets/widget-weather.php:172
+#: ../framework/widgets/widget-weather.php:168
 msgid "L"
 msgstr "الصغرى"
 
-#: ../framework/widgets/widget-weather.php:188
+#: ../framework/widgets/widget-weather.php:184
 msgid "Sun"
 msgstr "الأحد"
 
-#: ../framework/widgets/widget-weather.php:188
+#: ../framework/widgets/widget-weather.php:184
 msgid "Mon"
 msgstr "الاثنين"
 
-#: ../framework/widgets/widget-weather.php:188
+#: ../framework/widgets/widget-weather.php:184
 msgid "Tue"
 msgstr "الثلاثاء"
 
-#: ../framework/widgets/widget-weather.php:188
+#: ../framework/widgets/widget-weather.php:184
 msgid "Wed"
 msgstr "الأربعاء"
 
-#: ../framework/widgets/widget-weather.php:188
+#: ../framework/widgets/widget-weather.php:184
 msgid "Thu"
 msgstr "الخميس"
 
-#: ../framework/widgets/widget-weather.php:188
+#: ../framework/widgets/widget-weather.php:184
 msgid "Fri"
 msgstr "الجمعة"
 
-#: ../framework/widgets/widget-weather.php:188
+#: ../framework/widgets/widget-weather.php:184
 msgid "Sat"
 msgstr "السبت"
 
-#: ../framework/widgets/widget-weather.php:213
+#: ../framework/widgets/widget-weather.php:209
 msgid "No weather information available"
 msgstr "لم يتم العثور على أي معلومات"
 
-#: ../framework/widgets/widget-weather.php:222
+#: ../framework/widgets/widget-weather.php:218
 msgid "Weather"
 msgstr "الطقس"
 
-#: ../framework/widgets/widget-weather.php:263
+#: ../framework/widgets/widget-weather.php:259
 msgid "Location:"
 msgstr "الموقع الجغرافي:"
 
-#: ../framework/widgets/widget-weather.php:263
+#: ../framework/widgets/widget-weather.php:259
 msgid "Find Your Location"
 msgstr "تحديد مدينتك:"
 
-#: ../framework/widgets/widget-weather.php:264
+#: ../framework/widgets/widget-weather.php:260
 msgid "(i.e: London,UK or New York City,NY)"
 msgstr "(مثال: Alexandria, EG أو Riyadh, SA)"
 
-#: ../framework/widgets/widget-weather.php:270
+#: ../framework/widgets/widget-weather.php:266
 msgid "Units:"
 msgstr "الوحدة:"
 
-#: ../framework/widgets/widget-weather.php:277
+#: ../framework/widgets/widget-weather.php:273
 msgid "Forecast:"
 msgstr "التنبؤ بالطقس"
 
-#: ../framework/widgets/widget-weather.php:279
+#: ../framework/widgets/widget-weather.php:275
 msgid "5 Days"
 msgstr "5 أيام"
 
-#: ../framework/widgets/widget-weather.php:280
+#: ../framework/widgets/widget-weather.php:276
 msgid "4 Days"
 msgstr "4 أيام"
 
-#: ../framework/widgets/widget-weather.php:281
+#: ../framework/widgets/widget-weather.php:277
 msgid "3 Days"
 msgstr "3 أيام"
 
-#: ../framework/widgets/widget-weather.php:282
+#: ../framework/widgets/widget-weather.php:278
 msgid "2 Days"
 msgstr "يومان"
 
-#: ../framework/widgets/widget-weather.php:283
+#: ../framework/widgets/widget-weather.php:279
 msgid "1 Day"
 msgstr "يوم واحد"
 
-#: ../framework/widgets/widget-weather.php:284
+#: ../framework/widgets/widget-weather.php:280
 msgid "Don't Show"
 msgstr "اخفاء"
 
@@ -5215,108 +5094,60 @@ msgstr "إنضم لقناتنا"
 msgid "Channel Name:"
 msgstr "اسم القناة:"
 
+#: ../header.php:207
+msgid "Random Article"
+msgstr "مقال عشوائي"
+
+#: ../header.php:212
+msgid "View your shopping cart"
+msgstr "إستعراض سلة التسوق"
+
+#: ../page.php:84 ../single.php:65 ../template-authors.php:32
+#: ../template-best-reviews.php:31 ../template-login.php:32
+#: ../template-restrict.php:35 ../template-sitemap.php:32
+#: ../template-tags.php:32 ../template-timeline.php:31
+msgid "Pages:"
+msgstr "صفحات:"
+
 #: ../search.php:11
 msgid "Nothing Found"
 msgstr "لم يتم العثور على نتائج"
+
+#: ../search.php:28
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+"المعذرة, ولكن لم يتم العثور على نتائج تطابق كلمة البحث ... حاول البحث "
+"بإستخدام كلمات مختلفة ."
 
 #: ../single.php:81
 msgid "Tags "
 msgstr "الوسوم"
 
-#~ msgid "Need More ?"
-#~ msgstr "هل تبحث عن المزيد ؟"
+#: ../single.php:94
+msgid "About"
+msgstr "عن"
 
-#~ msgid "Forrst"
-#~ msgstr "Forrst"
+#: ../single.php:105
+msgid "Previous"
+msgstr "السابق"
 
-#~ msgid "Enter Your Forrst Account Username."
-#~ msgstr "ادخل اسم مستخدم Forrst الخاص بك ."
+#: ../template-restrict.php:38
+msgid "You must be logged in to view this page."
+msgstr "يجب أن تقوم بتسجيل الدخول لتتمكن من مشاهدة هذه الصفحة."
 
-#~ msgid "ago"
-#~ msgstr "مضت"
+#: ../template-sitemap.php:36
+msgid "Pages"
+msgstr "الصفحات"
 
-#~ msgid "Autoplay:"
-#~ msgstr "التشغيل التلقائي :"
+#: ../template-sitemap.php:58
+msgid "Authors"
+msgstr "الكُتاب"
 
-#~ msgid "Hide Top menu"
-#~ msgstr "إخفاء القائمة العلوية"
-
-#~ msgid "Hide Main Nav"
-#~ msgstr "إخفاء القائمة الرئيسية"
-
-#~ msgid "Hide the Mobile Menu Items Icons"
-#~ msgstr "إخفاء الأيقونات في ثائمة الجوال"
-
-#~ msgid "Hide RSS Icon"
-#~ msgstr "إخفاء أيقونة RSS"
-
-#~ msgid "Enter Your App ID and App Secret ,"
-#~ msgstr "ادخل الApp ID والApp Secret،"
-
-#~ msgid "Click Here"
-#~ msgstr "اضغط هنا"
-
-#~ msgid "For More Details."
-#~ msgstr "لمزيد من التفاصيل."
-
-#~ msgid "Enter Your App Client ID and App Client Secret ,"
-#~ msgstr "ادخل App Client ID و App Client Secret الخاص بك،"
-
-#~ msgid ""
-#~ "Enter Your Facebook Page Name or ID and click on Get Access Token to get "
-#~ "your App Access Token, "
-#~ msgstr ""
-#~ "ادخل اسم صفحة الFaceBook أو الرقم التعريفي واضغط على Get Access Token "
-#~ "للحصول على الApp Access Token الخاص بك،"
-
-#~ msgid ""
-#~ "Enter Your Twitter Account Username , your APP Consumer key and Consumer "
-#~ "secret ,"
-#~ msgstr ""
-#~ "ادخل اسم مستخدم Twitter الخاص بك و الApp Consumer Key و Consumer Secret، "
-
-#~ msgid "Enter Your Google+ page or profile ID and Google API Key ,"
-#~ msgstr ""
-#~ "ادخل عنوان صفحة جوجل+ أو الرقم التعريفي لملفك الشخصي و مفتاح Google API ،"
-
-#~ msgid ""
-#~ "Enter Your YouTube username or Channel ID and choose User or Channel from "
-#~ "Type menu ,"
-#~ msgstr ""
-#~ "ادخل اسم مستخدم الYouTube او الرقم التعريفي للقناة الخاصة بك، ثم اختر "
-#~ "\"مستخدم\" أو \"قناة\" من قائمة النوع ،"
-
-#~ msgid "Enter Your Vimeo Channel Name ,"
-#~ msgstr "ادخل اسم قناة Vimeo ،"
-
-#~ msgid "Enter Your Dribbble Account Username ."
-#~ msgstr "ادخل اسم مستخدم Dribble الخاص بك ."
-
-#~ msgid "Enter Your SoundCloud Account Username and the API Key,"
-#~ msgstr "ادخل اسم مستخدم SoundCloud الخاص بك والAPI ،"
-
-#~ msgid "Enter Your Behance Account Username and the API Key,"
-#~ msgstr "ادخل اسم مستخدم Behance الخاص بك و الAPI ،"
-
-#~ msgid "Enter Your Forrst Account Username ."
-#~ msgstr "ادخل اسم مستخدم Forrst الخاص بك ."
-
-#~ msgid "Enter Your Delicious Account Username ."
-#~ msgstr "ادخل اسم مستخدم Delicious الخاص بك ."
-
-#~ msgid ""
-#~ "Enter Your Instagram Username and click on Get Access Token to get your "
-#~ "App Access Token,"
-#~ msgstr ""
-#~ "ادخل اسم مستخدم Instagram الخاص بك واضغط على \"Get Access Token\" للحصول "
-#~ "على الAccess Token الخاصه بك،"
-
-#~ msgid ""
-#~ "Enter Your Feed URl and the Feedpress Json file URL or Number of "
-#~ "Subscribers manually ,"
-#~ msgstr ""
-#~ "ادخل رابط الFeed الخاص بك و رابط ملف الFeedpress Json او ادخل عدد "
-#~ "المشتركين يدويًا،"
+#: ../woocommerce/single-product/related.php:38
+msgid "Related Products"
+msgstr "منتجات ذات صلة"
 
 #~ msgid "Menu Icon (use full Font Awesome name)"
 #~ msgstr "الأيقونة ( إستخدم الإسم الكامل font awesome )"
@@ -5342,6 +5173,9 @@ msgstr "الوسوم"
 #~ msgid ""
 #~ "Enable Lightbox automatically for all images in the post content area"
 #~ msgstr "تفعيل Lightbox تلقائيًا لكل الصور في منطقة محتوى التدوينة"
+
+#~ msgid "Page %s"
+#~ msgstr "صفحة %s"
 
 #~ msgid "This Widget appears in single post only ."
 #~ msgstr "هذه القائمة الجانبية تظهر فقط في التدوينة المنفرده."

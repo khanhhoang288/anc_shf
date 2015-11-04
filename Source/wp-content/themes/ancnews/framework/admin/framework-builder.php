@@ -47,44 +47,37 @@ function tie_save_builder( $post_id ){
 			'slider_tag',
 			'slider_posts',
 			'slider_pages',
-			'slider_custom',
-			'slider_cat',
-			'featured_posts_cat',
+			'slider_custom'
 		);
 				
 		foreach( $custom_meta_fields as $custom_meta_field ){
-			if( isset( $_POST[$custom_meta_field] ) && !empty( $_POST[ $custom_meta_field] ) ){
-				$custom_meta_field_data = $_POST[$custom_meta_field];
-				if( is_array( $custom_meta_field_data ) ){
-					$custom_meta_field_data		= array_filter( $custom_meta_field_data );
-					if( !empty( $custom_meta_field_data ) ){
-						update_post_meta( $post_id, $custom_meta_field, $custom_meta_field_data );
-					}else{
-						delete_post_meta( $post_id, $custom_meta_field );
-					}
-				}else{
-					if( !empty( $custom_meta_field_data ) ){
-						update_post_meta( $post_id, $custom_meta_field, htmlspecialchars(stripslashes( $custom_meta_field_data )) );
-					}else{
-						delete_post_meta( $post_id, $custom_meta_field );
-					}
-				}
-			}else{
-				delete_post_meta( $post_id, $custom_meta_field );
-			}
-		}
+			if(isset($_POST[$custom_meta_field]) )
+				update_post_meta($post_id, $custom_meta_field, $_POST[$custom_meta_field] );
 				
+			else
+				delete_post_meta($post_id, $custom_meta_field);
+		}
+		
+		if(isset($_POST[ 'slider_cat' ]) )		
+			update_post_meta($post_id, 'slider_cat', $_POST['slider_cat']);
+		
+		if(isset($_POST[ 'featured_posts_cat' ]) )		
+			update_post_meta($post_id, 'featured_posts_cat', $_POST['featured_posts_cat']);
+
+		
 		//Builder	
-		if ( isset( $_POST['tie_builder_active'] ) && !empty( $_POST['tie_builder_active'] ) && $_POST['tie_builder_active'] == 'yes' ) {
-			update_post_meta( $post_id, 'tie_builder_active' , 'yes' );
+		if ( isset( $_POST['tie_builder_active'] )&& $_POST['tie_builder_active'] == 'yes' ) {
+			update_post_meta($post_id, 'tie_builder_active' , 'yes' );
 		}else{
 			delete_post_meta( $post_id, 'tie_builder_active' );
 		}
 	
-		if( isset( $_POST['tie_home_cats'] ) && !empty( $_POST['tie_home_cats'] ) ){
+	
+		if( isset( $_POST['tie_home_cats'] )){
 		
 			array_walk_recursive( $_POST['tie_home_cats'] , 'tie_clean_options');
-			update_post_meta( $post_id, 'tie_builder' , $_POST[ 'tie_home_cats' ] );
+			
+			update_post_meta($post_id, 'tie_builder' , $_POST[ 'tie_home_cats' ] );
 
 			
 			if(  function_exists('icl_register_string') ){
@@ -127,15 +120,15 @@ function tie_add_builder_pages() {
 	
 	//Categories
 	$categories_obj = get_categories('hide_empty=0');
-	$categories 	= array();
+	$categories = array();
 	foreach ($categories_obj as $pn_cat) {
 		$categories[$pn_cat->cat_ID] = $pn_cat->cat_name;
 	}
 	
 	//WooCommerce
 	if( function_exists( 'is_woocommerce' ) ){
-		$products_obj 	= get_categories( array( 'hide_empty'	=>	0,	'taxonomy'     => 'product_cat' ) );
-		$products_cats 	= array();
+		$products_obj = get_categories( array( 'hide_empty'	=>	0,	'taxonomy'     => 'product_cat' ) );
+		$products_cats = array();
 		foreach ($products_obj as $products) {
 			$products_cats[$products->cat_ID] = $products->cat_name;
 		}
@@ -368,7 +361,7 @@ function tie_add_builder_pages() {
 											<input id="tie_home_cats[<?php echo $i ?>][boxid]" name="tie_home_cats[<?php echo $i ?>][boxid]" value="<?php  if(empty($cat['boxid'])) echo $cat['type'].'_'.rand(200, 3500); else echo $cat['boxid'];  ?>" type="hidden" />
 									
 									<?php elseif( $cat['type'] == 'ads' ) : ?>
-										<div class="widget-head e3lan-box"><img src="<?php echo get_template_directory_uri(); ?>/framework/admin/images/code-small.png" /><?php _e( 'Text or HTML', 'tie' ) ?>
+										<div class="widget-head ads-box"><img src="<?php echo get_template_directory_uri(); ?>/framework/admin/images/code-small.png" /><?php _e( 'Text or HTML', 'tie' ) ?>
 											<a class="toggle-open">+</a>
 											<a class="toggle-close">-</a>
 										</div>
